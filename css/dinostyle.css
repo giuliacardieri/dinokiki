@@ -1,0 +1,132 @@
+/* HELLO WORLD!!! Kikikikikiki Dinostyle! Let's style this website! kiki */
+
+@font-face {
+    font-family: 'CodeProDemoRegular';
+    src: url('Code_Pro_Demo-webfont.eot');
+    src: url('Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Code_Pro_Demo-webfont.woff') format('woff'),
+         url('Code_Pro_Demo-webfont.ttf') format('truetype'),
+         url('Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  font-family: 'CodeProDemoRegular';
+  background-color: #7189E7;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  z-index: 2;
+  overflow-x: hidden;
+}
+
+/* This <p> tag has all the Kikis added dinamically via JavaScript */
+p{
+  z-index: 3;
+  position: absolute;
+}
+
+/*The header has the title*/
+header{
+  font-family: 'CodeProDemoRegular';
+  color: #282828;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+/*pic is the open/closed mouth picture*/
+#pic{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 50%;
+  height: 50%;
+  z-index: 4;
+  cursor: url('../images/micro.cur'), auto;
+}
+
+/* Mr Kiki Portrait displayed on Join/Help pages */
+#mrkiki{
+  border: solid 2px #282828;
+  margin-right: 20px;
+}
+
+aside{
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+#content{
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  z-index: 1;
+}
+
+#content2{
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  max-width: 700px;
+  padding: 0;
+}
+
+a{
+  text-decoration:none;
+  color: #202020
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+  padding-top: 20px;
+  list-style-type: none;
+}
+
+li{
+  display: inline-block;
+  padding-right: 10px;
+  margin:0;
+}
+
+h1{
+  font-size: 30pt;
+}
+
+h2{
+   font-size: 16pt;
+}
+
+h3{
+	font-size:  9pt;
+	color: #3f3f3f;
+}
+
+nav{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.normal{
+	font-family: helvetica, arial, sans-serif;
+	color: #282828;
+	padding: 5px;
+	margin: 0;
+	position: relative;
+}
+
+footer{
+  font-size: 11pt;
+  text-align: center;
+  width: 100%;
+  bottom:  0;
+  position:  fixed;
+}
