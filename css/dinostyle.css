@@ -12,83 +12,65 @@
 }
 
 body{
-  font-family: 'CodeProDemoRegular';
   background-color: #7189E7;
   color: #fff;
+  font-family: 'CodeProDemoRegular'; 
+  font-size: 12pt;
+  line-height: 14pt;
   margin: 0;
   padding: 0;
   z-index: 2;
-  overflow-x: hidden;
 }
 
+
+/* html tags */
 /* This <p> tag has all the Kikis added dinamically via JavaScript */
 p{
-  z-index: 3;
   position: absolute;
-}
-
-/*The header has the title*/
-header{
-  font-family: 'CodeProDemoRegular';
-  color: #282828;
-  margin: auto;
-  text-align: center;
-  padding-bottom: 20px;
-}
-
-/*pic is the open/closed mouth picture*/
-#pic{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
-  width: 50%;
-  height: 50%;
-  z-index: 4;
-  cursor: url('../images/micro.cur'), auto;
-}
-
-/* Mr Kiki Portrait displayed on Join/Help pages */
-#mrkiki{
-  border: solid 2px #282828;
-  margin-right: 20px;
-}
-
-aside{
-  padding: 0;
-  margin: 0;
-  float: left;
-}
-
-#content{
-  margin: 0;
-  width: 100%;
-  padding: 0;
-  z-index: 1;
-}
-
-#content2{
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-  max-width: 700px;
-  padding: 0;
+  z-index: 3;
 }
 
 a{
+  color: #202020;
   text-decoration:none;
-  color: #202020
 }
 
 a:hover{
-	text-decoration: underline;
+  text-decoration: underline;
+}
+
+h1 a:hover{
+  text-decoration: none;
+}
+
+nav a{
+  color: #4b4b4b;
+}
+
+footer ul li a{
+  bottom: 5px;
+  color: #ffffff;
+  position: relative;
+}
+
+h3 a{
+  color: #ffffff;
 }
 
 ul{
-  margin: 0;
-  padding: 0;
-  padding-top: 20px;
   list-style-type: none;
+  margin: 2px;
+  padding: 0;
+}
+
+footer ul{
+  display: inline-block;
+  margin-left: 50px;
+  padding-top: 10px;
+}
+
+footer li{
+  color: #ffffff;
 }
 
 li{
@@ -97,36 +79,154 @@ li{
   margin:0;
 }
 
+
+/* IDS */
+/*pic is the open/closed mouth picture*/
+#pic{
+  cursor: url('../images/micro.cur'), auto;
+  display: block;
+  height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  z-index: 4;
+}
+
+/* Mr Kiki Portrait displayed on Join/Help pages */
+#mrkiki{
+  border: solid 2px #282828;
+  margin-right: 50px;
+}
+
+#content{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+#content2{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 850px;
+  padding: 0;
+  padding-top: 25px;
+  width: 90%;
+}
+
+#friends ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#friends li{
+  color: #282828;
+  display: block;
+  font-family: helvetica, arial, sans-serif;
+  padding: 2px 0px;
+  margin:0;
+}
+
+#friends li a{  
+  color: #3d3d3d;
+  display: block;
+  padding: 2px 0;
+  margin:0;
+}
+
+#join{
+  border: 2px solid #282828;
+  border-radius: 10px;
+  color: #282828;
+  cursor: pointer;
+  font-family: 'CodeProDemoRegular';
+  font-size: 22pt;
+  line-height: 20pt;
+  margin: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 365px;
+  padding: 20px;
+  padding-top: 25px;
+}
+
+#join:hover{
+  background-color: #282828;
+  border: 2px solid #7189E7;
+  color: #7189E7;
+  opacity: 0.8;
+}
+
+
+#loading{
+  font-size: 16pt;
+  text-align: center;
+}
+
+
+/* headings */
 h1{
   font-size: 30pt;
 }
 
 h2{
-   font-size: 16pt;
+  font-size: 16pt;
+  line-height: 18pt;
 }
 
 h3{
-	font-size:  9pt;
-	color: #3f3f3f;
+  color:#ffffff;
+  display: inline-block;
+  font-size:  9pt;
+  position: fixed;
+  right: 50px;
 }
 
-nav{
-	margin-left: auto;
-	margin-right: auto;
-}
 
-.normal{
-	font-family: helvetica, arial, sans-serif;
-	color: #282828;
-	padding: 5px;
-	margin: 0;
-	position: relative;
+/* html5 tags */
+aside{
+  display: table-cell;
+  float: left;
+  margin: 0;
+  padding: 0;
 }
 
 footer{
+  background-color: #282828;
+  bottom: 0;
   font-size: 11pt;
-  text-align: center;
+  margin: 0;
+  margin-top: 15px;
+  opacity: 0.8;
+  padding: 5px 0;
+  position: fixed;
   width: 100%;
-  bottom:  0;
-  position:  fixed;
 }
+
+header{
+  color: #282828;
+  font-family: 'CodeProDemoRegular';
+  line-height: 28pt;
+  margin: auto;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+nav{
+  display: table-cell;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* classes */
+.normal{
+  color: #282828;
+  font-family: helvetica, arial, sans-serif;
+  margin: 0; 
+  padding: 5px 0px;
+  position: relative;
+}
+
+

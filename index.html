@@ -19,33 +19,33 @@
 <link rel="stylesheet" href="css/dinostyle.css">
 <link rel="shortcut icon" href="favicon.ico">
 <script src="js/jquery.js"></script>
+<script src="js/html5Preloader.js"></script>
 <script src="js/dinoscript.js"></script>
 </head>
 
-<body>
+<body onload="loadDino();">
   <header>
-    <h1> Hello! I'm Dinokiki and this is my home!</h1>
+    <h1><a href="index.html">Hello! I'm Dinokiki and this is my home!</a></h1>
   </header>
 
   <div id="content">
+    <div id="loading">Dinokiki is loading. Please wait!</div>
     <img id="pic" src="images/dinof3.png" alt="dinokiki is not talking!" onclick="changeImage(); sayKiki(); callWrite()">
  </div>
+
+ <div id="join" onclick="location.href='join.html'">Join the Dinokiki Party!</div>
   <footer>
   <ul>
-  	<li><a href="index.html">home</a></li>
-  	<li><a href="help.html">help</a></li>
-  	<li><a href="join.html">join</a></li>
-  </ul>
-  
-  <!-- Twitter and Facebook Buttons !-->
-  <ul>
+  	<li><a href="index.html">Home</a></li>
+  	<li><a href="help.html">Help</a></li>
+  	<li><a href="join.html">Join</a></li>
+ 	<li><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdinokiki.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 75px; height:21px;" allowTransparency="true"></iframe></li>
     <li><a href="https://twitter.com/share" class="twitter-share-button" data-text="Meet Dinokiki!" data-via="mrdinokiki" data-hashtags="kiki">Tweet</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
- 	<li><iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fdinokiki.com&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 75px; height:21px;" allowTransparency="true"></iframe></li>
 	</ul>
-  <!-- End of Twitter and Facebook Buttons !-->
+
    
-   <h3>© 2014 Dinokiki</h3>
+   <h3>© 2014 <a href="http://giuliacardieri.com" target="blank">Giulia Cardieri</a></h3>
   <!-- If you are reading this I consider that you might want to follow @mrdinokiki and @ggiulia on twitter. Or maybe give suggestions about the code? !-->
   </footer>
 </body>
