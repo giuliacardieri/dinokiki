@@ -85,9 +85,9 @@ function writeKiki(){
 	yPos = Math.floor(Math.random()*($(window).height()-100));
 	num = parseInt(Math.random()*100,10);
 	// the random text will be added dynamically to a p tag. 
-   $("<p>").addClass("dino" + num).html(randomSays).appendTo($("body")).css({top: yPos + "px",left: xPos + "px",fontSize: randomSize}).delay(5000).queue(function() { $(this).remove(); });		
+   $("<p>").addClass("kiki dino" + num).html(randomSays).appendTo($("body")).css({top: yPos + "px",left: xPos + "px",fontSize: randomSize}).delay(5000).queue(function() { $(this).remove(); });		
 }
 
-// Did you know that Dinokiki likes to eat brownies? Yeah, that's surprising. He's a vegetarian, or should I say brownievore?
-
-
+function showMenu(){
+   $("nav").animate({height: 'toggle'}); 
+}
