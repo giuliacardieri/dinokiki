@@ -1,66 +1,62 @@
-// DINOSCRIPT! 
-
-// pre-loads the dinokiki images.
 var dinoOpen = null;
 var dinoClosed = null;
-var audioKiki= new Audio('audio/Kiki.mp3'); 	//Giulia
-var audioKikiB= new Audio('audio/KikiB.mp3');	//Bruno
-var audioKikiG= new Audio('audio/KikiG.mp3'); 	//Guilherme
-var audioKikiM= new Audio('audio/KikiM.mp3'); 	//Michelangelo
-var audioKikiR= new Audio('audio/KikiR.mp3'); 	//Raianne
-var audioKikiI= new Audio('audio/KikiI.mp3'); 	//Raquel/aka Irina
-var audioKikiC= new Audio('audio/KikiC.mp3'); 	//Caio/aka Bad Bitch
-var audioKikiF= new Audio('audio/KikiF.mp3'); 	//Felipe
-var audioKikiSA= new Audio('audio/KikiSA.mp3'); //Staying Alive Kiki feat Sara, Raquel & Nicole.
-var audioKikiJ= new Audio('audio/KikiJ.mp3');   //Jerome Jarre
+var audioKiki= new Audio('audio/Kiki.mp3'); 
+var audioKikiB= new Audio('audio/KikiB.mp3');
+var audioKikiG= new Audio('audio/KikiG.mp3'); 
+var audioKikiM= new Audio('audio/KikiM.mp3'); 
+var audioKikiR= new Audio('audio/KikiR.mp3'); 
+var audioKikiI= new Audio('audio/KikiI.mp3'); 
+var audioKikiC= new Audio('audio/KikiC.mp3');
+var audioKikiF= new Audio('audio/KikiF.mp3');
+var audioKikiSA= new Audio('audio/KikiSA.mp3'); 
+var audioKikiJ= new Audio('audio/KikiJ.mp3');
+var audioKikiLK= new Audio('audio/KikiLK.mp3');
 
 function loadDino() {
     dinoOpen = new Image();
     dinoClosed = new Image();
     dinoOpen.src = "images/dinoa3.png";
     dinoClosed.src = "images/dinof3.png";
-    var dinoLoader = new html5Preloader('audio/Kiki.mp3', 'audio/KikiB.mp3', 'audio/KikiG.mp3', 'audio/KikiM.mp3', 'audio/KikiR.mp3', 'audio/KikiI.mp3', 'audio/KikiC.mp3', 'audio/KikiF.mp3', 'audio/KikiSA.mp3', 'audio/KikiJ.mp3');
-    console.log("loaded!!! ");
-    document.getElementById('loading').innerHTML = "";
 }
 
-var imgsrc = null; //closed mouth dinokiki
-var kikiSays = new Array('ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki');
+var imgsrc = "images/dinof3.png";
+var kikiSays = new Array('ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki', 'happy spring!');
 var sizes = new Array('16px', '18px', '24px', '36px', '42px', '54px');
-var randomSays = 0;
 var randomSize = 0;
 var xPos = 0;
 var yPos = 0;
-var audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ); 
-
+var audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK); 
 var interval;
 var num = 0;
 var num2 = 0;
+var dinoOpen = null;
+var dinoClosed = null;
+var loaded = false;
+
 
 // this function changes the dinossaur image when you click on it
-function changeImage() {
-  if ( imgsrc == dinoClosed.src) {
-	document.images["pic"].src = dinoOpen.src;
-    document.images["pic"].alt = "dinokiki is talking!";
-    imgsrc  = dinoOpen.src;
-  }
-  else {
+function changeImage() { 
+  if ( imgsrc == dinoOpen.src) {
     document.images["pic"].src = dinoClosed.src;
     document.images["pic"].alt = "dinokiki is not talking right now!";
     imgsrc  = dinoClosed.src;
   }
+  else {
+    document.images["pic"].src = dinoOpen.src;
+    document.images["pic"].alt = "dinokiki is talking!";
+    imgsrc  = dinoOpen.src;
+  }
 }
 
-// this function adds audio to the dinossaur
 function sayKiki() {
-	if ( imgsrc  == dinoOpen.src ) {
+    if ( imgsrc  == dinoOpen.src ) {
 	   num2 = parseInt(Math.random()*audioArray.length);
 	   audioArray[num2].addEventListener('ended', function() {
        this.currentTime = 0;
        this.play();
 	   }, false);
        audioArray[num2].play();
-  }
+    }
   else {
 	audioArray[num2].pause();
   }
@@ -79,7 +75,7 @@ function callWrite(){
 // this function will write kiki on the screen
 function writeKiki(){
 	// functions to find random positions, text and font sizes.
-    randomSays = kikiSays[Math.floor(6*Math.random())];
+    randomSays = "<img style='opacity: 0.6;' src='images/kikiflower2.png' alt='happy spring!'>"+ kikiSays[Math.floor(kikiSays.length*Math.random())]+"<img style='opacity: 0.6;' src='images/kikiflower2.png' alt='happy spring!'>";
 	randomSize = sizes[Math.floor(7*Math.random())];
 	xPos = Math.floor(Math.random()*($(window).width()-100));
 	yPos = Math.floor(Math.random()*($(window).height()-100));
@@ -89,5 +85,30 @@ function writeKiki(){
 }
 
 function showMenu(){
-   $("nav").animate({height: 'toggle'}); 
+   $(".menu").animate({width: 'toggle'});
+   if ($(".menu").hasClass("hidden")){
+       if ($( window ).width() > 768)
+            $(".menu-mobile").css("padding-right", "180px"); 
+       else
+            $(".menu-mobile").css("padding-right", "130px");
+        $(".menu").removeClass("hidden");
+   }
+   else{
+        $(".menu-mobile").css("padding-right", "10px");
+        $(".menu").addClass("hidden");
+   }
 }
+
+$(function(){
+    if ($(window).width() < 1024){
+        $("body").swipeleft(function() { 
+            if ($(".menu").hasClass("hidden"))
+            showMenu(); 
+            console.log("swipte left");
+        });
+        $("body").swiperight(function() { 
+            if (!$(".menu").hasClass("hidden"))
+            showMenu(); 
+        });
+    }
+});

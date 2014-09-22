@@ -9,7 +9,7 @@
     font-style: normal;
 }
 
-html{
+html, body, content{
   height: 100%;
 }
 
@@ -21,6 +21,7 @@ body{
   height: 100%;
   line-height: 14pt;
   margin: 0;
+  overflow-x: hidden;
   padding: 0;
   z-index: 2;
 }
@@ -45,16 +46,47 @@ header{
 }
 
 main{
-  margin: 25px auto 0 auto;
+  margin: 25px auto 70px auto;
   max-width: 850px;
 }
 
 section{
   display: table-cell;
+  padding-top: 25px;
   vertical-align: top;
 }
 
-aside, nav{
+aside{
+  display: inline-block;
+  float: right;
+}
+
+.menu{
+  background-color: #282828;
+  display: none;
+  height: 100%;
+  position: fixed;
+  opacity: 0.95;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.menu ul li{
+  color: #fff;
+  display: block;
+  padding: 0;
+}
+
+.menu ul li a{
+  border-bottom: 1px solid #fff;
+  color: #fff;
+  display: block;
+  padding: 15px 10px;
+  width: 150px;
+}
+
+nav{
   display: inline-block;
 }
 
@@ -63,7 +95,7 @@ footer{
   bottom: 0;
   font-size: 11pt;
   left: 0;
-  margin: 15px 0 0 0;
+  margin: 0;
   opacity: 0.8;
   padding: 5px 0;
   position: fixed;
@@ -122,9 +154,13 @@ li{
 #pic{
   cursor: url('../images/micro.cur'), auto;
   display: block;
-  height: 50%;
+  width: 80%;
   margin: 0 auto;
   z-index: 4;
+}
+
+.dino-test{
+    width: 70%;
 }
 
 .img-dinokiki{
@@ -153,7 +189,7 @@ li{
   margin:0;
 }
 
-.btn-join{
+.btn-join, .btn-send, input{
   border: 2px solid #282828;
   border-radius: 10px;
   color: #282828;
@@ -167,6 +203,33 @@ li{
   text-align: center;
   white-space: nowrap;
 }
+
+.btn-join{
+  font-size: 22pt;
+  line-height: 24pt;
+  max-width: 365px;
+}
+
+.btn-send{
+  font-size: 18pt;
+  line-height: 20pt;
+  max-width: 300px;
+  padding: 15px 10px;
+}
+
+form{
+  text-align: center;
+}
+
+input{
+  background-color: transparent;
+  font-size: 11pt;
+  line-height: 13pt;
+  margin: 0 10px;
+  padding: 10px;
+}
+
+
 
 /* headings */
 h1{
@@ -196,7 +259,7 @@ h2:first-child{
   display: inline-block;
   font-size:  9pt;
   position: fixed;
-  right: 50px;
+  left: 50px;
 }
 
 .copyright a{
@@ -210,14 +273,27 @@ h2:first-child{
   padding: 10px;
 }
 
+.content-under{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.content-under p{
+  font-size: 14pt;
+  line-height: 16pt;
+  margin: 5px 0;
+}
 
 
 @media (min-width:1025px){
-  .btn-join:hover{
-    background-color: #282828;
-    border: 2px solid #7189E7;
-    color: #7189E7;
-    opacity: 0.8;
+  .kiki-form{
+    padding: 0 25px;
+    vertical-align: middle;
+  }
+  .btn-join:hover, .btn-send:hover, input:hover{
+    background-color: transparent;
+    border: 2px solid #282828;
+    color: #282828;
   }
 }
 
@@ -230,15 +306,11 @@ h2:first-child{
     font-size: 26pt;
   }
     
-  .btn-join{
-    background-color: #282828;
-    border: 2px solid #7189E7;
-    color: #7189E7;
-    font-size: 20pt;
-    opacity: 0.8;
+  .btn-join, .btn-send{
+    font-size: 20pt
   }
     
-  nav{
+  footer nav{
     display: none;
   }
     
@@ -255,7 +327,11 @@ h2:first-child{
     display: block;
     font-size: 14pt;
     line-height: 16pt;
-    padding: 10px 0;
+    padding: 0 0 10px 0;
+  }
+
+  menu ul li.btn-media{
+    padding-top: 10px;
   }
 
   footer nav ul li a:hover{
@@ -264,13 +340,20 @@ h2:first-child{
 
   .copyright{
     position: absolute;
-    right: 25px;
+    left: 25px;
   }
 
   main{
+    padding-bottom: 70px;
     width: 90%;
   }
 
+}
+
+@media (max-width:1024px){
+  a:hover{
+    text-decoration: none;
+  }
 }
 
 @media (min-width:768px) and (max-width: 1024px){
@@ -280,16 +363,48 @@ h2:first-child{
 }
 
 @media (max-width: 768px){
+  h1{
+    font-size: 18pt;
+  }
+  h2{
+    font-size: 14pt;
+    line-height: 16pt;
+  }
+  .copyright, .copyright a{
+    font-size: 7pt;
+  }
+  main{
+    margin-top: 5px;
+  }
   #pic{
     width: 100%;
   }
   
   .img-dinokiki{
     float: none;
+    margin-right: 0;
+    width: 30%;
   }
     
   section{
     display: block;
+    margin-top: 25px;
+    padding-top: 0;
+  }
+  section:first-child{
+    margin-top: 0;
+    text-align: center;
+  }
+    
+  .btn-join{
+    font-size: 14pt;
+    line-height: 16pt;
+    padding: 15px 10px;
+  }
+    
+  .menu ul li a{
+    padding: 15px 10px;
+    width: 100px;
   }
 }
 
