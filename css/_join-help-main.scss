@@ -1,0 +1,44 @@
+section {
+    display: table-cell;
+    padding-top: 25px;
+    vertical-align: top;
+    @media (max-width: 768px){
+        display: block;
+        margin-top: 25px;
+        padding-top: 0;
+    }
+    &:first-child {
+        @media (max-width: 768px){
+            margin-top: 0;
+            text-align: center;
+        }
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        li {
+            color: $textMainColor;
+            display: block;
+            font-family: helvetica, arial, sans-serif;
+            padding: 2px 0px;
+            margin: 0;
+            a {
+                color: $pColor;
+                display: block;
+                padding: 2px 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.img-dinokiki {
+    border: solid 2px $borderColor;
+    margin-right: 50px;
+    @media (max-width: 768px) {  
+        float: none;
+        margin-right: 0;
+        width: 30%;
+    }
+}

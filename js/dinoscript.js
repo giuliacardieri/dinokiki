@@ -84,30 +84,26 @@ function writeKiki(){
    $("<p>").addClass("kiki dino" + num).html(randomSays).appendTo($("body")).css({top: yPos + "px",left: xPos + "px",fontSize: randomSize}).delay(5000).queue(function() { $(this).remove(); });		
 }
 
-function showMenu(){
-   $(".menu").animate({width: 'toggle'});
-   if ($(".menu").hasClass("hidden")){
-       if ($( window ).width() > 768)
-            $(".menu-mobile").css("padding-right", "180px"); 
-       else
-            $(".menu-mobile").css("padding-right", "130px");
-        $(".menu").removeClass("hidden");
+function showMenu(){  
+    $("aside nav").animate({width: "toggle"});
+    if ($("aside nav").hasClass("mobile-hidden")) {
+        $(".menu-mobile").animate({"padding-right": "200px"}); 
+        $("aside nav").removeClass("mobile-hidden");
    }
-   else{
-        $(".menu-mobile").css("padding-right", "10px");
-        $(".menu").addClass("hidden");
+   else {
+       $(".menu-mobile").animate({"padding-right": "10px"}, "slow"); 
+       $("aside nav").addClass("mobile-hidden");
    }
 }
 
 $(function(){
     if ($(window).width() < 1024){
         $("body").swipeleft(function() { 
-            if ($(".menu").hasClass("hidden"))
+            if ($("aside nav").hasClass("hidden"))
             showMenu(); 
-            console.log("swipte left");
         });
         $("body").swiperight(function() { 
-            if (!$(".menu").hasClass("hidden"))
+            if (!$("aside nav").hasClass("hidden"))
             showMenu(); 
         });
     }

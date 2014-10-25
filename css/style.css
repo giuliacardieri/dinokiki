@@ -45,6 +45,7 @@ main {
       width: 100%; } }
 
 .btn-join {
+  font-size: 22pt;
   line-height: 24pt;
   max-width: 365px; }
   @media (max-width: 768px) {
@@ -66,21 +67,6 @@ section {
     section:first-child {
       margin-top: 0;
       text-align: center; } }
-  section ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    section ul li {
-      color: #282828;
-      display: block;
-      font-family: helvetica, arial, sans-serif;
-      padding: 2px 0px;
-      margin: 0; }
-      section ul li a {
-        color: #3d3d3d;
-        display: block;
-        padding: 2px 0;
-        margin: 0; }
 
 .img-dinokiki {
   border: solid 2px #282828;
@@ -91,47 +77,21 @@ section {
       margin-right: 0;
       width: 30%; } }
 
-@media (max-width: 1024px) {
-  nav {
-    background-color: #282828;
-    display: none;
-    height: 100%;
-    opacity: 0.95;
-    position: fixed;
-    right: 0;
-    top: 0;
-    z-index: 10; } }
-@media (min-width: 1025px) {
-  nav {
-    display: inline-block !important; } }
-nav ul {
-  display: inline-block;
-  margin-left: 50px;
-  padding-top: 10px; }
-  @media (max-width: 1024px) {
-    nav ul {
-      margin: 0; } }
-  @media (max-width: 1024px) {
-    nav ul li {
-      display: block; } }
-  nav ul li a {
-    bottom: 5px;
-    color: #fff;
-    position: relative; }
-    @media (max-width: 1024px) {
-      nav ul li a {
-        border-bottom: 1px solid #fff;
-        display: block;
-        font-size: 14pt;
-        line-height: 16pt;
-        padding: 15px 10px;
-        width: 150px; } }
-    @media (max-width: 768px) {
-      nav ul li a {
-        width: 100px; } }
-    @media (max-width: 1024px) {
-      nav ul li a:hover {
-        text-decoration: none; } }
+.friends ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .friends ul li {
+    color: #282828;
+    display: block;
+    font-family: helvetica, arial, sans-serif;
+    padding: 2px 0px;
+    margin: 0; }
+    .friends ul li a {
+      color: #3d3d3d;
+      display: block;
+      padding: 2px 0;
+      margin: 0; }
 
 footer {
   background-color: #282828;
@@ -146,10 +106,53 @@ footer {
   footer aside {
     display: inline-block;
     float: right; }
+  @media (max-width: 1024px) {
+    footer nav {
+      background-color: #282828;
+      display: none;
+      height: 100%;
+      opacity: 0.95;
+      position: fixed;
+      right: 0;
+      top: 0;
+      z-index: 10; } }
+  @media (min-width: 1025px) {
+    footer nav {
+      display: inline-block !important; } }
+  footer nav ul {
+    display: inline-block;
+    margin-left: 50px;
+    padding-top: 10px; }
+    @media (max-width: 1024px) {
+      footer nav ul {
+        margin: 0; } }
+    @media (max-width: 1024px) {
+      footer nav ul li {
+        display: block; } }
+    footer nav ul li a {
+      bottom: 5px;
+      color: #ffffff;
+      position: relative; }
+      @media (max-width: 1024px) {
+        footer nav ul li a {
+          border-bottom: 1px solid #fff;
+          color: #ffffff;
+          display: block;
+          font-size: 14pt;
+          line-height: 16pt;
+          padding: 15px 10px;
+          width: 150px; } }
+      @media (max-width: 768px) {
+        footer nav ul li a {
+          padding: 15px 10px;
+          width: 100px; } }
+      @media (max-width: 1024px) {
+        footer nav ul li a:hover {
+          text-decoration: none; } }
 
 @media (max-width: 1024px) {
   .btn-media {
-    color: #fff;
+    color: #ffffff;
     display: block;
     font-size: 14pt;
     line-height: 16pt;
@@ -166,17 +169,23 @@ footer {
 
 .copyright {
   bottom: 19px;
-  color: #fff;
+  color: #ffffff;
   display: inline-block;
   font-size: 9pt;
   position: fixed;
   left: 50px; }
+  @media (max-width: 768px) {
+    .copyright {
+      font-size: 7pt; } }
   @media (max-width: 1024px) {
     .copyright {
       position: absolute;
       left: 25px; } }
   .copyright a {
-    color: #fff; }
+    color: #ffffff; }
+    @media (max-width: 768px) {
+      .copyright a {
+        font-size: 7pt; } }
 
 .content-under {
   margin: 0 auto;
@@ -221,6 +230,7 @@ html, body, content {
 
 body {
   background-color: #7189E7;
+  color: #fff;
   font-family: 'CodeProDemoRegular';
   font-size: 12pt;
   height: 100%;
@@ -289,7 +299,7 @@ h1 {
   @media (max-width: 768px) {
     h1 {
       font-size: 18pt; } }
-  @media (min-width: 769px) and (max-width: 1024px) {
+  @media (max-width: 1024px) {
     h1 {
       font-size: 26pt; } }
 
@@ -305,4 +315,4 @@ h2 {
       font-size: 14pt;
       line-height: 16pt; } }
 
-/*# sourceMappingURL=dinostyle.css.map */
+/*# sourceMappingURL=style.css.map */
