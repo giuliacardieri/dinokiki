@@ -1,9 +1,8 @@
     nav {
         @media (max-width: 1024px) {
-            background-color: $textMainColor;
+            background-color: $footerColor;
             display: none;
             height: 100%;
-            opacity: 0.95;
             position: fixed;
             right: 0;
             top: 0;

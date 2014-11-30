@@ -42,3 +42,8 @@ section {
         width: 30%;
     }
 }
+
+.img-dinokiki-christmas {
+    @extend .img-dinokiki;
+    border: 0;
+}
