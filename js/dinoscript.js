@@ -14,54 +14,42 @@ var audioKikiLK = new Audio('audio/KikiLK.mp3');
 var audioKikiCH = new Audio('audio/KikiCH.mp3');
 var audioKikiCB = new Audio('audio/KikiCB.mp3');
 var audioKikiL = new Audio('audio/KikiL.mp3');
+var audioKikiE = new Audio('audio/KikiE.mp3');
+var audioKikiGA = new Audio('audio/KikiGA.mp3');
+var audioKikiN = new Audio('audio/KikiN.mp3');
 
 function loadDino() {
     dinoOpen = new Image();
     dinoClosed = new Image();
-    dinoOpen.src = "images/dinovermelho.png";
-    dinoClosed.src = "images/dinoapagado.png";
+    dinoOpen.src = "images/dinoa3.png";
+    dinoClosed.src = "images/dinof3.png";
 }
 
-var imgsrc = "images/dinoapagado.png";
+var imgsrc = "images/dinof3.png";
 var kikiSays = new Array('ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki');
 var sizes = new Array('16px', '18px', '24px', '36px', '42px', '54px');
 var randomSize = 0;
 var xPos = 0;
 var yPos = 0;
-var audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK, audioKikiCH, audioKikiCB, audioKikiL);
+var audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK, audioKikiCH, audioKikiCB, audioKikiL, audioKikiE, audioKikiGA, audioKikiN);
 var interval;
 var num = 0;
 var num2 = 0;
 var dinoOpen = null;
 var dinoClosed = null;
 var loaded = false;
-var i = 0;
-var christmas_lights_img = new Array ('images/dinovermelho.png', 'images/dinoamarelo.png', 'images/dinolaranja.png', 'images/dinoluzes.png');
-
-function changeLights(){
-    console.log("src = "+dinoOpen.src+" array="+christmas_lights_img[3]);
-    if (i==3) {
-        dinoOpen.src = christmas_lights_img[0];
-        i = 0;
-    }
-    else {
-        i++;
-        dinoOpen.src = christmas_lights_img[i];
-    }     
-    document.images["pic"].src = dinoOpen.src;
-}
 
 
 // this function changes the dinossaur image when you click on it
 function changeImage() {
-    if (imgsrc == dinoClosed.src) {
-        document.images["pic"].src = dinoOpen.src;
-        document.images["pic"].alt = "dinokiki is talking!";
-        imgsrc = dinoOpen.src;
-    } else {
+    if (imgsrc == dinoOpen.src) {
         document.images["pic"].src = dinoClosed.src;
         document.images["pic"].alt = "dinokiki is not talking right now!";
         imgsrc = dinoClosed.src;
+    } else {
+        document.images["pic"].src = dinoOpen.src;
+        document.images["pic"].alt = "dinokiki is talking!";
+        imgsrc = dinoOpen.src;
     }
 }
 
@@ -80,10 +68,9 @@ function sayKiki() {
 
 //this function defines the interval for write kiki on the screen.
 function callWrite() {
-    if (imgsrc != dinoClosed.src) {
+    if (imgsrc == dinoOpen.src) {
         interval = setInterval(function() {
             writeKiki()
-           changeLights();
         }, 500);
     } else {
         clearInterval(interval);
