@@ -1,4 +1,5 @@
 #DINOKIKI
+Available at http://dinokiki.com
 
 ##What is Dinokiki? 
 Dinokiki is an interactive website with one purpose: have fun!!!
