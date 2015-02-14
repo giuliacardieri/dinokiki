@@ -1,0 +1,48 @@
+    nav {
+        @media (max-width: 1024px) {
+            background-color: $footerColor;
+            display: none;
+            height: 100%;
+            position: fixed;
+            right: 0;
+            top: 0;
+            z-index: 10;
+        }
+        @media (min-width: 1025px) {
+            display: inline-block!important;
+        }
+        ul {
+            display: inline-block;
+            margin-left: 50px;
+            padding-top: 10px;
+            @media (max-width:1024px){
+                margin: 0;
+            }
+            li {
+                @media (max-width:1024px){
+                    display: block;
+                }
+                a {
+                    bottom: 5px;
+                    color: $footerTextColor;
+                    position: relative;
+                    @media (max-width:1024px){
+                        border-bottom: 1px solid $footerTextColor;
+                        display: block;
+                        font-size: 14pt;
+                        line-height: 16pt;
+                        padding: 15px 10px;
+                        width: 150px;
+                    }
+                    @media (max-width: 768px){  
+                        width: 100px;
+                    }
+                    &:hover {
+                        @media (max-width:1024px){
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }

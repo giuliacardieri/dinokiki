@@ -1,0 +1,33 @@
+$textMainColor: #FFFEFA;
+$pColor: #FFFEFA;
+$aColor: #FFFEFA;
+$kikiColor: #FFFEFA;
+$footerTextColor: #A62B2B;
+$backgroundColor: #A62B2B;
+$borderColor: #FFFEFA;
+$footerColor: #FFFEFA;
+
+.btn-padrao {
+    border: 2px solid $borderColor;
+    border-radius: 10px;
+    color: $textMainColor;
+    cursor: pointer;
+    font-family: 'CodeProDemoRegular';
+    font-size: 22pt;
+    line-height: 20pt;
+    margin: 20px auto;
+    max-width: 365px;
+    padding: 25px 15px;
+    text-align: center;
+    white-space: nowrap;
+    &:hover {
+        @media (min-width:1025px){
+            background-color: transparent;
+            border: 2px solid $borderColor;
+            color: $textMainColor;
+          }
+    }
+    @media (max-width:1024px){
+        font-size: 20pt;
+    }
+}

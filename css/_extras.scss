@@ -1,42 +1,186 @@
-.content-under {
-    margin: 0 auto;
-    width: 90%;
-    p {
-        font-size: 14pt;
-        line-height: 16pt;
-        margin: 5px 0;
+.balloons {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+}
+
+.balloon {
+    border-radius: 50% 50% 50% 50% / 40% 40% 60% 60%;
+    display: block;
+    height: 140px;
+    opacity: 0.8;
+    position: absolute;
+    width: 110px;
+    @media (max-width:767px){
+        height: 115px;
+        width: 80px;
+    }
+    &:after {
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        bottom: -5px;
+        content: "";
+        height: 0;
+        left: 45%;
+        position: absolute;
+        width: 0;
     }
 }
 
-.kiki-form {
-    @media (min-width:1025px){
-        padding: 0 25px;
-        vertical-align: middle;
-    }
+.balloon1:after,
+.balloon6:after,
+.balloon11:after {
+    border-bottom: 10px solid #D13848;
 }
 
-.btn-send {
-    @extend .btn-padrao;
-    font-size: 18pt;
-    line-height: 20pt;
-    max-width: 300px;
-    padding: 15px 10px;
+.balloon2:after,
+.balloon7:after,
+.balloon12:after {
+    border-bottom: 10px solid #1919B5;
 }
 
-
-form {
-    text-align: center;
+.balloon3:after,
+.balloon8:after,
+.balloon13:after {
+    border-bottom: 10px solid #D96C23;
 }
 
-input {
-    @extend .btn-padrao;
-    background-color: transparent;
-    font-size: 11pt;
-    line-height: 13pt;
-    margin: 0 10px;
-    padding: 10px;
+.balloon4:after,
+.balloon9:after,
+.balloon14:after {
+    border-bottom: 10px solid #B02C8F;
 }
 
-.dino-test {
-    width: 70%;
+.balloon5:after,
+.balloon10:after,
+.balloon15:after {
+    border-bottom: 10px solid #8F2CB0;
+}
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+.balloon1 {
+    background-color: #D13848;
+    left: 1%;
+    @include vendor-prefix(animation, flyingBalloon 12s);
+}
+
+.balloon2 {
+    background-color: #1919B5;
+    left: 6%;
+    @include vendor-prefix(animation, flyingBalloon 10s);
+}
+
+.balloon3 {
+    background-color: #D96C23;
+    left: 15%;
+    @include vendor-prefix(animation, flyingBalloon 17s);
+}
+
+.balloon4 {
+    background-color: #B02C8F;
+    left: 20%;
+    @include vendor-prefix(animation, flyingBalloon 14s);
+}
+
+.balloon5 {
+    background-color: #8F2CB0;
+    left: 22%;
+    @include vendor-prefix(animation, flyingBalloon 20s);
+}
+
+.balloon6 {
+    background-color: #D13848;
+    left: 30%;
+    @include vendor-prefix(animation, flyingBalloon 13s);
+}
+
+.balloon7 {
+    background-color: #1919B5;
+    left: 37%;
+    @include vendor-prefix(animation, flyingBalloon 21s);
+}
+
+.balloon8 {
+    background-color: #D96C23;
+    left: 44%;
+    @include vendor-prefix(animation, flyingBalloon 9s);
+}
+
+.balloon9 {
+    background-color: #B02C8F;
+    left: 50%;
+    @include vendor-prefix(animation, flyingBalloon 17s);
+}
+
+.balloon10 {
+    background-color: #8F2CB0;
+    left: 56%;
+    @include vendor-prefix(animation, flyingBalloon 11s);
+}
+
+.balloon11 {
+    background-color: #D13848;
+    left: 63%;
+    @include vendor-prefix(animation, flyingBalloon 12s);
+}
+
+.balloon12 {
+    background-color: #1919B5;
+    left: 72%;
+    @include vendor-prefix(animation, flyingBalloon 20s);
+}
+
+.balloon13 {
+    background-color: #D96C23;
+    left: 77%;
+    @include vendor-prefix(animation, flyingBalloon 10s);
+}
+
+.balloon14 {
+    background-color: #B02C8F;
+    left: 82%;
+    @include vendor-prefix(animation, flyingBalloon 9s);
+}
+
+.balloon15 {
+    background-color: #8F2CB0;
+    left: 90%;
+    @include vendor-prefix(animation, flyingBalloon 11s);
+}
+
+@-webkit-keyframes flyingBalloon {
+    from {bottom: -10%;}
+    to {bottom: 110%;}
+}
+
+@-moz-keyframes flyingBalloon {
+    from {bottom: -10%;}
+    to {bottom: 110%;}
+}
+
+@-ms-keyframes flyingBalloon {
+    from {bottom: -10%;}
+    to {bottom: 110%;}
+}
+
+@-o-keyframes flyingBalloon {
+    from {bottom: -10%;}
+    to {bottom: 110%;}
+}
+
+@keyframes flyingBalloon {
+    from {bottom: -10%;}
+    to {bottom: 110%;}
+}
+
+.balloon {
+    @include vendor-prefix(animation-timing-function, linear);
+    @include vendor-prefix(animation-iteration-count, infinite);
+    @include vendor-prefix(animation-delay, -100s);
+    position: absolute;
 }

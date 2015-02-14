@@ -1,0 +1,32 @@
+main {
+    margin: 25px auto 70px auto;
+    max-width: 850px;
+    @media (max-width: 768px){
+        margin-top: 5px;
+    }
+    @media (max-width: 1024px) {
+        padding-bottom: 70px;
+        width: 90%;
+    }
+}
+
+.kiki {
+    color: $kikiColor;
+    font-family: 'code';
+    position: absolute;
+    z-index: 3;
+}
+
+#pic {
+    cursor: url('../images/micro.cur'), auto;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    z-index: 4;
+    @media (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+
+

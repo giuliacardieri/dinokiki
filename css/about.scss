@@ -1,0 +1,36 @@
+section{
+    margin: 75px 0;
+    @media (max-width: 767px){
+        margin: 50px 0;
+    }
+    img{
+        border: 2px solid $borderColor;
+        border-radius: 10px;
+        @media (max-width: 767px){
+            width: 50%;
+        }
+    }
+}
+
+.dino-photo{
+    display: table-cell;
+    margin: auto;
+}
+
+.img-container{
+    margin-top: 25px;
+    text-align: center;
+    img{
+        margin: 0 10px;
+    }
+}
+
+table{
+    margin: 25px auto;
+    td{
+        padding: 5px 25px;
+        @media (max-width: 767px){
+            padding: 10px 0;
+        }
+    }
+}
