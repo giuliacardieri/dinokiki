@@ -1,0 +1,67 @@
+.form-wrapper{
+    display: table;
+    margin: 50px auto;
+}
+
+.dino-in-the-box{
+    display: table-cell;
+    width: 95%;
+    @media (max-width: 767px){
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+    }
+}
+
+form{
+    display: table-cell;
+    margin: 0 auto;
+    padding: 0 50px;
+    vertical-align: middle;
+    @media (max-width: 767px){
+        display: block;
+        padding: 0 25px;
+    }
+}
+
+input,textarea{
+    background-color: #282828;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+    display: block;
+    margin: 15px auto;
+    opacity: 0.8;
+    padding: 10px;
+    width: 250px;
+    @media (max-width: 767px){
+        font-size: 12pt;
+        padding: 20px;
+        width: 90%;
+    }
+}
+
+
+input[type="submit"]{
+    background-color: #4b4b4b;
+    font-family: code;
+    font-size: 12pt;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    @media (max-width: 767px){
+        font-size: 14pt;
+    }
+}
+
+
+span.error{
+    color: #901010;
+    font-size: 10pt;
+    @media (max-width: 767px){
+        font-size: 12pt;
+    }
+}
+
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px DimGrey inset;
+}

@@ -1,0 +1,54 @@
+@media (max-width:1024px){
+  .menu-mobile{
+    display: table-cell;
+  }
+
+  .btn-join, .btn-send{
+    font-size: 20pt
+  }
+
+    
+.btn-media{
+    color: #ffffff;
+    display: block;
+    font-size: 14pt;
+    line-height: 16pt;
+    padding: 0 0 10px 0;
+  }
+
+
+  menu ul li.btn-media{
+    padding-top: 10px;
+  }
+
+
+
+  .copyright{
+    position: absolute;
+    left: 25px;
+  }
+
+}
+
+
+
+
+@media (max-width: 768px){  
+  .img-dinokiki{
+    float: none;
+    margin-right: 0;
+    width: 30%;
+  }
+    
+  .btn-join{
+    font-size: 14pt;
+    line-height: 16pt;
+    padding: 15px 10px;
+  }
+    
+  .menu ul li a{
+    padding: 15px 10px;
+    width: 100px;
+  }
+}
+

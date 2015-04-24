@@ -1,65 +1,69 @@
-@import "base";
-@import "main";
-@import "join-help-main";
-@import "menu";
+$textColor: #282828;
+$aColor: #202020;
+$kikiColor: #fff;
+$footerTextColor: #fff;
+$backgroundColor:#6378ca;
+$borderColor: #282828;
+$footerColor: #282828;
+
+@import "index";
+@import "about";
+@import "sendyourkiki";
 @import "footer";
-@import "extras";
 
 @font-face {
-    font-family: 'CodeProDemoRegular';
+    font-family: 'code';
     src: url('Code_Pro_Demo-webfont.eot');
     src: url('Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'), url('Code_Pro_Demo-webfont.woff') format('woff'), url('Code_Pro_Demo-webfont.ttf') format('truetype'), url('Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
 
-html, body, content {
+@font-face {
+    font-family: 'raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+html, body, .content {
     height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
 }
 
 body {
     background-color: $backgroundColor;
-    font-family: 'CodeProDemoRegular';
+    color: $textColor;
+    font-family: helvetica, arial;
     font-size: 12pt;
-    height: 100%;
     line-height: 14pt;
-    margin: 0;
-    overflow-x: hidden;
-    padding: 0;
-    z-index: 2;
 }
 
 .content {
     display: inline-block;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 
 header {
-    color: $textMainColor;
-    font-family: 'CodeProDemoRegular';
-    line-height: 28pt;
     margin: auto;
     padding: 15px 0;
     text-align: center;
     width: 100%;
-}
-
-.kiki {
-    color: $kikiColor;
-    font-family: 'CodeProDemoRegular';
-    position: absolute;
-    z-index: 3;
+    img{
+        @media (max-width:1023px){
+            width: 85%;
+        }
+        @media (max-width:767px){
+            width: 90%;
+        }
+    }
 }
 
 p {
-    color: $pColor;
-    font-family: helvetica, arial, sans-serif;
-    font-size: 12pt;
-    line-height: 14pt;
+    font-size: 14pt;
+    line-height: 20pt;
     margin: 10px 0;
 }
 
@@ -73,37 +77,28 @@ a {
         }
     }
 }
-
-ul {
-    list-style-type: none;
-    margin: 2px;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-    padding-right: 10px;
-    margin: 0;
-}
      
 /* headings */
 h1 {
-    color: $textMainColor;
+    color: $textColor;
+    font-family: code;
     font-size: 30pt;
+    line-height: 32pt;
     margin: 10px;
     a:hover {
         text-decoration: none;
     }
     @media (max-width: 768px) {
         font-size: 18pt;
+        line-height: 20pt;
     }
     @media (min-width: 769px) and (max-width:1024px) {
         font-size: 26pt;
+        line-height: 28pt;
     }
 }
 
 h2 {
-    color: $textMainColor;
     font-size: 16pt;
     line-height: 18pt;
     margin: 20px 0 5px 0;
@@ -117,3 +112,12 @@ h2 {
 }
 
 
+/* general styling for about and send page */
+main.text{
+    margin: 50px auto;
+    max-width: 80%;
+}
+
+.center{
+  text-align: center;
+}
