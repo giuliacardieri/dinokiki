@@ -1,0 +1,256 @@
+$textColor: #282828;
+$aColor: #202020;
+$kikiColor: #fff;
+$footerTextColor: #fff;
+$backgroundColor: #6378ca;
+$borderColor: #282828;
+$footerColor: #282828;
+$successColor: #356125;
+$errorColor: #802525;
+$darkerColor: #282828;
+$darkSection: #343849;
+
+$borderRadius:10px;
+$twitter:#55acee;
+$facebook:#3b5998;
+$footerHeight:58px;
+
+@mixin placeholder($selector, $color){
+    #{$selector}::-webkit-input-placeholder {
+        color: $color;
+    }
+    #{$selector}::-moz-placeholder {
+        color: $color;
+    }
+    #{$selector}:-ms-input-placeholder {
+        color: $color;
+    }
+}
+
+@mixin transform($info) {
+  transform: $info;
+  -webkit-transform: $info;
+  -moz-transform: $info;
+  -ms-transform: $info;
+}
+
+@font-face {
+    font-family: 'code';
+    src: url('Code_Pro_Demo-webfont.eot');
+    src: url('Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'), url('Code_Pro_Demo-webfont.woff') format('woff'), url('Code_Pro_Demo-webfont.ttf') format('truetype'), url('Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+
+html,
+body,
+.content {
+    height: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+    padding: 0;
+    width: 100%;
+}
+
+body {
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-family: raleway, helvetica, arial;
+    font-size: 12pt;
+    line-height: 1.6;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    margin: auto;
+    padding: 0;
+    text-align: center;
+    width: 80%;
+    img {
+        @media (max-width: 1023px) {
+            width: 85%;
+        }
+        @media (max-width: 767px) {
+            width: 90%;
+        }
+    }
+}
+
+p {
+    font-size: 13pt;
+    line-height: 16pt;
+    margin: 10px 0;
+    &.small {
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+}
+
+a {
+    color: $aColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        @media (max-width: 1024px) {
+            text-decoration: none;
+        }
+    }
+}
+
+/* headings */
+
+h1 a {
+    color: $textColor;
+    font-family: code;
+    font-size: 30pt;
+    line-height: 32pt;
+    margin: 10px;
+    &:hover {
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        font-size: 16pt;
+        line-height: 1;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 26pt;
+        line-height: 28pt;
+    }
+}
+
+h2 {
+    font-size: 14pt;
+    line-height: 16pt;
+    margin: 10px 0 15px 0;
+    text-align: center;
+    &:first-child {
+        margin-top: 0;
+    }
+    @media (max-width: 768px) {
+        font-size: 14pt;
+        line-height: 16pt;
+    }
+}
+
+h3, h4 {
+    font-family: code;
+}
+
+.hidden {
+    display: none!important;
+}
+
+main {
+    margin: 0;
+    &.index {
+        margin-top: 5%;
+    }
+}
+
+section {
+    margin: 1.5% 10%;
+    text-align: justify;
+    &.dino-test-wrapper {
+        background-color: $darkSection;
+        margin: 0;
+        padding: 3.75% 10%;
+    }
+    img{
+        border: 1px solid $borderColor;
+        border-radius: $borderRadius;
+        margin: 0 -3px;
+        @media (max-width: 767px){
+            width: 50%;
+        }
+    }
+    &.dark {
+        background-color: $darkSection;
+        margin: 2.5% 0;
+    }
+    .icon-wrapper img {
+        max-width: 40px;
+    }
+}
+
+.big-photo {
+    margin: 0 0 1% 0;
+    img {
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+/* buttons */
+.btn, .kiki-form input[type="submit"], .kiki-form input[type="reset"], input[type="submit"] {
+    background-color: $borderColor;
+    border: 0;
+    border-radius: $borderRadius;
+    color: $kikiColor;
+    cursor: pointer;
+    font-family: code;
+    font-size: 11pt;
+    opacity: 0.8;
+    padding: 10px 15px;
+    &:hover {
+        @media (min-width: 1025px) {
+            background-color: $borderColor - 15;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
+    @media (max-width: 910px) {
+        font-size: 11pt;
+        line-height: 13pt;
+        width: 42%;
+    }
+    @media (max-width: 768px) {
+        display: inline-block;
+        margin: 1.5% 0;
+        width: 90%;
+    }
+}
+
+.icon-wrapper {
+    text-align: center;
+    img.icon {
+        border: 0;
+    }
+}
+
+.menu-icon {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    left: 2.5%;
+    line-height: 52px;
+    position: absolute;
+    top: 2%;
+    @media (min-width: 768px) {
+        display: none;
+    }
+    span {
+        color: $textColor;
+        font-size: 18pt;
+    }
+}
+
+@import "index";
+@import "about";
+@import "sendyourkiki";
+@import "footer";
+@import "game";
+@import "test";

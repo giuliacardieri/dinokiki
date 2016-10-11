@@ -1,0 +1,77 @@
+form {
+    margin: 0 auto;
+    padding: 0;
+    .form-element {
+        display: inline-block;
+        position: relative;
+        width: 49%;
+        @media (max-width: 767px) {
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+label {
+    color: $textColor;
+    display: none;
+    font-size: 9pt;
+    line-height: 11pt;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+}
+
+.kiki-form {
+    input {      
+        background-color: transparent;
+        border: 0;
+        border-bottom: 1px solid #282828;
+        color: #282828;
+        display: block;
+        font-family: helvetica, arial;
+        font-size: 11pt;
+        line-height: 13pt;
+        margin: 2.5% 0;
+        opacity: 0.9;
+        padding: 1.25% 0;
+        width: 100%;
+        &[type="submit"], &[type="reset"] {
+            display: inline-block;
+            width: auto;
+        }
+        @media (max-width: 767px){
+            font-size: 10pt;
+            padding: 15px 0 5px 0;
+            width: 100%;
+        }
+    }
+    .btn-wrapper {
+        text-align: right;
+    }
+}
+
+.form-element span{
+    display: block;
+    font-size: 10pt;
+    margin-top: -10px;
+    @media (max-width: 767px){
+        font-size: 12pt;
+    }
+}
+
+.error{
+    color: $errorColor;
+}
+
+.success{
+    color: $successColor;
+}
+
+input:-webkit-autofill{
+    -webkit-box-shadow: 0 0 0px 1000px $backgroundColor inset;
+}
+
+
+@include placeholder('input', $textColor);
+@include placeholder('textarea', $textColor);

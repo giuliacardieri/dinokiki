@@ -1,0 +1,115 @@
+.img-container{
+    padding: 2.5% 10%;
+    h2 {
+        color: #6378ca;
+        text-align: left;
+    }
+    img {
+        width: 25%;
+    }
+}
+
+.dino-friend-wrapper {
+    display: inline-block;
+    margin: -6px -2px;
+    width: 25%;
+    .dino-friend {
+        display: inline-block;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.dino-modal {
+    background-color: $footerColor;
+    border-radius: $borderRadius;
+    bottom: 0;
+    display: table;
+    height: 40vh;
+    left: 0;
+    margin: auto;
+    position: fixed;
+    right: 0;
+    width: 60vw;
+    top: 0;
+    &:before {
+        background-color: $footerColor;
+        content: '';
+        height: 100vh;
+        left: -20vw;
+        opacity: 0.5;
+        position: absolute;
+        top: -35vh;
+        width: 100vw;
+        z-index: -1;
+        @media (max-width: 1024px) {
+            left: -5vw;
+        }
+        @media (max-width: 768px) {
+            height: 110vh;
+            overflow: hidden;
+        }
+    }
+    img {
+        border-radius: $borderRadius;
+        display: table-cell;
+        margin: 50px 0 50px 50px;
+        max-width: 100%;
+        @media (max-width: 768px) {
+            margin: 25px 0 25px 25px;
+        }
+    }
+    @media (max-width: 1024px) {
+        height: 20vh;
+        width: 90vw;
+    }
+    @media (max-width: 768px) {
+        height: 40vh;
+        width: 90vw;
+    }
+}
+
+.modal-text-content {
+    color: $footerTextColor - 20;
+    display: table-cell;
+    padding: 50px 100px;
+    vertical-align: top;
+    width: 75%;
+    h3 {
+        margin: 0;
+        @media (max-width: 768px) {
+            font-size: 12pt;
+        }
+    }
+    h4 {
+        font-weight: normal;
+        margin: 0;
+    }
+    img {
+        border-radius: 0;
+        cursor: pointer;
+        display: inline-block;
+        margin: 10px 10px 0 0;
+        &.audio {
+            display: block;
+        }
+        @media (min-width: 1025px) {
+            &:hover {  
+                @include transform(scale(0.9));
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        padding: 25px 25px 25px 50px;
+    }
+}
+
+.close-icon {
+    color: $footerTextColor - 20;
+    cursor: pointer;
+    font-size: 14pt;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}

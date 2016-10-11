@@ -1,0 +1,109 @@
+footer {
+    background-color: $footerColor;
+    bottom: 0;
+    font-family: code;
+    font-size: 11pt;
+    left: 0;
+    margin: 0;
+    opacity: 0.9;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    @media (max-width: 767px) {
+        left: -50%;
+        top: 0;
+        width: 40%;
+    }
+    .media-wrapper {
+        bottom: 0;
+        line-height: $footerHeight;
+        margin: 0;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 5px;
+            vertical-align: top;
+            &:first-child {
+                line-height: 33px;
+            }
+        }
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    }
+    nav {
+        @media (min-width: 768px) and (max-width: 992px) {
+            margin: 0 10% 0 0;
+        }
+        ul {
+            margin: 10px 5px;
+            text-align: center;
+            @media (max-width: 767px) {
+                padding: 0;
+                margin: 0;
+            }
+            li {
+                display: inline-block;
+                padding: 0 5px;
+                @media (max-width: 1024px) {
+                    padding: 5px 10px;
+                }
+                @media (max-width: 767px) {
+                    display: block;
+                    padding: 0;
+                }
+                a {
+                    bottom: 0;
+                    color: $footerTextColor;
+                    position: relative;
+                    &:hover {
+                        @media (max-width: 1024px) {
+                            text-decoration: none;
+                        }
+                    }
+                    &.active {
+                        @media (max-width: 767px) {
+                            background-color: #111;
+                        }
+                    }
+                    @media (max-width: 767px) {
+                        border-bottom: 1px solid #555;
+                        bottom: 0;
+                        color: #f9f9f9;
+                        display: block;
+                        padding: 10px 0;
+                        position: relative;
+                    }
+                }
+                &.btn-media {
+                    max-height: 20px;
+                    vertical-align: bottom;
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.copyright {
+    bottom: 10px;
+    color: $footerTextColor;
+    display: block;
+    font-family: helvetica, arial;
+    font-size: 8pt;
+    line-height: 8pt;
+    opacity: 0.5;
+    text-align: center;
+    width: 100%;
+    a {
+        color: $footerTextColor;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+}

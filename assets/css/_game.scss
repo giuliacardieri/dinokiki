@@ -1,0 +1,84 @@
+.game-wrapper {
+	background-color: $footerColor;
+	margin: 0 0 2.5% 0;
+	padding: 50px;
+	h2 {
+		color: $footerTextColor - 20;
+		font-family: code;
+		font-weight: normal;
+		text-align: left;
+		@media (max-width: 767px) {
+			font-size: 12pt;
+		}
+	}
+	.img-wrapper {
+		margin: 25px auto;
+		text-align: center;
+		img { 
+			margin: 0 1%;
+			width: 21%;
+			@media (max-width: 767px) {
+				width: 42%;
+			}
+		}
+	}
+	@media (max-width: 767px) {
+		padding: 25px;
+	}
+}
+
+
+.ended {
+	.btn-wrapper .btn {
+		background-color: $footerColor - 15;
+		@media (min-width: 1025px) {
+			&:hover {
+				background-color: $footerColor - 25;
+			}
+		}
+	}
+	img {
+		display: table-cell;
+		width: 85%;
+		@media (max-width: 767px) {
+			display: block;
+			margin: auto;
+			width: 55%;
+		}
+	}
+	.center-align-ended-content {
+		display: table;
+		margin: auto;
+		width: 80%;
+		@media (max-width: 767px) {
+			width: 100%;
+		}
+	}
+	.text-container-ended {
+		display: table-cell;
+		padding: 0 25px;
+		vertical-align: middle;
+		width: 80%;
+		@media (max-width: 767px) {
+			display: block;
+			padding: 0;
+			width: 100%;
+		}
+	}
+	h3 {
+		color: $footerTextColor;
+		font-size: 20pt;
+		margin: 0 0 10px 0;
+		@media (max-width: 767px) {
+			font-size: 14pt;
+		}
+	}
+	h4 {
+		color: $footerTextColor;
+		font-size: 18pt;
+		margin: 0;
+		@media (max-width: 767px) {
+			font-size: 1pt;
+		}
+	}
+}

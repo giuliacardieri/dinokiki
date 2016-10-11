@@ -1,0 +1,19 @@
+/* dynamic kikis when dino is clicked */
+.kiki {
+  color: $kikiColor;
+  font-family: 'code';
+  position: absolute;
+  z-index: 3;
+}
+
+/* dinokiki's photo */
+#pic {
+  cursor: url('../images/micro.cur'), auto;
+  display: block;
+  width: 55%;
+  margin: 0 auto;
+  z-index: 4;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
