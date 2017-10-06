@@ -534,6 +534,4 @@ $(function() {
             endGame();
      });
 
-    loadDino();
-
 });
