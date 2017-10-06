@@ -14,7 +14,7 @@ Dinokiki changes its style for some special dates such as halloween, christmas a
 No. It changes constantly and you can help if you want :D
 
 ## Can I help?
-Sure! If you have any idea, want to solve an issue, send a kiki or just want to say hi send me a message. Don't forget to follow @mrdinokiki on twitter, facebook and instagram for updates!
+Sure! If you have any idea, want to solve an issue, send a kiki or just want to say hi send me a message. Don't forget to follow @mrdinokiki on [twitter](https://twitter.com/mrdinokiki), [facebook](https://facebook.com/mrdinokiki) and [instagram](https://instagram.com/mrdinokiki) for updates!
 
 ## How I can run Dinokiki on my computer?
 To run Dinokiki in your machine you need to have a local PHP server.
