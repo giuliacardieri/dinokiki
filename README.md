@@ -20,3 +20,10 @@ Sure! If you have any idea, want to solve an issue, send a kiki or just want to 
 To run Dinokiki in your machine you need to have a local PHP server.
 If you want to change the CSS files you'll need to have [Sass](http://sass-lang.com/) installed and compile it.
 
+You have to setup a few things on CodeIgniter. 
+1. At application/config/config.php you have to change the base_url to the url you'll use on your machine.
+2. At application/config/database.php you have to update the database info with your database.
+ps: if you want to have exactly the same database content as the real website, download the [sql file](http://giuliacardieri.com/dinokiki.sql).
+
+
+
