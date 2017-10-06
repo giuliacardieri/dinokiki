@@ -32,7 +32,11 @@ var dinoOpen = null
 , audioKikiAC = new Audio(base_assets + 'audio/KikiAC.mp3')  // Carol's Kiki
 , audioKikiMI = new Audio(base_assets + 'audio/KikiMI.mp3')  // Kiki Mission Impossible feat Carol and Keiko
 , audioKikiHM = new Audio(base_assets + 'audio/KikiHM.mp3')  // Kiki Hakuna Matata feat Keiko
-, audioKikiH = new Audio(base_assets + 'audio/KikiH.mp3');  // Henrique's Kiki
+, audioKikiH = new Audio(base_assets + 'audio/KikiH.mp3')  // Henrique's Kiki
+, audioKikiD = new Audio(base_assets + 'audio/KikiD.mp3')  // Deivison's Kiki
+, audioKikiGOT = new Audio(base_assets + 'audio/KikiGOT.mp3')  // Kimiko's Kiki
+, audioKikiMC = new Audio(base_assets + 'audio/KikiMC.mp3') // Marelos's Kiki
+, audioKikiVR = new Audio(base_assets + 'audio/KikiVR.mp3');  // Vinicius's Kiki
 
 
 var image_names = {
@@ -156,6 +160,22 @@ var image_names = {
         img: 'antipattern.png',
         audio: audioKikiH
     },
+    30: {
+        img: 'reporter.png',
+        audio: audioKikiD
+    },
+    31: {
+        img: 'got.png',
+        audio: audioKikiGOT
+    },
+    32: {
+        img: 'canadian.png',
+        audio: audioKikiMC
+    },
+    33: {
+        img: 'lost.png',
+        audio: audioKikiVR
+    },
 };
 
 var ended = {
@@ -164,14 +184,9 @@ var ended = {
     'great': "<h3>You're Kikiawesome!</h3><h4>Let's be super friends!</h4>",
 }
 
-var loadDino = function loadDino() {
-    dinoOpen = new Image();
-    dinoClosed = new Image();
-    dinoOpen.src = base_assets + "images/dinoa4.png";
-    dinoClosed.src = base_assets + "images/dinof4.png";
-}
+var share;
 
-var imgsrc = "images/dinof-bday.png"
+var dinoAberto = false 
 , kikiSays = new Array('ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki')
 , sizes = new Array('16px', '18px', '24px', '36px', '42px', '54px')
 , randomSize = 0
@@ -187,24 +202,24 @@ var imgsrc = "images/dinof-bday.png"
 , audioGame = null
 , rightAnswers = 0
 , gameNum = 1
-, audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK, audioKikiCH, audioKikiCB, audioKikiL, audioKikiE, audioKikiGA, audioKikiN, audioKikiJC, audioKikiJC1, audioKikiT, audioKikiV, audioKikiAC, audioKikiY, audioKikiG2, audioKiki2, audioKikiK, audioKikiK2, audioKikiHM, audioKikiMI, audioKikiH);
+, audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK, audioKikiCH, audioKikiCB, audioKikiL, audioKikiE, audioKikiGA, audioKikiN, audioKikiJC, audioKikiJC1, audioKikiT, audioKikiV, audioKikiAC, audioKikiY, audioKikiG2, audioKiki2, audioKikiK, audioKikiK2, audioKikiHM, audioKikiMI, audioKikiH, audioKikiD, audioKikiGOT, audioKikiMC, audioKikiVR);
 
 // this function changes the dinossaur image when you click on it
 var changeImage = function changeImage() {
-    if (imgsrc == dinoOpen.src) {
-        document.images["pic"].src = dinoClosed.src;
-        document.images["pic"].alt = "dinokiki is not talking right now!";
-        imgsrc = dinoClosed.src;
+    if (dinoAberto) {
+        $('.dino-aberto').addClass('hidden');
+        $('.dino-fechado').removeClass('hidden');
+        dinoAberto = false;
     } else {
-        document.images["pic"].src = dinoOpen.src;
-        document.images["pic"].alt = "dinokiki is talking!";
-        imgsrc = dinoOpen.src;
+        $('.dino-fechado').addClass('hidden');
+        $('.dino-aberto').removeClass('hidden');
+        dinoAberto = true;
     }
 }
 
 var sayKiki = function sayKiki(test) {
     var audio = '';
-    if (imgsrc == dinoOpen.src) {
+    if (dinoAberto) {
         if (test)
             audio = testKiki;
         else {
@@ -226,7 +241,7 @@ var sayKiki = function sayKiki(test) {
 
 //this function defines the interval for write kiki on the screen.
 var callWrite = function callWrite() {
-    if (imgsrc == dinoOpen.src) {
+    if (dinoAberto) {
         interval = setInterval(function() {
             writeKiki()
         }, 500);
@@ -244,7 +259,7 @@ var writeKiki = function writeKiki() {
     yPos = Math.floor(Math.random() * ($(window).height() - 100));
     num = parseInt(Math.random() * 100, 10);
     // the random text will be added dynamically to a p tag. 
-    $("<p>").addClass("kiki dino" + num).html(randomSays).appendTo($("body")).css({
+    $("<p>").addClass("kiki dino" + num).html(randomSays).appendTo($(".kiki-wrapper")).css({
         top: yPos + "px",
         left: xPos + "px",
         fontSize: randomSize
@@ -316,21 +331,6 @@ var validateForm = function validateForm(isTest) {
     return false;
 };
 
-var showMenu = function showMenu() {
-    $("footer").addClass('menu-mobile').css('display', 'block').animate({
-        "left": "0px"
-    });
-};
-
-var hideMenu = function hideMenu() {
-    setTimeout(function(){
-        $("footer").removeClass("menu-mobile");
-    }, 500);
-    $("footer").animate({
-        "left": "-50%"
-    })
-};
-
 var playGame = function startGame() {
     var randomAudio
     , randomImg;
@@ -345,7 +345,8 @@ var playGame = function startGame() {
     randomNum = parseInt(Math.random() * Object.keys(image_names).length);
     randomAudio = audioArray[randomNum];
     insertImages(randomNum);
-    audioGame = randomAudio;    
+    audioGame = randomAudio;
+    audioGame.currentTime = 0;   
     audioGame.play();
 };
 
@@ -354,7 +355,6 @@ var insertImages = function insertImages(chosen_img) {
     , img
     , add_class
     , num;
-
 
     while(randomImgs.length < 3){
         num = parseInt(Math.random() * Object.keys(image_names).length);
@@ -397,24 +397,40 @@ var endGame = function endGame() {
         $('.ended img').attr('src', base_assets + 'images/great.png');
         $('.text-container-ended').append(ended['great']);
     }
+
+    makeShare();
+};
+
+var makeShare = function makeShare() {
+    share = {
+        'bad': "Help me! I chose only " + rightAnswers + "/10 correct kikis on the Kiki Game!",
+        'ok': "Nice! I chose " + rightAnswers + "/10 correct kikis on the Kiki Game!",
+        'great': "Yeah! I chose " + rightAnswers + "/10 correct kikis on the Kiki Game!",
+    }
 };
 
 $(function() {
 
-    $(".share-btn").click(function() {
+    $('.share-btn').click(function() {
+        if (rightAnswers < 5)
+            frase = share['bad'];
+        else if (rightAnswers <8)
+            frase = share['ok'];
+        else 
+            frase = share['great'];
         FB.ui({
           method: 'share',
           display: 'popup',
-          hashtag: '#playthekikigame',
-          quote: 'Yeah! I chose 10/10 correct kikis on the Kiki Game!',
+          hashtag: '#playthekikigame #dinokiki',
+          quote: frase,
           href: 'http://dinokiki.com/index.php/game'
         }, function(response){});
     });
 
 
-     $("#pic").click(function() {
+     $('svg').on('click', function() {
         changeImage();
-        if ($("#pic").hasClass("test"))
+        if ($('.dino-fechado').hasClass("test"))
             sayKiki(true);
         else
             sayKiki(false);
@@ -474,11 +490,7 @@ $(function() {
                 $('.messageSucess').removeClass('hidden');
             });
         }
-     });    
-
-    $('.menu-icon').on('click', function() {
-        showMenu();
-    });  
+     });      
 
     $('.dino-friend').on('click', 'img', function() {
         $.get($(this).data("href"), function(data) {
@@ -490,11 +502,6 @@ $(function() {
     $('.dino-modal').on('click', '.audio', function() {
         audioAbout = eval($(this).data("href"));
         audioAbout.play();
-    });
-
-     $("body").on('click', function(e) {
-        if ($(window).width() < 768 && e.target.tagName !== 'FOOTER' && e.target.classList[0] !== 'menu-btn-span' && e.target.classList[0] !== 'menu-icon') 
-            hideMenu();
     });
 
      $('.dino-modal').on('click', '.close-icon', function() {
@@ -526,17 +533,6 @@ $(function() {
         else 
             endGame();
      });
-
-    if ($(window).width() < 768) {
-        $("body").swipeleft(function() {
-            if ($("footer").hasClass("menu-mobile"))
-                hideMenu();
-        });
-        $("body").swiperight(function() {
-            if (!$("footer").hasClass("menu-mobile"))
-                showMenu();
-        });
-    }
 
     loadDino();
 

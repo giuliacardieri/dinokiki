@@ -27,13 +27,19 @@
 	}
 }
 
+.btn-wrapper {
+	margin: 0 0 100px 0;
+}
 
 .ended {
-	.btn-wrapper .btn {
-		background-color: $footerColor - 15;
-		@media (min-width: 1025px) {
-			&:hover {
-				background-color: $footerColor - 25;
+	.btn-wrapper {
+		margin: 10px 0;
+		.btn {
+			background-color: $footerColor - 15;
+			@media (min-width: 1025px) {
+				&:hover {
+					background-color: $footerColor - 25;
+				}
 			}
 		}
 	}
@@ -78,7 +84,7 @@
 		font-size: 18pt;
 		margin: 0;
 		@media (max-width: 767px) {
-			font-size: 1pt;
+			font-size: 12pt;
 		}
 	}
 }

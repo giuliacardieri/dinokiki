@@ -11,6 +11,7 @@ class About extends CI_Controller {
     {
         $data['title'] = 'About';
         $data['kikis'] = $this->kiki_model->get_kikis();
+        $data['active'] = 'about';
         
         $this->load->view('templates/head', $data);
         $this->load->view('about');

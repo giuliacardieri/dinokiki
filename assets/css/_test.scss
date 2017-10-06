@@ -22,3 +22,19 @@
     text-align: center;
 }
 
+#pic {
+    cursor: url(../images/micro.cur),auto;
+    display: block;
+    margin: 0 auto;
+    width: 55%;
+    z-index: 4;
+}
+
+.dino-test-wrapper {
+    .dino-fechado, .dino-aberto {
+        text-align: center;
+        svg {
+            width: 50vw;
+        }
+    }
+}

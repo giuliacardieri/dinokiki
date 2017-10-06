@@ -16,6 +16,7 @@
     .dino-friend {
         display: inline-block;
         img {
+            cursor: pointer;
             width: 100%;
         }
     }
@@ -33,6 +34,7 @@
     right: 0;
     width: 60vw;
     top: 0;
+    z-index: 3;
     &:before {
         background-color: $footerColor;
         content: '';

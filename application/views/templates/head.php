@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="http://dinokiki.com" />
+    <meta property="og:url" content="http://dinokiki.com/" />
     <meta property="og:title" content="Dinokiki" />
     <meta property="og:site_name" content="Dinokiki" />
-    <meta property="og:image" content="http://dinokiki.com/images/play-game.png" />
+    <meta property="og:image" content="http://dinokiki.com/dinomain.png" />
+    <meta property="og:description" content="Dinokiki is a dinosaur that speaks the Kiki language with his friends. Come for a visit!" />
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -48,9 +49,6 @@
 
     <div class="content">
 
-        <header>         
-            <button class="menu-icon" type="button" id="menu-btn">
-                <span class="menu-btn-span">&#9776;</span>
-            </button>
+        <header>
             <h1><a href="<?php echo site_url('home'); ?>">Hello, I'm Dinokiki and this is my home!</a></h1>
         </header>

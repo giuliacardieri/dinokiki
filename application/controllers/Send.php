@@ -10,6 +10,7 @@ class Send extends CI_Controller {
     public function index()
     {
         $data['title'] = 'Send your Kiki';
+        $data['active'] = 'send';
         
         $this->load->view('templates/head', $data);
         $this->load->view('send');

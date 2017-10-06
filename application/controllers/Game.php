@@ -11,6 +11,7 @@ class Game extends CI_Controller {
     {
         $data['title'] = 'Play The Kiki Game';
         $data['kikis'] = $this->kiki_model->get_kikis();
+        $data['active'] = 'game';
         
         $this->load->view('templates/head', $data);
         $this->load->view('game');
