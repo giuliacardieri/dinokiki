@@ -204,13 +204,6 @@ var dinoAberto = false
 , gameNum = 1
 , audioArray = new Array(audioKiki, audioKikiB, audioKikiG, audioKikiM, audioKikiR, audioKikiI, audioKikiC, audioKikiF, audioKikiSA, audioKikiJ, audioKikiLK, audioKikiCH, audioKikiCB, audioKikiL, audioKikiE, audioKikiGA, audioKikiN, audioKikiJC, audioKikiJC1, audioKikiT, audioKikiV, audioKikiAC, audioKikiY, audioKikiG2, audioKiki2, audioKikiK, audioKikiK2, audioKikiHM, audioKikiMI, audioKikiH, audioKikiD, audioKikiGOT, audioKikiMC, audioKikiVR);
 
-
-
-
-
-
-
-
 // this function changes the dinossaur image when you click on it
 var changeImage = function changeImage() {
     if (dinoAberto) {
@@ -417,7 +410,6 @@ var makeShare = function makeShare() {
 };
 
 $(function() {
-
     //close dino-modals (from about and  others ) hitting ESC button
     $(document).keyup(function(e) {
         if ($('.dino-modal').css("display") == 'table' && e.keyCode == 27 ) {
@@ -427,8 +419,6 @@ $(function() {
             $('.dino-modal').addClass('hidden');
         }
     });
-
-
 
     $('.share-btn').click(function() {
         if (rightAnswers < 5)
