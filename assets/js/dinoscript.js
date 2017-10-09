@@ -410,6 +410,15 @@ var makeShare = function makeShare() {
 };
 
 $(function() {
+    //close dino-modals (from about and  others ) hitting ESC button
+    $(document).keyup(function(e) {
+        if ($('.dino-modal').css("display") == 'table' && e.keyCode == 27 ) {
+            if (audioAbout) {
+                audioAbout.pause();
+            }
+            $('.dino-modal').addClass('hidden');
+        }
+    });
 
     $('.share-btn').click(function() {
         if (rightAnswers < 5)
@@ -498,6 +507,7 @@ $(function() {
         });
         $('.dino-modal').removeClass('hidden');
     });
+
 
     $('.dino-modal').on('click', '.audio', function() {
         audioAbout = eval($(this).data("href"));
