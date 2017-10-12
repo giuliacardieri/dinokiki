@@ -2,10 +2,7 @@
     <nav>
         <ul>
             <li>
-                <a <?php if ($active == 'home') {echo "class='active'";
-}
-
-?> href="<?php echo site_url('home');?>">
+                <a <?php if ($active == 'home') { echo "class='active'"; }?> href="<?php echo site_url('home');?>">
                   <span class="hidden-xs hidden-sm">Home</span>
                   <div class="menu-svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -15,10 +12,7 @@
                 </a>
             </li>
             <li>
-                <a <?php if ($active == 'about') {echo "class='active'";
-}
-
-?> href="<?php echo site_url('about');?>">
+                <a <?php if ($active == 'about') {echo "class='active'";}?> href="<?php echo site_url('about');?>">
                   <span class="hidden-xs hidden-sm">About</span>
                   <div class="menu-svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -28,10 +22,7 @@
                 </a>
             </li>
             <li>
-                <a <?php if ($active == 'game') {echo "class='active'";
-}
-
-?> href="<?php echo site_url('game');?>">
+                <a <?php if ($active == 'game') {echo "class='active'";}?> href="<?php echo site_url('game');?>">
                   <span class="hidden-xs hidden-sm">Play The Kiki Game</span>
                   <div class="menu-svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -41,10 +32,7 @@
                 </a>
             </li>
             <li>
-                <a <?php if ($active == 'send') {echo "class='active'";
-}
-
-?> href="<?php echo site_url('send');?>">
+                <a <?php if ($active == 'send') {echo "class='active'";}?> href="<?php echo site_url('send');?>">
                   <span class="hidden-xs hidden-sm">Send a Kiki</span>
                   <div class="menu-svg-wrapper">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
