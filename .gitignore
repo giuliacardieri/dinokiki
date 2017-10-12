@@ -20,3 +20,13 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
+
+
+
+# Config.php should be added to gitignore
+# database.php must not be commited, just to avoid db exposure
+
+application/config/config.php
+application/config/database.php
+
+
