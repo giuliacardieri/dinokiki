@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+     - ./data:/var/lib/mysql
+     - ./dump/dinokiki.sql:/docker-entrypoint-initdb.d/dump.sql
+    environment:
+     - MYSQL_ROOT_PASSWORD=lolala
+     - MYSQL_DATABASE=dinokiki
+  php:
+    build: .
+    ports:
+     - "8081:80"
+     - "4431:443"
+    volumes:
+     - ./:/var/www/html
+    links:
+     - db

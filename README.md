@@ -25,5 +25,8 @@ You have to setup a few things on CodeIgniter.
 2. At application/config/database.php you have to update the database info with your database.
 ps: if you want to have exactly the same database content as the real website, download the [sql file](http://giuliacardieri.com/dinokiki.sql).
 
-
-
+### Run with docker
+If you want run quickly, will can use a docker.
+run `docker-compose up -d`.
+wait a minute ;) and
+access [http://localhost:8081](http://localhost:8081)
