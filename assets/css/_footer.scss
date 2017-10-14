@@ -53,6 +53,8 @@ footer {
                         fill: $textColor + 100;
                     }
                     &.active {
+                        color: $backgroundColor;
+                        font-weight: bold;
                         svg {
                             fill: $textColor;
                         }
