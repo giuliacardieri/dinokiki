@@ -355,7 +355,9 @@ p.kiki {
     max-width: 100%; }
     @media (max-width: 768px) {
       .dino-modal img {
-        margin: 25px 0 25px 25px; } }
+        margin: 25px 25px 25px 25px;
+        display: block;
+        max-width: 75%; } }
   @media (max-width: 1024px) {
     .dino-modal {
       height: 20vh;
@@ -394,7 +396,8 @@ p.kiki {
         -ms-transform: scale(0.9); } }
   @media (max-width: 768px) {
     .modal-text-content {
-      padding: 25px 25px 25px 50px; } }
+      padding: 0px 25px 25px 25px;
+      display: block; } }
 
 .close-icon {
   color: #ebebeb;
