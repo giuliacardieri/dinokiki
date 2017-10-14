@@ -386,6 +386,8 @@ p.kiki {
     margin: 10px 10px 0 0; }
     .modal-text-content img.audio {
       display: block; }
+    .modal-text-content img.audiostop {
+      display: block; }
     @media (min-width: 1025px) {
       .modal-text-content img:hover {
         transform: scale(0.9);

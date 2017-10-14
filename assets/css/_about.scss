@@ -96,8 +96,11 @@
         &.audio {
             display: block;
         }
+        &.audiostop {
+            display: block;
+        }
         @media (min-width: 1025px) {
-            &:hover {  
+            &:hover {
                 @include transform(scale(0.9));
             }
         }
