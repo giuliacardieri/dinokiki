@@ -532,8 +532,11 @@ footer {
         position: relative; }
         footer nav ul li a svg {
           fill: #8c8c8c; }
-        footer nav ul li a.active svg {
-          fill: #282828; }
+        footer nav ul li a.active {
+          color: #6378ca;
+          font-weight: bold; }
+          footer nav ul li a.active svg {
+            fill: #282828; }
 
 @media (min-width: 992px) {
   .menu-svg-wrapper {
