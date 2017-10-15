@@ -1,4 +1,11 @@
 <?php
+/**
+ * config-sample.php 
+ * 
+ * Please change this file to fit your environment needs, then rename it 
+ * to config.php
+ */
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 /*
