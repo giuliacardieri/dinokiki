@@ -2,6 +2,10 @@
 .DS_Store
 Desktop.ini
 
+#Private files
+application/config/database.php
+application/config/config.php
+
 # Thumbnail cache files
 ._*
 Thumbs.db
