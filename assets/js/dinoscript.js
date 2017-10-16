@@ -9,7 +9,7 @@ var dinoOpen = null
 , audioKikiI = new Audio(base_assets + 'audio/KikiI.mp3')  // Raquel's Kiki
 , audioKikiC = new Audio(base_assets + 'audio/KikiC.mp3')  // Caio Mahin's Kiki
 , audioKikiF = new Audio(base_assets + 'audio/KikiF.mp3')  // Felipe's Kiki
-, audioKikiSA = new Audio(base_assets + 'audio/KikiSA.mp3')  // Kiki Staying Alive feat Raquel, Sara, Nicole and Guilherme 
+, audioKikiSA = new Audio(base_assets + 'audio/KikiSA.mp3')  // Kiki Staying Alive feat Raquel, Sara, Nicole and Guilherme
 , audioKikiJ = new Audio(base_assets + 'audio/KikiJ.mp3')  // Jerome's Kiki
 , audioKikiLK = new Audio(base_assets + 'audio/KikiLK.mp3')  // Giovani's and Raquel's Kiki
 , audioKikiCH = new Audio(base_assets + 'audio/KikiCH.mp3')  // Caio Hideki's Kiki
@@ -22,7 +22,7 @@ var dinoOpen = null
 //, audioKikiJD = new Audio(base_assets + 'audio/KikiJD.mp3')  // Jessica's Kiki
 , audioKikiJC = new Audio(base_assets + 'audio/KikiJC.mp3')  // Jessica's Little Cousin 1 Kiki
 , audioKikiJC1 = new Audio(base_assets + 'audio/KikiJC1.mp3')  // Jessica's Little Cousin 2 Kiki
-, audioKikiT = new Audio(base_assets + 'audio/KikiT.mp3')  // Tamires' Kiki 
+, audioKikiT = new Audio(base_assets + 'audio/KikiT.mp3')  // Tamires' Kiki
 , audioKikiV = new Audio(base_assets + 'audio/KikiV.mp3')  // Vitória's Kiki
 , audioKikiY = new Audio(base_assets + 'audio/KikiY.mp3')  // Yumi's Kiki
 , audioKikiG2 = new Audio(base_assets + 'audio/KikiG2.mp3')  // Guilherme's Birthday Kiki
@@ -186,7 +186,7 @@ var ended = {
 
 var share;
 
-var dinoAberto = false 
+var dinoAberto = false
 , kikiSays = new Array('ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki')
 , sizes = new Array('16px', '18px', '24px', '36px', '42px', '54px')
 , randomSize = 0
@@ -258,7 +258,7 @@ var writeKiki = function writeKiki() {
     xPos = Math.floor(Math.random() * ($(window).width() - 100));
     yPos = Math.floor(Math.random() * ($(window).height() - 100));
     num = parseInt(Math.random() * 100, 10);
-    // the random text will be added dynamically to a p tag. 
+    // the random text will be added dynamically to a p tag.
     $("<p>").addClass("kiki dino" + num).html(randomSays).appendTo($(".kiki-wrapper")).css({
         top: yPos + "px",
         left: xPos + "px",
@@ -298,13 +298,13 @@ var validateForm = function validateForm(isTest) {
     , proceed = true
     , data;
 
-    file_ext = kiki ? (kiki.name).split('.') : 'null'; 
+    file_ext = kiki ? (kiki.name).split('.') : 'null';
 
     if (!kiki || (file_ext[1].toLowerCase() !== "mp3" && file_ext[1].toLowerCase() !== "m4a" && file_ext[1].toLowerCase() !== "wav")) {
         proceed = false;
         $('.kikiError').removeClass('hidden');
     }
-    else 
+    else
         $('.nameError').addClass('hidden');
 
     if (name.length < 3) {
@@ -318,16 +318,16 @@ var validateForm = function validateForm(isTest) {
         proceed = false;
     } else
         $('.emailError').addClass('hidden');
-    
+
     data = {
         'name' : name,
         'email' : email,
         'kiki' : kiki,
         'twitter' : twitter,
     };
-    
+
     if (proceed)
-        return data; 
+        return data;
     return false;
 };
 
@@ -346,7 +346,7 @@ var playGame = function startGame() {
     randomAudio = audioArray[randomNum];
     insertImages(randomNum);
     audioGame = randomAudio;
-    audioGame.currentTime = 0;   
+    audioGame.currentTime = 0;
     audioGame.play();
 };
 
@@ -364,7 +364,7 @@ var insertImages = function insertImages(chosen_img) {
                 found = true;
                 break;
             }
-        if (!found) 
+        if (!found)
             randomImgs[randomImgs.length] = num;
     }
     randomImgs[3] = chosen_img;
@@ -372,12 +372,12 @@ var insertImages = function insertImages(chosen_img) {
     // shuffling array
     randomImgs.sort(function() { return 0.5 - Math.random() });
 
-    for (var i = 0; i<= 3; i++) { 
+    for (var i = 0; i<= 3; i++) {
         add_class = '';
         img = image_names[randomImgs[i]]['img'];
         if (randomImgs[i] == chosen_img)
             add_class = " class='correct'";
-        $('.img-wrapper').append("<img" + add_class + " src='" + base_assets + "images/" + img + "' alt='kiki img' />"); 
+        $('.img-wrapper').append("<img" + add_class + " src='" + base_assets + "images/" + img + "' alt='kiki img' />");
     }
 };
 
@@ -409,7 +409,9 @@ var makeShare = function makeShare() {
     }
 };
 
+
 $(function() {
+
     //close dino-modals (from about and  others ) hitting ESC button
     $(document).keyup(function(e) {
         if ($('.dino-modal').css("display") == 'table' && e.keyCode == 27 ) {
@@ -425,7 +427,7 @@ $(function() {
             frase = share['bad'];
         else if (rightAnswers <8)
             frase = share['ok'];
-        else 
+        else
             frase = share['great'];
         FB.ui({
           method: 'share',
@@ -445,7 +447,7 @@ $(function() {
             sayKiki(false);
         callWrite();
     });
-    
+
     $('.form-test').on('submit', function(e){
         e.preventDefault();
         var formData = new FormData()
@@ -470,7 +472,7 @@ $(function() {
             messageError('test');
         }
     });
-    
+
      $("input").focus(function() {
         var id = $(this).attr("id");
         $("." + id + "-label").css('display','block').css('opacity', 1).animate({
@@ -499,19 +501,36 @@ $(function() {
                 $('.messageSucess').removeClass('hidden');
             });
         }
-     });      
+     });
 
     $('.dino-friend').on('click', 'img', function() {
         $.get($(this).data("href"), function(data) {
             $(".dino-modal").html(data);
+            $('.audiostop').hide();
         });
         $('.dino-modal').removeClass('hidden');
     });
 
 
     $('.dino-modal').on('click', '.audio', function() {
-        audioAbout = eval($(this).data("href"));
+    	audioAbout = eval($(this).data("href"));
+    	audioAbout.addEventListener('ended', function() {
+    	    this.currentTime = 0;
+    	    this.play();
+    	}, false);
         audioAbout.play();
+
+        $('.audio').hide();
+    	$('.audiostop').show();
+    });
+
+    $('.dino-modal').on('click', '.audiostop', function() {
+    	if (audioAbout)
+    		audioAbout.pause();
+
+    	$('.audio').show();
+    	$('.audiostop').hide();
+
     });
 
      $('.dino-modal').on('click', '.close-icon', function() {
@@ -540,7 +559,7 @@ $(function() {
             rightAnswers++;
         if (gameNum <= 10)
             playGame();
-        else 
+        else
             endGame();
      });
 

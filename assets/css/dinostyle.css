@@ -355,9 +355,7 @@ p.kiki {
     max-width: 100%; }
     @media (max-width: 768px) {
       .dino-modal img {
-        margin: 25px 25px 25px 25px;
-        display: block;
-        max-width: 75%; } }
+        margin: 25px 0 25px 25px; } }
   @media (max-width: 1024px) {
     .dino-modal {
       height: 20vh;
@@ -388,6 +386,8 @@ p.kiki {
     margin: 10px 10px 0 0; }
     .modal-text-content img.audio {
       display: block; }
+    .modal-text-content img.audiostop {
+      display: block; }
     @media (min-width: 1025px) {
       .modal-text-content img:hover {
         transform: scale(0.9);
@@ -396,8 +396,7 @@ p.kiki {
         -ms-transform: scale(0.9); } }
   @media (max-width: 768px) {
     .modal-text-content {
-      padding: 0px 25px 25px 25px;
-      display: block; } }
+      padding: 25px 25px 25px 50px; } }
 .close-icon {
   color: #ebebeb;
   cursor: pointer;
