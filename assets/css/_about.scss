@@ -62,7 +62,9 @@
         margin: 50px 0 50px 50px;
         max-width: 100%;
         @media (max-width: 768px) {
-            margin: 25px 0 25px 25px;
+            margin: 25px 25px 25px 25px;
+            display: block;
+            max-width: 75%;
         }
     }
     @media (max-width: 1024px) {
@@ -85,6 +87,7 @@
         margin: 0;
         @media (max-width: 768px) {
             font-size: 12pt;
+
         }
     }
     h4 {
@@ -106,7 +109,8 @@
         }
     }
     @media (max-width: 768px) {
-        padding: 25px 25px 25px 50px;
+        padding: 0px 25px 25px 25px;
+        display: block;
     }
 }
 

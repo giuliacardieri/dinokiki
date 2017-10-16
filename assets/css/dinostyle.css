@@ -312,9 +312,6 @@ p.kiki {
   display: inline-block;
   margin: -6px -2px;
   width: 25%; }
-  @media (max-width: 768px) {
-    .dino-friend-wrapper {
-      width: 50%; } }
   .dino-friend-wrapper .dino-friend {
     display: inline-block; }
     .dino-friend-wrapper .dino-friend img {
@@ -358,7 +355,9 @@ p.kiki {
     max-width: 100%; }
     @media (max-width: 768px) {
       .dino-modal img {
-        margin: 25px 0 25px 25px; } }
+        margin: 25px 25px 25px 25px;
+        display: block;
+        max-width: 75%; } }
   @media (max-width: 1024px) {
     .dino-modal {
       height: 20vh;
@@ -397,8 +396,8 @@ p.kiki {
         -ms-transform: scale(0.9); } }
   @media (max-width: 768px) {
     .modal-text-content {
-      padding: 25px 25px 25px 50px; } }
-
+      padding: 0px 25px 25px 25px;
+      display: block; } }
 .close-icon {
   color: #ebebeb;
   cursor: pointer;
@@ -535,11 +534,8 @@ footer {
         position: relative; }
         footer nav ul li a svg {
           fill: #8c8c8c; }
-        footer nav ul li a.active {
-          color: #6378ca;
-          font-weight: bold; }
-          footer nav ul li a.active svg {
-            fill: #282828; }
+        footer nav ul li a.active svg {
+          fill: #282828; }
 
 @media (min-width: 992px) {
   .menu-svg-wrapper {
