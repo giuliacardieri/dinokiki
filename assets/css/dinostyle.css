@@ -312,6 +312,9 @@ p.kiki {
   display: inline-block;
   margin: -6px -2px;
   width: 25%; }
+  @media (max-width: 768px) {
+    .dino-friend-wrapper {
+      width: 50%; } }
   .dino-friend-wrapper .dino-friend {
     display: inline-block; }
     .dino-friend-wrapper .dino-friend img {
