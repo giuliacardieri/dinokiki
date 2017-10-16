@@ -13,6 +13,9 @@
     display: inline-block;
     margin: -6px -2px;
     width: 25%;
+    @media (max-width: 768px) {
+           width: 50%;
+    }
     .dino-friend {
         display: inline-block;
         img {
