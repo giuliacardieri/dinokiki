@@ -1,0 +1,72 @@
+footer {
+    background-color: $footerColor;
+    bottom: 0;
+    font-family: raleway;
+    font-size: 11pt;
+    left: 0;
+    margin: 0;
+    opacity: 0.9;
+    padding: 5px 0;
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    .media-wrapper {
+        bottom: 0;
+        margin: 0;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        li {
+            display: inline-block;
+            list-style-type: none;
+            padding: 5px;
+            vertical-align: top;
+            &:first-child {
+                line-height: 30px;
+            }
+            &.btn-media.twitter {
+                padding-top: 15px;
+            }
+        }
+    }
+    @media (max-width: $max-sm) {
+        background-color: $white;
+        border-top: 1px solid $backgroundColor - 50;
+    }
+    nav {
+        ul {
+            margin: 10px 5px;
+            padding: 0;
+            text-align: center;
+            li {
+                display: inline-block;
+                padding: 0 5px;
+                @media (max-width: $max-sm) {
+                    padding: 0;
+                    width: 23vw;
+                }
+                a {
+                    bottom: 0;
+                    color: $footerTextColor;
+                    position: relative;
+                    svg {
+                        fill: $textColor + 100;
+                    }
+                    &.active {
+                        color: $backgroundColor;
+                        font-weight: bold;
+                        svg {
+                            fill: $textColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.menu-svg-wrapper {
+    @media (min-width: $min-md) {
+        display: none;
+    }
+}

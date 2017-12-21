@@ -1,0 +1,3463 @@
+@font-face {
+  font-family: 'raleway';
+  src: url("../fonts/Raleway-Regular.ttf"); }
+@font-face {
+  font-family: 'code';
+  src: url("../fonts/Code_Pro_Demo-webfont.eot");
+  src: url("../fonts/Code_Pro_Demo-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Code_Pro_Demo-webfont.woff") format("woff"), url("../fonts/Code_Pro_Demo-webfont.ttf") format("truetype"), url("../fonts/Code_Pro_Demo-webfont.svg#CodeProDemoRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+body {
+  background-color: #7D4750;
+  color: #282828;
+  font-family: raleway, helvetica, arial;
+  font-size: 12pt;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%; }
+
+.content {
+  position: relative;
+  z-index: 2; }
+
+header {
+  margin: auto;
+  padding: 5vh 0;
+  position: relative;
+  text-align: center;
+  width: 80vw;
+  z-index: 2; }
+  @media (max-width: 991px) {
+    header {
+      width: 95vw; } }
+  @media (max-width: 767px) {
+    header {
+      padding: 2.5vh 0; } }
+
+p {
+  font-size: 13pt;
+  line-height: 16pt;
+  margin: 10px 0; }
+  p.small {
+    font-size: 12pt;
+    line-height: 16pt; }
+
+a {
+  color: #202020;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+    @media (max-width: 991px) {
+      a:hover {
+        text-decoration: none; } }
+
+/* headings */
+h1 {
+  line-height: 1.6;
+  margin: 0; }
+  h1 a {
+    color: #fff;
+    font-family: code;
+    font-size: 30pt;
+    opacity: 0.5; }
+    h1 a:hover {
+      text-decoration: none; }
+    @media (max-width: 767px) {
+      h1 a {
+        font-size: 10pt; } }
+    @media (min-width: 768px) and (max-width: 991px) {
+      h1 a {
+        font-size: 24pt; } }
+
+h2 {
+  font-family: code;
+  font-size: 14pt;
+  line-height: 16pt;
+  margin: 10px 0 15px 0;
+  text-align: center; }
+  h2:first-child {
+    margin-top: 0; }
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 14pt;
+      line-height: 16pt; } }
+
+h3, h4 {
+  font-family: code; }
+
+/* end of headings */
+/* hidden classes */
+.hidden {
+  display: none !important; }
+
+.hidden-visi {
+  visibility: hidden; }
+
+@media (max-width: 767px) {
+  .hidden-xs {
+    display: none !important; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none !important; } }
+/* end of hidden classes */
+main {
+  margin: 0;
+  margin-bottom: 63px;
+  position: relative;
+  z-index: 2; }
+
+section {
+  margin: 1.5% 10%;
+  text-align: justify; }
+  section.dino-test-wrapper {
+    background-color: #4b151e;
+    margin: 0;
+    padding: 3.75% 10%; }
+  section img {
+    border: 1px solid #282828;
+    border-radius: 10px;
+    margin: 0 -3px; }
+    @media (max-width: 767px) {
+      section img {
+        width: 50%; } }
+  section.dark {
+    background-color: #4b151e;
+    margin: 2.5% 0; }
+  section .icon-wrapper img {
+    max-width: 40px; }
+
+.big-photo {
+  margin: 0 0 1% 0; }
+  .big-photo img {
+    border: 0;
+    border-radius: 0;
+    width: 100%; }
+  @media (max-width: 767px) {
+    .big-photo {
+      display: none; } }
+
+/* buttons */
+.btn, .kiki-form input[type="submit"], .kiki-form input[type="reset"], input[type="submit"] {
+  background-color: #282828;
+  border: 0;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-family: raleway;
+  font-size: 11pt;
+  opacity: 0.8;
+  padding: 10px 15px; }
+  @media (min-width: 1025px) {
+    .btn:hover, .kiki-form input[type="submit"]:hover, .kiki-form input[type="reset"]:hover, input[type="submit"]:hover {
+      background-color: #191919; } }
+  .btn:focus, .kiki-form input[type="submit"]:focus, .kiki-form input[type="reset"]:focus, input[type="submit"]:focus {
+    outline: 0; }
+  @media (max-width: 910px) {
+    .btn, .kiki-form input[type="submit"], .kiki-form input[type="reset"], input[type="submit"] {
+      font-size: 11pt;
+      line-height: 13pt;
+      width: 42%; } }
+  @media (max-width: 768px) {
+    .btn, .kiki-form input[type="submit"], .kiki-form input[type="reset"], input[type="submit"] {
+      display: inline-block;
+      margin: 1.5% 0;
+      width: 90%; } }
+
+.icon-wrapper {
+  text-align: center; }
+  .icon-wrapper img.icon {
+    border: 0; }
+
+.menu-icon {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  left: -7.5vw;
+  line-height: 52px;
+  position: absolute;
+  top: 2%; }
+  @media (min-width: 768px) {
+    .menu-icon {
+      display: none; } }
+  .menu-icon span {
+    color: #282828;
+    font-size: 18pt; }
+
+/* dynamic kikis when dino is clicked */
+p.kiki {
+  color: #fff;
+  font-family: 'code';
+  position: absolute;
+  z-index: 3; }
+
+/* dinokiki's photo */
+.dino {
+  cursor: url("../images/micro.cur"), auto;
+  display: block;
+  margin: 8vh auto;
+  z-index: 4; }
+  @media (min-width: 769px) {
+    .dino {
+      max-width: 50%; } }
+  @media (max-width: 768px) {
+    .dino {
+      width: 70%; } }
+
+.kiki-wrapper {
+  z-index: 3; }
+
+.azul {
+  animation: lightItUp 2s linear infinite;
+  -webkit-animation: lightItUp 2s linear infinite;
+  -moz-animation: lightItUp 2s linear infinite;
+  -ms-animation: lightItUp 2s linear infinite;
+  -o-animation: lightItUp 2s linear infinite; }
+
+.vermelho {
+  animation: lightItUp 2s -0.5s linear infinite;
+  -webkit-animation: lightItUp 2s -0.5s linear infinite;
+  -moz-animation: lightItUp 2s -0.5s linear infinite;
+  -ms-animation: lightItUp 2s -0.5s linear infinite;
+  -o-animation: lightItUp 2s -0.5s linear infinite; }
+
+.verde {
+  animation: lightItUp 2s -1s linear infinite;
+  -webkit-animation: lightItUp 2s -1s linear infinite;
+  -moz-animation: lightItUp 2s -1s linear infinite;
+  -ms-animation: lightItUp 2s -1s linear infinite;
+  -o-animation: lightItUp 2s -1s linear infinite; }
+
+.amarelo {
+  animation: lightItUp 2s -1.5s linear infinite;
+  -webkit-animation: lightItUp 2s -1.5s linear infinite;
+  -moz-animation: lightItUp 2s -1.5s linear infinite;
+  -ms-animation: lightItUp 2s -1.5s linear infinite;
+  -o-animation: lightItUp 2s -1.5s linear infinite; }
+
+@keyframes lightItUp {
+  0% {
+    fill: #4065A0; }
+  24% {
+    fill: #4065A0; }
+  25% {
+    fill: #923334; }
+  49% {
+    fill: #923334; }
+  50% {
+    fill: #317137; }
+  74% {
+    fill: #317137; }
+  75% {
+    fill: #C7AD3A; }
+  100% {
+    fill: #C7AD3A; } }
+@-webkit-keyframes lightItUp {
+  0% {
+    fill: #4065A0; }
+  24% {
+    fill: #4065A0; }
+  25% {
+    fill: #923334; }
+  49% {
+    fill: #923334; }
+  50% {
+    fill: #317137; }
+  74% {
+    fill: #317137; }
+  75% {
+    fill: #C7AD3A; }
+  100% {
+    fill: #C7AD3A; } }
+@-moz-keyframes lightItUp {
+  0% {
+    fill: #4065A0; }
+  24% {
+    fill: #4065A0; }
+  25% {
+    fill: #923334; }
+  49% {
+    fill: #923334; }
+  50% {
+    fill: #317137; }
+  74% {
+    fill: #317137; }
+  75% {
+    fill: #C7AD3A; }
+  100% {
+    fill: #C7AD3A; } }
+@-ms-keyframes lightItUp {
+  0% {
+    fill: #4065A0; }
+  24% {
+    fill: #4065A0; }
+  25% {
+    fill: #923334; }
+  49% {
+    fill: #923334; }
+  50% {
+    fill: #317137; }
+  74% {
+    fill: #317137; }
+  75% {
+    fill: #C7AD3A; }
+  100% {
+    fill: #C7AD3A; } }
+.img-container {
+  padding: 2.5% 10%; }
+  .img-container h2 {
+    color: #6378ca;
+    text-align: left; }
+  .img-container img {
+    width: 25%; }
+
+.dino-friend-wrapper {
+  display: inline-block;
+  margin: -6px -2px;
+  width: 25%; }
+  @media (max-width: 768px) {
+    .dino-friend-wrapper {
+      width: 50%; } }
+  .dino-friend-wrapper .dino-friend {
+    display: inline-block; }
+    .dino-friend-wrapper .dino-friend img {
+      cursor: pointer;
+      width: 100%; }
+
+.dino-modal {
+  background-color: #282828;
+  border-radius: 10px;
+  bottom: 0;
+  display: table;
+  height: 40vh;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  right: 0;
+  width: 60vw;
+  top: 0;
+  z-index: 3; }
+  .dino-modal:before {
+    background-color: #282828;
+    content: '';
+    height: 100vh;
+    left: -20vw;
+    opacity: 0.5;
+    position: absolute;
+    top: -35vh;
+    width: 100vw;
+    z-index: -1; }
+    @media (max-width: 1024px) {
+      .dino-modal:before {
+        left: -5vw; } }
+    @media (max-width: 768px) {
+      .dino-modal:before {
+        height: 110vh;
+        overflow: hidden; } }
+  .dino-modal img {
+    border-radius: 10px;
+    display: table-cell;
+    margin: 50px 0 50px 50px;
+    max-width: 100%; }
+    @media (max-width: 768px) {
+      .dino-modal img {
+        margin: 25px 25px 25px 25px;
+        display: block;
+        max-width: 75%; } }
+  @media (max-width: 1024px) {
+    .dino-modal {
+      height: 20vh;
+      width: 90vw; } }
+  @media (max-width: 768px) {
+    .dino-modal {
+      height: 40vh;
+      width: 90vw; } }
+
+.modal-text-content {
+  color: #ebebeb;
+  display: table-cell;
+  padding: 50px 100px;
+  vertical-align: top;
+  width: 75%; }
+  .modal-text-content h3 {
+    margin: 0; }
+    @media (max-width: 768px) {
+      .modal-text-content h3 {
+        font-size: 12pt; } }
+  .modal-text-content h4 {
+    font-weight: normal;
+    margin: 0; }
+  .modal-text-content img {
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px 10px 0 0; }
+    .modal-text-content img.audio {
+      display: block; }
+    .modal-text-content img.audiostop {
+      display: block; }
+    @media (min-width: 1025px) {
+      .modal-text-content img:hover {
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9); } }
+  @media (max-width: 768px) {
+    .modal-text-content {
+      padding: 0px 25px 25px 25px;
+      display: block; } }
+
+.close-icon {
+  color: #ebebeb;
+  cursor: pointer;
+  font-size: 14pt;
+  position: absolute;
+  right: 20px;
+  top: 20px; }
+
+footer {
+  background-color: #282828;
+  bottom: 0;
+  font-family: raleway;
+  font-size: 11pt;
+  left: 0;
+  margin: 0;
+  opacity: 0.9;
+  padding: 5px 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 5; }
+  footer .media-wrapper {
+    bottom: 0;
+    margin: 0;
+    position: absolute;
+    right: 15px;
+    top: 0; }
+    footer .media-wrapper li {
+      display: inline-block;
+      list-style-type: none;
+      padding: 5px;
+      vertical-align: top; }
+      footer .media-wrapper li:first-child {
+        line-height: 30px; }
+      footer .media-wrapper li.btn-media.twitter {
+        padding-top: 15px; }
+  @media (max-width: 991px) {
+    footer {
+      background-color: #eee;
+      border-top: 1px solid #4b151e; } }
+  footer nav ul {
+    margin: 10px 5px;
+    padding: 0;
+    text-align: center; }
+    footer nav ul li {
+      display: inline-block;
+      padding: 0 5px; }
+      @media (max-width: 991px) {
+        footer nav ul li {
+          padding: 0;
+          width: 23vw; } }
+      footer nav ul li a {
+        bottom: 0;
+        color: #fff;
+        position: relative; }
+        footer nav ul li a svg {
+          fill: #8c8c8c; }
+        footer nav ul li a.active {
+          color: #7D4750;
+          font-weight: bold; }
+          footer nav ul li a.active svg {
+            fill: #282828; }
+
+@media (min-width: 992px) {
+  .menu-svg-wrapper {
+    display: none; } }
+
+/* christmas lights */
+.blue, .red, .green, .yellow {
+  opacity: 0.9; }
+
+.blue {
+  animation: lightItUp 2s linear infinite;
+  -webkit-animation: lightItUp 2s linear infinite;
+  -moz-animation: lightItUp 2s linear infinite;
+  -ms-animation: lightItUp 2s linear infinite;
+  -o-animation: lightItUp 2s linear infinite; }
+
+.red {
+  animation: lightItUp 2s -0.5s linear infinite;
+  -webkit-animation: lightItUp 2s -0.5s linear infinite;
+  -moz-animation: lightItUp 2s -0.5s linear infinite;
+  -ms-animation: lightItUp 2s -0.5s linear infinite;
+  -o-animation: lightItUp 2s -0.5s linear infinite; }
+
+.green {
+  animation: lightItUp 2s -1s linear infinite;
+  -webkit-animation: lightItUp 2s -1s linear infinite;
+  -moz-animation: lightItUp 2s -1s linear infinite;
+  -ms-animation: lightItUp 2s -1s linear infinite;
+  -o-animation: lightItUp 2s -1s linear infinite; }
+
+.yellow {
+  animation: lightItUp 2s -1.5s linear infinite;
+  -webkit-animation: lightItUp 2s -1.5s linear infinite;
+  -moz-animation: lightItUp 2s -1.5s linear infinite;
+  -ms-animation: lightItUp 2s -1.5s linear infinite;
+  -o-animation: lightItUp 2s -1.5s linear infinite; }
+
+@keyframes lightItUp {
+  0% {
+    fill: #28678e; }
+  24% {
+    fill: #28678e; }
+  25% {
+    fill: #a54646; }
+  49% {
+    fill: #a54646; }
+  50% {
+    fill: #476024; }
+  74% {
+    fill: #476024; }
+  75% {
+    fill: #c19f40; }
+  100% {
+    fill: #c19f40; } }
+@-webkit-keyframes lightItUp {
+  0% {
+    fill: #28678e; }
+  24% {
+    fill: #28678e; }
+  25% {
+    fill: #a54646; }
+  49% {
+    fill: #a54646; }
+  50% {
+    fill: #476024; }
+  74% {
+    fill: #476024; }
+  75% {
+    fill: #c19f40; }
+  100% {
+    fill: #c19f40; } }
+@-moz-keyframes lightItUp {
+  0% {
+    fill: #28678e; }
+  24% {
+    fill: #28678e; }
+  25% {
+    fill: #a54646; }
+  49% {
+    fill: #a54646; }
+  50% {
+    fill: #476024; }
+  74% {
+    fill: #476024; }
+  75% {
+    fill: #c19f40; }
+  100% {
+    fill: #c19f40; } }
+@-ms-keyframes lightItUp {
+  0% {
+    fill: #28678e; }
+  24% {
+    fill: #28678e; }
+  25% {
+    fill: #a54646; }
+  49% {
+    fill: #a54646; }
+  50% {
+    fill: #476024; }
+  74% {
+    fill: #476024; }
+  75% {
+    fill: #c19f40; }
+  100% {
+    fill: #c19f40; } }
+/* snow falling */
+.snow {
+  background-color: #fff;
+  border-radius: 30%;
+  bottom: 110vh;
+  position: absolute; }
+
+.snow.s1 {
+  height: 9px;
+  left: 32vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 12.25s 12s linear infinite, shakeIt 4s 12s linear infinite;
+  -webkit-animation: letItSnow 12.25s 12s linear infinite, shakeIt 4s 12s linear infinite;
+  -moz-animation: letItSnow 12.25s 12s linear infinite, shakeIt 4s 12s linear infinite;
+  -ms-animation: letItSnow 12.25s 12s linear infinite, shakeIt 4s 12s linear infinite;
+  -o-animation: letItSnow 12.25s 12s linear infinite, shakeIt 4s 12s linear infinite; }
+  .snow.s1:after, .snow.s1:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s1:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s2 {
+  height: 6px;
+  left: 98vw;
+  opacity: 0.4;
+  width: 2px;
+  animation: letItSnow 11.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -webkit-animation: letItSnow 11.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -moz-animation: letItSnow 11.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -ms-animation: letItSnow 11.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -o-animation: letItSnow 11.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite; }
+  .snow.s2:after, .snow.s2:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s2:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s3 {
+  height: 15px;
+  left: 28vw;
+  opacity: 0.1;
+  width: 5px;
+  animation: letItSnow 13.1428571429s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -webkit-animation: letItSnow 13.1428571429s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -moz-animation: letItSnow 13.1428571429s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -ms-animation: letItSnow 13.1428571429s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -o-animation: letItSnow 13.1428571429s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite; }
+  .snow.s3:after, .snow.s3:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s3:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s4 {
+  height: 6px;
+  left: 23vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 14s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -moz-animation: letItSnow 14s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -ms-animation: letItSnow 14s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -o-animation: letItSnow 14s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite; }
+  .snow.s4:after, .snow.s4:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s4:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s5 {
+  height: 9px;
+  left: 49vw;
+  opacity: 0.6;
+  width: 3px;
+  animation: letItSnow 12.1666666667s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -webkit-animation: letItSnow 12.1666666667s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -moz-animation: letItSnow 12.1666666667s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -ms-animation: letItSnow 12.1666666667s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -o-animation: letItSnow 12.1666666667s 6s linear infinite, shakeIt 4s 6s linear infinite; }
+  .snow.s5:after, .snow.s5:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s5:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s6 {
+  height: 15px;
+  left: 53vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 12.2s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -webkit-animation: letItSnow 12.2s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -moz-animation: letItSnow 12.2s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -ms-animation: letItSnow 12.2s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -o-animation: letItSnow 12.2s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite; }
+  .snow.s6:after, .snow.s6:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s6:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s7 {
+  height: 15px;
+  left: 88vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 13.2s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -webkit-animation: letItSnow 13.2s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -moz-animation: letItSnow 13.2s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -ms-animation: letItSnow 13.2s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -o-animation: letItSnow 13.2s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite; }
+  .snow.s7:after, .snow.s7:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s7:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s8 {
+  height: 15px;
+  left: 33vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 12.25s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -webkit-animation: letItSnow 12.25s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -moz-animation: letItSnow 12.25s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -ms-animation: letItSnow 12.25s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -o-animation: letItSnow 12.25s 3s linear infinite, shakeIt 4s 3s linear infinite; }
+  .snow.s8:after, .snow.s8:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s8:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s9 {
+  height: 12px;
+  left: 58vw;
+  opacity: 0.7;
+  width: 4px;
+  animation: letItSnow 12.1666666667s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -webkit-animation: letItSnow 12.1666666667s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -moz-animation: letItSnow 12.1666666667s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -ms-animation: letItSnow 12.1666666667s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -o-animation: letItSnow 12.1666666667s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite; }
+  .snow.s9:after, .snow.s9:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s9:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s10 {
+  height: 15px;
+  left: 50vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -webkit-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -moz-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -ms-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -o-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite; }
+  .snow.s10:after, .snow.s10:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s10:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s11 {
+  height: 9px;
+  left: 21vw;
+  opacity: 0.6;
+  width: 3px;
+  animation: letItSnow 15.1428571429s 7.2s linear infinite, shakeIt 4s 7.2s linear infinite;
+  -webkit-animation: letItSnow 15.1428571429s 7.2s linear infinite, shakeIt 4s 7.2s linear infinite;
+  -moz-animation: letItSnow 15.1428571429s 7.2s linear infinite, shakeIt 4s 7.2s linear infinite;
+  -ms-animation: letItSnow 15.1428571429s 7.2s linear infinite, shakeIt 4s 7.2s linear infinite;
+  -o-animation: letItSnow 15.1428571429s 7.2s linear infinite, shakeIt 4s 7.2s linear infinite; }
+  .snow.s11:after, .snow.s11:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s11:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s12 {
+  height: 6px;
+  left: 61vw;
+  opacity: 0.4;
+  width: 2px;
+  animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -webkit-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -moz-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -ms-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -o-animation: letItSnow 13.1666666667s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite; }
+  .snow.s12:after, .snow.s12:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s12:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s13 {
+  height: 12px;
+  left: 3vw;
+  opacity: 0.6;
+  width: 4px;
+  animation: letItSnow 14s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -webkit-animation: letItSnow 14s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -moz-animation: letItSnow 14s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -ms-animation: letItSnow 14s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -o-animation: letItSnow 14s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite; }
+  .snow.s13:after, .snow.s13:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s13:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s14 {
+  height: 9px;
+  left: 59vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 13.1666666667s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -webkit-animation: letItSnow 13.1666666667s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -moz-animation: letItSnow 13.1666666667s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -ms-animation: letItSnow 13.1666666667s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -o-animation: letItSnow 13.1666666667s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite; }
+  .snow.s14:after, .snow.s14:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s14:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s15 {
+  height: 12px;
+  left: 58vw;
+  opacity: 0.6;
+  width: 4px;
+  animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -webkit-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -moz-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -ms-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -o-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite; }
+  .snow.s15:after, .snow.s15:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s15:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s16 {
+  height: 12px;
+  left: 7vw;
+  opacity: 0.7;
+  width: 4px;
+  animation: letItSnow 15.1428571429s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -webkit-animation: letItSnow 15.1428571429s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -moz-animation: letItSnow 15.1428571429s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -ms-animation: letItSnow 15.1428571429s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -o-animation: letItSnow 15.1428571429s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite; }
+  .snow.s16:after, .snow.s16:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s16:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s17 {
+  height: 12px;
+  left: 41vw;
+  opacity: 0.5;
+  width: 4px;
+  animation: letItSnow 13.1428571429s 7.3333333333s linear infinite, shakeIt 4s 7.3333333333s linear infinite;
+  -webkit-animation: letItSnow 13.1428571429s 7.3333333333s linear infinite, shakeIt 4s 7.3333333333s linear infinite;
+  -moz-animation: letItSnow 13.1428571429s 7.3333333333s linear infinite, shakeIt 4s 7.3333333333s linear infinite;
+  -ms-animation: letItSnow 13.1428571429s 7.3333333333s linear infinite, shakeIt 4s 7.3333333333s linear infinite;
+  -o-animation: letItSnow 13.1428571429s 7.3333333333s linear infinite, shakeIt 4s 7.3333333333s linear infinite; }
+  .snow.s17:after, .snow.s17:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s17:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s18 {
+  height: 9px;
+  left: 85vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 11.25s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -webkit-animation: letItSnow 11.25s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -moz-animation: letItSnow 11.25s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -ms-animation: letItSnow 11.25s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -o-animation: letItSnow 11.25s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite; }
+  .snow.s18:after, .snow.s18:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s18:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s19 {
+  height: 9px;
+  left: 55vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 12s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -webkit-animation: letItSnow 12s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -moz-animation: letItSnow 12s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -ms-animation: letItSnow 12s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite;
+  -o-animation: letItSnow 12s 4.5s linear infinite, shakeIt 4s 4.5s linear infinite; }
+  .snow.s19:after, .snow.s19:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s19:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s20 {
+  height: 15px;
+  left: 77vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 15s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -webkit-animation: letItSnow 15s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -moz-animation: letItSnow 15s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -ms-animation: letItSnow 15s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -o-animation: letItSnow 15s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite; }
+  .snow.s20:after, .snow.s20:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s20:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s21 {
+  height: 15px;
+  left: 33vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 13.5s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -webkit-animation: letItSnow 13.5s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -moz-animation: letItSnow 13.5s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -ms-animation: letItSnow 13.5s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -o-animation: letItSnow 13.5s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite; }
+  .snow.s21:after, .snow.s21:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s21:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s22 {
+  height: 9px;
+  left: 70vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 14.3333333333s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -webkit-animation: letItSnow 14.3333333333s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -moz-animation: letItSnow 14.3333333333s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -ms-animation: letItSnow 14.3333333333s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -o-animation: letItSnow 14.3333333333s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite; }
+  .snow.s22:after, .snow.s22:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s22:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s23 {
+  height: 9px;
+  left: 27vw;
+  opacity: 0.1;
+  width: 3px;
+  animation: letItSnow 15.2s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -webkit-animation: letItSnow 15.2s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -moz-animation: letItSnow 15.2s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -ms-animation: letItSnow 15.2s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -o-animation: letItSnow 15.2s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite; }
+  .snow.s23:after, .snow.s23:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s23:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s24 {
+  height: 9px;
+  left: 87vw;
+  opacity: 0.3;
+  width: 3px;
+  animation: letItSnow 15.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -webkit-animation: letItSnow 15.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -moz-animation: letItSnow 15.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -ms-animation: letItSnow 15.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite;
+  -o-animation: letItSnow 15.3333333333s 5s linear infinite, shakeIt 4s 5s linear infinite; }
+  .snow.s24:after, .snow.s24:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s24:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s25 {
+  height: 9px;
+  left: 27vw;
+  opacity: 0.7;
+  width: 3px;
+  animation: letItSnow 12.3333333333s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -webkit-animation: letItSnow 12.3333333333s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -moz-animation: letItSnow 12.3333333333s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -ms-animation: letItSnow 12.3333333333s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -o-animation: letItSnow 12.3333333333s 6s linear infinite, shakeIt 4s 6s linear infinite; }
+  .snow.s25:after, .snow.s25:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s25:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s26 {
+  height: 12px;
+  left: 75vw;
+  opacity: 0.6;
+  width: 4px;
+  animation: letItSnow 13.2s 4.3333333333s linear infinite, shakeIt 4s 4.3333333333s linear infinite;
+  -webkit-animation: letItSnow 13.2s 4.3333333333s linear infinite, shakeIt 4s 4.3333333333s linear infinite;
+  -moz-animation: letItSnow 13.2s 4.3333333333s linear infinite, shakeIt 4s 4.3333333333s linear infinite;
+  -ms-animation: letItSnow 13.2s 4.3333333333s linear infinite, shakeIt 4s 4.3333333333s linear infinite;
+  -o-animation: letItSnow 13.2s 4.3333333333s linear infinite, shakeIt 4s 4.3333333333s linear infinite; }
+  .snow.s26:after, .snow.s26:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s26:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s27 {
+  height: 15px;
+  left: 44vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 13.2s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -webkit-animation: letItSnow 13.2s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -moz-animation: letItSnow 13.2s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -ms-animation: letItSnow 13.2s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -o-animation: letItSnow 13.2s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite; }
+  .snow.s27:after, .snow.s27:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s27:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s28 {
+  height: 6px;
+  left: 70vw;
+  opacity: 0.7;
+  width: 2px;
+  animation: letItSnow 13s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -webkit-animation: letItSnow 13s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -moz-animation: letItSnow 13s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -ms-animation: letItSnow 13s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -o-animation: letItSnow 13s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite; }
+  .snow.s28:after, .snow.s28:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s28:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s29 {
+  height: 6px;
+  left: 92vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 13.25s 12.3333333333s linear infinite, shakeIt 4s 12.3333333333s linear infinite;
+  -webkit-animation: letItSnow 13.25s 12.3333333333s linear infinite, shakeIt 4s 12.3333333333s linear infinite;
+  -moz-animation: letItSnow 13.25s 12.3333333333s linear infinite, shakeIt 4s 12.3333333333s linear infinite;
+  -ms-animation: letItSnow 13.25s 12.3333333333s linear infinite, shakeIt 4s 12.3333333333s linear infinite;
+  -o-animation: letItSnow 13.25s 12.3333333333s linear infinite, shakeIt 4s 12.3333333333s linear infinite; }
+  .snow.s29:after, .snow.s29:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s29:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s30 {
+  height: 9px;
+  left: 19vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 13.3333333333s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -webkit-animation: letItSnow 13.3333333333s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -moz-animation: letItSnow 13.3333333333s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -ms-animation: letItSnow 13.3333333333s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -o-animation: letItSnow 13.3333333333s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite; }
+  .snow.s30:after, .snow.s30:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s30:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s31 {
+  height: 6px;
+  left: 89vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 11.2s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -webkit-animation: letItSnow 11.2s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -moz-animation: letItSnow 11.2s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -ms-animation: letItSnow 11.2s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -o-animation: letItSnow 11.2s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite; }
+  .snow.s31:after, .snow.s31:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s31:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s32 {
+  height: 15px;
+  left: 96vw;
+  opacity: 0.3;
+  width: 5px;
+  animation: letItSnow 12.5s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -webkit-animation: letItSnow 12.5s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -moz-animation: letItSnow 12.5s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -ms-animation: letItSnow 12.5s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -o-animation: letItSnow 12.5s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite; }
+  .snow.s32:after, .snow.s32:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s32:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s33 {
+  height: 9px;
+  left: 96vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 11.25s 11s linear infinite, shakeIt 4s 11s linear infinite;
+  -webkit-animation: letItSnow 11.25s 11s linear infinite, shakeIt 4s 11s linear infinite;
+  -moz-animation: letItSnow 11.25s 11s linear infinite, shakeIt 4s 11s linear infinite;
+  -ms-animation: letItSnow 11.25s 11s linear infinite, shakeIt 4s 11s linear infinite;
+  -o-animation: letItSnow 11.25s 11s linear infinite, shakeIt 4s 11s linear infinite; }
+  .snow.s33:after, .snow.s33:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s33:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s34 {
+  height: 6px;
+  left: 59vw;
+  opacity: 0.5;
+  width: 2px;
+  animation: letItSnow 12.1666666667s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -webkit-animation: letItSnow 12.1666666667s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -moz-animation: letItSnow 12.1666666667s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -ms-animation: letItSnow 12.1666666667s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -o-animation: letItSnow 12.1666666667s 4s linear infinite, shakeIt 4s 4s linear infinite; }
+  .snow.s34:after, .snow.s34:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s34:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s35 {
+  height: 15px;
+  left: 100vw;
+  opacity: 0.2;
+  width: 5px;
+  animation: letItSnow 14s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -moz-animation: letItSnow 14s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -ms-animation: letItSnow 14s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -o-animation: letItSnow 14s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite; }
+  .snow.s35:after, .snow.s35:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s35:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s36 {
+  height: 15px;
+  left: 6vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 13.3333333333s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -webkit-animation: letItSnow 13.3333333333s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -moz-animation: letItSnow 13.3333333333s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -ms-animation: letItSnow 13.3333333333s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -o-animation: letItSnow 13.3333333333s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite; }
+  .snow.s36:after, .snow.s36:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s36:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s37 {
+  height: 6px;
+  left: 35vw;
+  opacity: 0.7;
+  width: 2px;
+  animation: letItSnow 13.2s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -webkit-animation: letItSnow 13.2s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -moz-animation: letItSnow 13.2s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -ms-animation: letItSnow 13.2s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -o-animation: letItSnow 13.2s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite; }
+  .snow.s37:after, .snow.s37:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s37:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s38 {
+  height: 6px;
+  left: 96vw;
+  opacity: 0.1;
+  width: 2px;
+  animation: letItSnow 11.3333333333s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -webkit-animation: letItSnow 11.3333333333s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -moz-animation: letItSnow 11.3333333333s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -ms-animation: letItSnow 11.3333333333s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -o-animation: letItSnow 11.3333333333s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite; }
+  .snow.s38:after, .snow.s38:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s38:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s39 {
+  height: 6px;
+  left: 99vw;
+  opacity: 0.1;
+  width: 2px;
+  animation: letItSnow 11.3333333333s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -webkit-animation: letItSnow 11.3333333333s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -moz-animation: letItSnow 11.3333333333s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -ms-animation: letItSnow 11.3333333333s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite;
+  -o-animation: letItSnow 11.3333333333s 2.2s linear infinite, shakeIt 4s 2.2s linear infinite; }
+  .snow.s39:after, .snow.s39:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s39:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s40 {
+  height: 9px;
+  left: 87vw;
+  opacity: 0.6;
+  width: 3px;
+  animation: letItSnow 12.2s 5.5s linear infinite, shakeIt 4s 5.5s linear infinite;
+  -webkit-animation: letItSnow 12.2s 5.5s linear infinite, shakeIt 4s 5.5s linear infinite;
+  -moz-animation: letItSnow 12.2s 5.5s linear infinite, shakeIt 4s 5.5s linear infinite;
+  -ms-animation: letItSnow 12.2s 5.5s linear infinite, shakeIt 4s 5.5s linear infinite;
+  -o-animation: letItSnow 12.2s 5.5s linear infinite, shakeIt 4s 5.5s linear infinite; }
+  .snow.s40:after, .snow.s40:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s40:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s41 {
+  height: 9px;
+  left: 91vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 14.1428571429s 3.3333333333s linear infinite, shakeIt 4s 3.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14.1428571429s 3.3333333333s linear infinite, shakeIt 4s 3.3333333333s linear infinite;
+  -moz-animation: letItSnow 14.1428571429s 3.3333333333s linear infinite, shakeIt 4s 3.3333333333s linear infinite;
+  -ms-animation: letItSnow 14.1428571429s 3.3333333333s linear infinite, shakeIt 4s 3.3333333333s linear infinite;
+  -o-animation: letItSnow 14.1428571429s 3.3333333333s linear infinite, shakeIt 4s 3.3333333333s linear infinite; }
+  .snow.s41:after, .snow.s41:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s41:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s42 {
+  height: 15px;
+  left: 40vw;
+  opacity: 0.1;
+  width: 5px;
+  animation: letItSnow 12.5s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -webkit-animation: letItSnow 12.5s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -moz-animation: letItSnow 12.5s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -ms-animation: letItSnow 12.5s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite;
+  -o-animation: letItSnow 12.5s 11.25s linear infinite, shakeIt 4s 11.25s linear infinite; }
+  .snow.s42:after, .snow.s42:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s42:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s43 {
+  height: 12px;
+  left: 97vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 14s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -webkit-animation: letItSnow 14s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -moz-animation: letItSnow 14s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -ms-animation: letItSnow 14s 3s linear infinite, shakeIt 4s 3s linear infinite;
+  -o-animation: letItSnow 14s 3s linear infinite, shakeIt 4s 3s linear infinite; }
+  .snow.s43:after, .snow.s43:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s43:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s44 {
+  height: 12px;
+  left: 91vw;
+  opacity: 0.5;
+  width: 4px;
+  animation: letItSnow 15s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -webkit-animation: letItSnow 15s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -moz-animation: letItSnow 15s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -ms-animation: letItSnow 15s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite;
+  -o-animation: letItSnow 15s 4.2s linear infinite, shakeIt 4s 4.2s linear infinite; }
+  .snow.s44:after, .snow.s44:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s44:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s45 {
+  height: 9px;
+  left: 70vw;
+  opacity: 0.1;
+  width: 3px;
+  animation: letItSnow 13.5s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -webkit-animation: letItSnow 13.5s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -moz-animation: letItSnow 13.5s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -ms-animation: letItSnow 13.5s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -o-animation: letItSnow 13.5s 9s linear infinite, shakeIt 4s 9s linear infinite; }
+  .snow.s45:after, .snow.s45:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s45:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s46 {
+  height: 9px;
+  left: 10vw;
+  opacity: 0.3;
+  width: 3px;
+  animation: letItSnow 13.1428571429s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -webkit-animation: letItSnow 13.1428571429s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -moz-animation: letItSnow 13.1428571429s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -ms-animation: letItSnow 13.1428571429s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -o-animation: letItSnow 13.1428571429s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite; }
+  .snow.s46:after, .snow.s46:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s46:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s47 {
+  height: 12px;
+  left: 61vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 15.1666666667s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -webkit-animation: letItSnow 15.1666666667s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -moz-animation: letItSnow 15.1666666667s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -ms-animation: letItSnow 15.1666666667s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite;
+  -o-animation: letItSnow 15.1666666667s 9.25s linear infinite, shakeIt 4s 9.25s linear infinite; }
+  .snow.s47:after, .snow.s47:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s47:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s48 {
+  height: 9px;
+  left: 41vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 15.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -webkit-animation: letItSnow 15.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -moz-animation: letItSnow 15.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -ms-animation: letItSnow 15.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -o-animation: letItSnow 15.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite; }
+  .snow.s48:after, .snow.s48:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s48:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s49 {
+  height: 15px;
+  left: 1vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 14.5s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -webkit-animation: letItSnow 14.5s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -moz-animation: letItSnow 14.5s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -ms-animation: letItSnow 14.5s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -o-animation: letItSnow 14.5s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite; }
+  .snow.s49:after, .snow.s49:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s49:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s50 {
+  height: 15px;
+  left: 99vw;
+  opacity: 0.3;
+  width: 5px;
+  animation: letItSnow 14.3333333333s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14.3333333333s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -moz-animation: letItSnow 14.3333333333s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -ms-animation: letItSnow 14.3333333333s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite;
+  -o-animation: letItSnow 14.3333333333s 6.3333333333s linear infinite, shakeIt 4s 6.3333333333s linear infinite; }
+  .snow.s50:after, .snow.s50:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s50:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s51 {
+  height: 6px;
+  left: 82vw;
+  opacity: 0.3;
+  width: 2px;
+  animation: letItSnow 13.5s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -webkit-animation: letItSnow 13.5s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -moz-animation: letItSnow 13.5s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -ms-animation: letItSnow 13.5s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -o-animation: letItSnow 13.5s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite; }
+  .snow.s51:after, .snow.s51:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s51:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s52 {
+  height: 12px;
+  left: 56vw;
+  opacity: 0.6;
+  width: 4px;
+  animation: letItSnow 13s 8.25s linear infinite, shakeIt 4s 8.25s linear infinite;
+  -webkit-animation: letItSnow 13s 8.25s linear infinite, shakeIt 4s 8.25s linear infinite;
+  -moz-animation: letItSnow 13s 8.25s linear infinite, shakeIt 4s 8.25s linear infinite;
+  -ms-animation: letItSnow 13s 8.25s linear infinite, shakeIt 4s 8.25s linear infinite;
+  -o-animation: letItSnow 13s 8.25s linear infinite, shakeIt 4s 8.25s linear infinite; }
+  .snow.s52:after, .snow.s52:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s52:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s53 {
+  height: 15px;
+  left: 67vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 15.2s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -webkit-animation: letItSnow 15.2s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -moz-animation: letItSnow 15.2s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -ms-animation: letItSnow 15.2s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite;
+  -o-animation: letItSnow 15.2s 1.5s linear infinite, shakeIt 4s 1.5s linear infinite; }
+  .snow.s53:after, .snow.s53:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s53:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s54 {
+  height: 12px;
+  left: 59vw;
+  opacity: 0.1;
+  width: 4px;
+  animation: letItSnow 11.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -webkit-animation: letItSnow 11.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -moz-animation: letItSnow 11.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -ms-animation: letItSnow 11.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -o-animation: letItSnow 11.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite; }
+  .snow.s54:after, .snow.s54:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s54:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s55 {
+  height: 6px;
+  left: 23vw;
+  opacity: 0.5;
+  width: 2px;
+  animation: letItSnow 13.1428571429s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -webkit-animation: letItSnow 13.1428571429s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -moz-animation: letItSnow 13.1428571429s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -ms-animation: letItSnow 13.1428571429s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -o-animation: letItSnow 13.1428571429s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite; }
+  .snow.s55:after, .snow.s55:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s55:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s56 {
+  height: 15px;
+  left: 75vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 13.1428571429s 5.3333333333s linear infinite, shakeIt 4s 5.3333333333s linear infinite;
+  -webkit-animation: letItSnow 13.1428571429s 5.3333333333s linear infinite, shakeIt 4s 5.3333333333s linear infinite;
+  -moz-animation: letItSnow 13.1428571429s 5.3333333333s linear infinite, shakeIt 4s 5.3333333333s linear infinite;
+  -ms-animation: letItSnow 13.1428571429s 5.3333333333s linear infinite, shakeIt 4s 5.3333333333s linear infinite;
+  -o-animation: letItSnow 13.1428571429s 5.3333333333s linear infinite, shakeIt 4s 5.3333333333s linear infinite; }
+  .snow.s56:after, .snow.s56:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s56:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s57 {
+  height: 12px;
+  left: 9vw;
+  opacity: 0.4;
+  width: 4px;
+  animation: letItSnow 15s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -webkit-animation: letItSnow 15s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -moz-animation: letItSnow 15s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -ms-animation: letItSnow 15s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -o-animation: letItSnow 15s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite; }
+  .snow.s57:after, .snow.s57:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s57:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s58 {
+  height: 12px;
+  left: 82vw;
+  opacity: 0.2;
+  width: 4px;
+  animation: letItSnow 13.2s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -webkit-animation: letItSnow 13.2s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -moz-animation: letItSnow 13.2s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -ms-animation: letItSnow 13.2s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -o-animation: letItSnow 13.2s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite; }
+  .snow.s58:after, .snow.s58:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s58:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s59 {
+  height: 6px;
+  left: 43vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 12.25s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -webkit-animation: letItSnow 12.25s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -moz-animation: letItSnow 12.25s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -ms-animation: letItSnow 12.25s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite;
+  -o-animation: letItSnow 12.25s 3.25s linear infinite, shakeIt 4s 3.25s linear infinite; }
+  .snow.s59:after, .snow.s59:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s59:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s60 {
+  height: 9px;
+  left: 74vw;
+  opacity: 0.4;
+  width: 3px;
+  animation: letItSnow 14.1666666667s 13s linear infinite, shakeIt 4s 13s linear infinite;
+  -webkit-animation: letItSnow 14.1666666667s 13s linear infinite, shakeIt 4s 13s linear infinite;
+  -moz-animation: letItSnow 14.1666666667s 13s linear infinite, shakeIt 4s 13s linear infinite;
+  -ms-animation: letItSnow 14.1666666667s 13s linear infinite, shakeIt 4s 13s linear infinite;
+  -o-animation: letItSnow 14.1666666667s 13s linear infinite, shakeIt 4s 13s linear infinite; }
+  .snow.s60:after, .snow.s60:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s60:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s61 {
+  height: 6px;
+  left: 90vw;
+  opacity: 0.6;
+  width: 2px;
+  animation: letItSnow 12s 6.2s linear infinite, shakeIt 4s 6.2s linear infinite;
+  -webkit-animation: letItSnow 12s 6.2s linear infinite, shakeIt 4s 6.2s linear infinite;
+  -moz-animation: letItSnow 12s 6.2s linear infinite, shakeIt 4s 6.2s linear infinite;
+  -ms-animation: letItSnow 12s 6.2s linear infinite, shakeIt 4s 6.2s linear infinite;
+  -o-animation: letItSnow 12s 6.2s linear infinite, shakeIt 4s 6.2s linear infinite; }
+  .snow.s61:after, .snow.s61:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s61:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s62 {
+  height: 9px;
+  left: 43vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 11.5s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -webkit-animation: letItSnow 11.5s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -moz-animation: letItSnow 11.5s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -ms-animation: letItSnow 11.5s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite;
+  -o-animation: letItSnow 11.5s 9.2s linear infinite, shakeIt 4s 9.2s linear infinite; }
+  .snow.s62:after, .snow.s62:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s62:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s63 {
+  height: 6px;
+  left: 67vw;
+  opacity: 0.4;
+  width: 2px;
+  animation: letItSnow 15s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -webkit-animation: letItSnow 15s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -moz-animation: letItSnow 15s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -ms-animation: letItSnow 15s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite;
+  -o-animation: letItSnow 15s 8.2s linear infinite, shakeIt 4s 8.2s linear infinite; }
+  .snow.s63:after, .snow.s63:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s63:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s64 {
+  height: 6px;
+  left: 50vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 12.3333333333s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -webkit-animation: letItSnow 12.3333333333s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -moz-animation: letItSnow 12.3333333333s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -ms-animation: letItSnow 12.3333333333s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite;
+  -o-animation: letItSnow 12.3333333333s 10.25s linear infinite, shakeIt 4s 10.25s linear infinite; }
+  .snow.s64:after, .snow.s64:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s64:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s65 {
+  height: 9px;
+  left: 56vw;
+  opacity: 0.1;
+  width: 3px;
+  animation: letItSnow 15.2s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -webkit-animation: letItSnow 15.2s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -moz-animation: letItSnow 15.2s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -ms-animation: letItSnow 15.2s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite;
+  -o-animation: letItSnow 15.2s 7.5s linear infinite, shakeIt 4s 7.5s linear infinite; }
+  .snow.s65:after, .snow.s65:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s65:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s66 {
+  height: 12px;
+  left: 20vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 13.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -webkit-animation: letItSnow 13.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -moz-animation: letItSnow 13.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -ms-animation: letItSnow 13.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -o-animation: letItSnow 13.5s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite; }
+  .snow.s66:after, .snow.s66:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s66:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s67 {
+  height: 15px;
+  left: 87vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 12.1428571429s 10.2s linear infinite, shakeIt 4s 10.2s linear infinite;
+  -webkit-animation: letItSnow 12.1428571429s 10.2s linear infinite, shakeIt 4s 10.2s linear infinite;
+  -moz-animation: letItSnow 12.1428571429s 10.2s linear infinite, shakeIt 4s 10.2s linear infinite;
+  -ms-animation: letItSnow 12.1428571429s 10.2s linear infinite, shakeIt 4s 10.2s linear infinite;
+  -o-animation: letItSnow 12.1428571429s 10.2s linear infinite, shakeIt 4s 10.2s linear infinite; }
+  .snow.s67:after, .snow.s67:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s67:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s68 {
+  height: 15px;
+  left: 37vw;
+  opacity: 0.1;
+  width: 5px;
+  animation: letItSnow 12.1428571429s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -webkit-animation: letItSnow 12.1428571429s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -moz-animation: letItSnow 12.1428571429s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -ms-animation: letItSnow 12.1428571429s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite;
+  -o-animation: letItSnow 12.1428571429s 3.2s linear infinite, shakeIt 4s 3.2s linear infinite; }
+  .snow.s68:after, .snow.s68:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s68:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s69 {
+  height: 12px;
+  left: 35vw;
+  opacity: 0.6;
+  width: 4px;
+  animation: letItSnow 13s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -webkit-animation: letItSnow 13s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -moz-animation: letItSnow 13s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -ms-animation: letItSnow 13s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -o-animation: letItSnow 13s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite; }
+  .snow.s69:after, .snow.s69:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s69:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s70 {
+  height: 9px;
+  left: 33vw;
+  opacity: 0.4;
+  width: 3px;
+  animation: letItSnow 12.1428571429s 1.3333333333s linear infinite, shakeIt 4s 1.3333333333s linear infinite;
+  -webkit-animation: letItSnow 12.1428571429s 1.3333333333s linear infinite, shakeIt 4s 1.3333333333s linear infinite;
+  -moz-animation: letItSnow 12.1428571429s 1.3333333333s linear infinite, shakeIt 4s 1.3333333333s linear infinite;
+  -ms-animation: letItSnow 12.1428571429s 1.3333333333s linear infinite, shakeIt 4s 1.3333333333s linear infinite;
+  -o-animation: letItSnow 12.1428571429s 1.3333333333s linear infinite, shakeIt 4s 1.3333333333s linear infinite; }
+  .snow.s70:after, .snow.s70:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s70:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s71 {
+  height: 9px;
+  left: 62vw;
+  opacity: 0.1;
+  width: 3px;
+  animation: letItSnow 14.1428571429s 10.3333333333s linear infinite, shakeIt 4s 10.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14.1428571429s 10.3333333333s linear infinite, shakeIt 4s 10.3333333333s linear infinite;
+  -moz-animation: letItSnow 14.1428571429s 10.3333333333s linear infinite, shakeIt 4s 10.3333333333s linear infinite;
+  -ms-animation: letItSnow 14.1428571429s 10.3333333333s linear infinite, shakeIt 4s 10.3333333333s linear infinite;
+  -o-animation: letItSnow 14.1428571429s 10.3333333333s linear infinite, shakeIt 4s 10.3333333333s linear infinite; }
+  .snow.s71:after, .snow.s71:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s71:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s72 {
+  height: 12px;
+  left: 16vw;
+  opacity: 0.5;
+  width: 4px;
+  animation: letItSnow 14.3333333333s 4.25s linear infinite, shakeIt 4s 4.25s linear infinite;
+  -webkit-animation: letItSnow 14.3333333333s 4.25s linear infinite, shakeIt 4s 4.25s linear infinite;
+  -moz-animation: letItSnow 14.3333333333s 4.25s linear infinite, shakeIt 4s 4.25s linear infinite;
+  -ms-animation: letItSnow 14.3333333333s 4.25s linear infinite, shakeIt 4s 4.25s linear infinite;
+  -o-animation: letItSnow 14.3333333333s 4.25s linear infinite, shakeIt 4s 4.25s linear infinite; }
+  .snow.s72:after, .snow.s72:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s72:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s73 {
+  height: 15px;
+  left: 26vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 15.1666666667s 11.5s linear infinite, shakeIt 4s 11.5s linear infinite;
+  -webkit-animation: letItSnow 15.1666666667s 11.5s linear infinite, shakeIt 4s 11.5s linear infinite;
+  -moz-animation: letItSnow 15.1666666667s 11.5s linear infinite, shakeIt 4s 11.5s linear infinite;
+  -ms-animation: letItSnow 15.1666666667s 11.5s linear infinite, shakeIt 4s 11.5s linear infinite;
+  -o-animation: letItSnow 15.1666666667s 11.5s linear infinite, shakeIt 4s 11.5s linear infinite; }
+  .snow.s73:after, .snow.s73:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s73:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s74 {
+  height: 9px;
+  left: 38vw;
+  opacity: 0.5;
+  width: 3px;
+  animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -webkit-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -moz-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -ms-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -o-animation: letItSnow 11.5s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite; }
+  .snow.s74:after, .snow.s74:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s74:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s75 {
+  height: 9px;
+  left: 21vw;
+  opacity: 0.4;
+  width: 3px;
+  animation: letItSnow 13s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -webkit-animation: letItSnow 13s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -moz-animation: letItSnow 13s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -ms-animation: letItSnow 13s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite;
+  -o-animation: letItSnow 13s 9.3333333333s linear infinite, shakeIt 4s 9.3333333333s linear infinite; }
+  .snow.s75:after, .snow.s75:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s75:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s76 {
+  height: 15px;
+  left: 63vw;
+  opacity: 0.2;
+  width: 5px;
+  animation: letItSnow 15.1428571429s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -webkit-animation: letItSnow 15.1428571429s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -moz-animation: letItSnow 15.1428571429s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -ms-animation: letItSnow 15.1428571429s 4s linear infinite, shakeIt 4s 4s linear infinite;
+  -o-animation: letItSnow 15.1428571429s 4s linear infinite, shakeIt 4s 4s linear infinite; }
+  .snow.s76:after, .snow.s76:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s76:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s77 {
+  height: 15px;
+  left: 89vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 12.25s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -webkit-animation: letItSnow 12.25s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -moz-animation: letItSnow 12.25s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -ms-animation: letItSnow 12.25s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite;
+  -o-animation: letItSnow 12.25s 3.5s linear infinite, shakeIt 4s 3.5s linear infinite; }
+  .snow.s77:after, .snow.s77:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s77:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s78 {
+  height: 6px;
+  left: 79vw;
+  opacity: 0.1;
+  width: 2px;
+  animation: letItSnow 15.25s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -webkit-animation: letItSnow 15.25s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -moz-animation: letItSnow 15.25s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -ms-animation: letItSnow 15.25s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -o-animation: letItSnow 15.25s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite; }
+  .snow.s78:after, .snow.s78:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s78:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s79 {
+  height: 12px;
+  left: 59vw;
+  opacity: 0.5;
+  width: 4px;
+  animation: letItSnow 11.2s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -webkit-animation: letItSnow 11.2s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -moz-animation: letItSnow 11.2s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -ms-animation: letItSnow 11.2s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -o-animation: letItSnow 11.2s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite; }
+  .snow.s79:after, .snow.s79:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s79:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s80 {
+  height: 9px;
+  left: 20vw;
+  opacity: 0.7;
+  width: 3px;
+  animation: letItSnow 11.25s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -webkit-animation: letItSnow 11.25s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -moz-animation: letItSnow 11.25s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -ms-animation: letItSnow 11.25s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite;
+  -o-animation: letItSnow 11.25s 10.5s linear infinite, shakeIt 4s 10.5s linear infinite; }
+  .snow.s80:after, .snow.s80:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s80:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s81 {
+  height: 15px;
+  left: 12vw;
+  opacity: 0.2;
+  width: 5px;
+  animation: letItSnow 15s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -webkit-animation: letItSnow 15s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -moz-animation: letItSnow 15s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -ms-animation: letItSnow 15s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -o-animation: letItSnow 15s 6s linear infinite, shakeIt 4s 6s linear infinite; }
+  .snow.s81:after, .snow.s81:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s81:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s82 {
+  height: 6px;
+  left: 6vw;
+  opacity: 0.7;
+  width: 2px;
+  animation: letItSnow 12.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -webkit-animation: letItSnow 12.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -moz-animation: letItSnow 12.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -ms-animation: letItSnow 12.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite;
+  -o-animation: letItSnow 12.1666666667s 2s linear infinite, shakeIt 4s 2s linear infinite; }
+  .snow.s82:after, .snow.s82:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s82:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s83 {
+  height: 15px;
+  left: 27vw;
+  opacity: 0.4;
+  width: 5px;
+  animation: letItSnow 15.5s 1.2s linear infinite, shakeIt 4s 1.2s linear infinite;
+  -webkit-animation: letItSnow 15.5s 1.2s linear infinite, shakeIt 4s 1.2s linear infinite;
+  -moz-animation: letItSnow 15.5s 1.2s linear infinite, shakeIt 4s 1.2s linear infinite;
+  -ms-animation: letItSnow 15.5s 1.2s linear infinite, shakeIt 4s 1.2s linear infinite;
+  -o-animation: letItSnow 15.5s 1.2s linear infinite, shakeIt 4s 1.2s linear infinite; }
+  .snow.s83:after, .snow.s83:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s83:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s84 {
+  height: 15px;
+  left: 83vw;
+  opacity: 0.6;
+  width: 5px;
+  animation: letItSnow 13.5s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -webkit-animation: letItSnow 13.5s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -moz-animation: letItSnow 13.5s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -ms-animation: letItSnow 13.5s 6s linear infinite, shakeIt 4s 6s linear infinite;
+  -o-animation: letItSnow 13.5s 6s linear infinite, shakeIt 4s 6s linear infinite; }
+  .snow.s84:after, .snow.s84:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s84:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s85 {
+  height: 15px;
+  left: 51vw;
+  opacity: 0.1;
+  width: 5px;
+  animation: letItSnow 14s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -webkit-animation: letItSnow 14s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -moz-animation: letItSnow 14s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -ms-animation: letItSnow 14s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite;
+  -o-animation: letItSnow 14s 8.5s linear infinite, shakeIt 4s 8.5s linear infinite; }
+  .snow.s85:after, .snow.s85:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s85:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s86 {
+  height: 12px;
+  left: 91vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 14.5s 11.3333333333s linear infinite, shakeIt 4s 11.3333333333s linear infinite;
+  -webkit-animation: letItSnow 14.5s 11.3333333333s linear infinite, shakeIt 4s 11.3333333333s linear infinite;
+  -moz-animation: letItSnow 14.5s 11.3333333333s linear infinite, shakeIt 4s 11.3333333333s linear infinite;
+  -ms-animation: letItSnow 14.5s 11.3333333333s linear infinite, shakeIt 4s 11.3333333333s linear infinite;
+  -o-animation: letItSnow 14.5s 11.3333333333s linear infinite, shakeIt 4s 11.3333333333s linear infinite; }
+  .snow.s86:after, .snow.s86:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s86:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s87 {
+  height: 9px;
+  left: 58vw;
+  opacity: 0.3;
+  width: 3px;
+  animation: letItSnow 12.1428571429s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -webkit-animation: letItSnow 12.1428571429s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -moz-animation: letItSnow 12.1428571429s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -ms-animation: letItSnow 12.1428571429s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite;
+  -o-animation: letItSnow 12.1428571429s 8.3333333333s linear infinite, shakeIt 4s 8.3333333333s linear infinite; }
+  .snow.s87:after, .snow.s87:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s87:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s88 {
+  height: 9px;
+  left: 53vw;
+  opacity: 0.2;
+  width: 3px;
+  animation: letItSnow 16s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -webkit-animation: letItSnow 16s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -moz-animation: letItSnow 16s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -ms-animation: letItSnow 16s 9s linear infinite, shakeIt 4s 9s linear infinite;
+  -o-animation: letItSnow 16s 9s linear infinite, shakeIt 4s 9s linear infinite; }
+  .snow.s88:after, .snow.s88:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s88:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s89 {
+  height: 6px;
+  left: 74vw;
+  opacity: 0.6;
+  width: 2px;
+  animation: letItSnow 11.2s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -webkit-animation: letItSnow 11.2s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -moz-animation: letItSnow 11.2s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -ms-animation: letItSnow 11.2s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -o-animation: letItSnow 11.2s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite; }
+  .snow.s89:after, .snow.s89:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s89:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s90 {
+  height: 15px;
+  left: 56vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 14.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -webkit-animation: letItSnow 14.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -moz-animation: letItSnow 14.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -ms-animation: letItSnow 14.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -o-animation: letItSnow 14.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite; }
+  .snow.s90:after, .snow.s90:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s90:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s91 {
+  height: 15px;
+  left: 71vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 12s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -webkit-animation: letItSnow 12s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -moz-animation: letItSnow 12s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -ms-animation: letItSnow 12s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -o-animation: letItSnow 12s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite; }
+  .snow.s91:after, .snow.s91:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s91:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s92 {
+  height: 6px;
+  left: 98vw;
+  opacity: 0.1;
+  width: 2px;
+  animation: letItSnow 12.2s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -webkit-animation: letItSnow 12.2s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -moz-animation: letItSnow 12.2s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -ms-animation: letItSnow 12.2s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite;
+  -o-animation: letItSnow 12.2s 6.5s linear infinite, shakeIt 4s 6.5s linear infinite; }
+  .snow.s92:after, .snow.s92:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s92:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s93 {
+  height: 6px;
+  left: 63vw;
+  opacity: 0.2;
+  width: 2px;
+  animation: letItSnow 13.5s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -webkit-animation: letItSnow 13.5s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -moz-animation: letItSnow 13.5s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -ms-animation: letItSnow 13.5s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite;
+  -o-animation: letItSnow 13.5s 12.25s linear infinite, shakeIt 4s 12.25s linear infinite; }
+  .snow.s93:after, .snow.s93:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s93:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s94 {
+  height: 12px;
+  left: 41vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 14s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -webkit-animation: letItSnow 14s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -moz-animation: letItSnow 14s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -ms-animation: letItSnow 14s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -o-animation: letItSnow 14s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite; }
+  .snow.s94:after, .snow.s94:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s94:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s95 {
+  height: 9px;
+  left: 4vw;
+  opacity: 0.4;
+  width: 3px;
+  animation: letItSnow 11.1666666667s 7s linear infinite, shakeIt 4s 7s linear infinite;
+  -webkit-animation: letItSnow 11.1666666667s 7s linear infinite, shakeIt 4s 7s linear infinite;
+  -moz-animation: letItSnow 11.1666666667s 7s linear infinite, shakeIt 4s 7s linear infinite;
+  -ms-animation: letItSnow 11.1666666667s 7s linear infinite, shakeIt 4s 7s linear infinite;
+  -o-animation: letItSnow 11.1666666667s 7s linear infinite, shakeIt 4s 7s linear infinite; }
+  .snow.s95:after, .snow.s95:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s95:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s96 {
+  height: 15px;
+  left: 35vw;
+  opacity: 0.7;
+  width: 5px;
+  animation: letItSnow 15s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -webkit-animation: letItSnow 15s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -moz-animation: letItSnow 15s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -ms-animation: letItSnow 15s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite;
+  -o-animation: letItSnow 15s 7.25s linear infinite, shakeIt 4s 7.25s linear infinite; }
+  .snow.s96:after, .snow.s96:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s96:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s97 {
+  height: 6px;
+  left: 58vw;
+  opacity: 0.7;
+  width: 2px;
+  animation: letItSnow 12.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -webkit-animation: letItSnow 12.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -moz-animation: letItSnow 12.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -ms-animation: letItSnow 12.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite;
+  -o-animation: letItSnow 12.1666666667s 1.25s linear infinite, shakeIt 4s 1.25s linear infinite; }
+  .snow.s97:after, .snow.s97:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 6px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 2px; }
+  .snow.s97:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s98 {
+  height: 9px;
+  left: 2vw;
+  opacity: 0.6;
+  width: 3px;
+  animation: letItSnow 11.1428571429s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -webkit-animation: letItSnow 11.1428571429s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -moz-animation: letItSnow 11.1428571429s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -ms-animation: letItSnow 11.1428571429s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite;
+  -o-animation: letItSnow 11.1428571429s 9.5s linear infinite, shakeIt 4s 9.5s linear infinite; }
+  .snow.s98:after, .snow.s98:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 9px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 3px; }
+  .snow.s98:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s99 {
+  height: 12px;
+  left: 75vw;
+  opacity: 0.3;
+  width: 4px;
+  animation: letItSnow 12.2s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -webkit-animation: letItSnow 12.2s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -moz-animation: letItSnow 12.2s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -ms-animation: letItSnow 12.2s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite;
+  -o-animation: letItSnow 12.2s 6.25s linear infinite, shakeIt 4s 6.25s linear infinite; }
+  .snow.s99:after, .snow.s99:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 12px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 4px; }
+  .snow.s99:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+.snow.s100 {
+  height: 15px;
+  left: 59vw;
+  opacity: 0.5;
+  width: 5px;
+  animation: letItSnow 14s 8s linear infinite, shakeIt 4s 8s linear infinite;
+  -webkit-animation: letItSnow 14s 8s linear infinite, shakeIt 4s 8s linear infinite;
+  -moz-animation: letItSnow 14s 8s linear infinite, shakeIt 4s 8s linear infinite;
+  -ms-animation: letItSnow 14s 8s linear infinite, shakeIt 4s 8s linear infinite;
+  -o-animation: letItSnow 14s 8s linear infinite, shakeIt 4s 8s linear infinite; }
+  .snow.s100:after, .snow.s100:before {
+    background-color: #fff;
+    border-radius: 100%;
+    content: '';
+    height: 15px;
+    position: absolute;
+    transform: rotate(60deg);
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    -ms-transform: rotate(60deg);
+    width: 5px; }
+  .snow.s100:before {
+    transform: rotate(-60deg);
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    -ms-transform: rotate(-60deg); }
+
+@keyframes letItSnow {
+  from {
+    top: -20vh; }
+  to {
+    top: 100vh; } }
+@-webkit-keyframes letItSnow {
+  from {
+    top: -20vh; }
+  to {
+    top: 100vh; } }
+@-moz-keyframes letItSnow {
+  from {
+    top: -20vh; }
+  to {
+    top: 100vh; } }
+@-ms-keyframes letItSnow {
+  from {
+    top: -20vh; }
+  to {
+    top: 100vh; } }
+@keyframes shakeIt {
+  0% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); }
+  40% {
+    transform: rotate(10deg) translateX(0px);
+    -webkit-transform: rotate(10deg) translateX(0px);
+    -moz-transform: rotate(10deg) translateX(0px);
+    -ms-transform: rotate(10deg) translateX(0px); }
+  60% {
+    transform: rotate(10deg) translateX(-10px);
+    -webkit-transform: rotate(10deg) translateX(-10px);
+    -moz-transform: rotate(10deg) translateX(-10px);
+    -ms-transform: rotate(10deg) translateX(-10px); }
+  100% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); } }
+@-webkit-keyframes shakeIt {
+  0% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); }
+  40% {
+    transform: rotate(10deg) translateX(0px);
+    -webkit-transform: rotate(10deg) translateX(0px);
+    -moz-transform: rotate(10deg) translateX(0px);
+    -ms-transform: rotate(10deg) translateX(0px); }
+  60% {
+    transform: rotate(10deg) translateX(-10px);
+    -webkit-transform: rotate(10deg) translateX(-10px);
+    -moz-transform: rotate(10deg) translateX(-10px);
+    -ms-transform: rotate(10deg) translateX(-10px); }
+  100% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); } }
+@-moz-keyframes shakeIt {
+  0% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); }
+  40% {
+    transform: rotate(10deg) translateX(0px);
+    -webkit-transform: rotate(10deg) translateX(0px);
+    -moz-transform: rotate(10deg) translateX(0px);
+    -ms-transform: rotate(10deg) translateX(0px); }
+  60% {
+    transform: rotate(10deg) translateX(-10px);
+    -webkit-transform: rotate(10deg) translateX(-10px);
+    -moz-transform: rotate(10deg) translateX(-10px);
+    -ms-transform: rotate(10deg) translateX(-10px); }
+  100% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); } }
+@-ms-keyframes shakeIt {
+  0% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); }
+  40% {
+    transform: rotate(10deg) translateX(0px);
+    -webkit-transform: rotate(10deg) translateX(0px);
+    -moz-transform: rotate(10deg) translateX(0px);
+    -ms-transform: rotate(10deg) translateX(0px); }
+  60% {
+    transform: rotate(10deg) translateX(-10px);
+    -webkit-transform: rotate(10deg) translateX(-10px);
+    -moz-transform: rotate(10deg) translateX(-10px);
+    -ms-transform: rotate(10deg) translateX(-10px); }
+  100% {
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg); } }
+.game-wrapper {
+  background-color: #282828;
+  margin: 0 0 2.5% 0;
+  padding: 50px; }
+  .game-wrapper h2 {
+    color: #ebebeb;
+    font-family: code;
+    font-weight: normal;
+    text-align: left; }
+    @media (max-width: 767px) {
+      .game-wrapper h2 {
+        font-size: 12pt; } }
+  .game-wrapper .img-wrapper {
+    margin: 25px auto;
+    text-align: center; }
+    .game-wrapper .img-wrapper img {
+      margin: 0 1%;
+      width: 21%; }
+      @media (max-width: 767px) {
+        .game-wrapper .img-wrapper img {
+          width: 42%; } }
+  @media (max-width: 767px) {
+    .game-wrapper {
+      padding: 25px; } }
+
+.btn-wrapper {
+  margin: 0 0 100px 0; }
+
+.ended .btn-wrapper {
+  margin: 10px 0; }
+  .ended .btn-wrapper .btn {
+    background-color: #191919; }
+    @media (min-width: 1025px) {
+      .ended .btn-wrapper .btn:hover {
+        background-color: #0f0f0f; } }
+.ended img {
+  display: table-cell;
+  width: 85%; }
+  @media (max-width: 767px) {
+    .ended img {
+      display: block;
+      margin: auto;
+      width: 55%; } }
+.ended .center-align-ended-content {
+  display: table;
+  margin: auto;
+  width: 80%; }
+  @media (max-width: 767px) {
+    .ended .center-align-ended-content {
+      width: 100%; } }
+.ended .text-container-ended {
+  display: table-cell;
+  padding: 0 25px;
+  vertical-align: middle;
+  width: 80%; }
+  @media (max-width: 767px) {
+    .ended .text-container-ended {
+      display: block;
+      padding: 0;
+      width: 100%; } }
+.ended h3 {
+  color: #fff;
+  font-size: 20pt;
+  margin: 0 0 10px 0; }
+  @media (max-width: 767px) {
+    .ended h3 {
+      font-size: 14pt; } }
+.ended h4 {
+  color: #fff;
+  font-size: 18pt;
+  margin: 0; }
+  @media (max-width: 767px) {
+    .ended h4 {
+      font-size: 12pt; } }
+
+/*# sourceMappingURL=dinostyle.css.map */

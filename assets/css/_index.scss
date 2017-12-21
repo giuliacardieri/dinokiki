@@ -1,0 +1,73 @@
+$red: #923334;
+$blue: #4065A0;
+$yellow: #C7AD3A;
+$green: #317137;
+
+/* dynamic kikis when dino is clicked */
+p.kiki {
+  color: $kikiColor;
+  font-family: 'code';
+  position: absolute;
+  z-index: 3;
+}
+
+/* dinokiki's photo */
+.dino {
+  cursor: url('../images/micro.cur'), auto;
+  display: block;
+  margin: 8vh auto;
+  z-index: 4;
+  @media (min-width: 769px) {
+    max-width: 50%;
+  }
+  @media (max-width: 768px) {
+    width: 70%;
+  }
+}
+
+.kiki-wrapper {
+  z-index: 3;
+}
+
+.azul {
+  @include browsers(lightItUp 2s linear infinite);
+}
+
+.vermelho {
+  @include browsers(lightItUp 2s -0.5s linear infinite);
+}
+
+.verde {
+  @include browsers(lightItUp 2s -1s linear infinite);
+}
+
+.amarelo {
+  @include browsers(lightItUp 2s -1.5s linear infinite);
+}
+
+@include animation(lightItUp) {
+  0% {
+    fill: $blue;
+  }
+ 24% {
+    fill: $blue;
+  }
+  25% {
+    fill: $red;
+  }
+  49% {
+    fill: $red;
+  }
+  50% {
+    fill: $green;
+  }
+  74% {
+    fill: $green;
+  }
+  75% {
+    fill: $yellow;
+  }
+  100% {
+    fill: $yellow;
+  }
+}

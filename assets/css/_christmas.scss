@@ -1,0 +1,112 @@
+$red: #a54646;
+$blue: #28678e;
+$yellow: #c19f40;
+$green: #476024;
+$white: #fff;
+
+
+/* christmas lights */
+.blue, .red, .green, .yellow {
+  opacity: 0.9; 
+}
+
+.blue {
+  @include browsers(lightItUp 2s linear infinite);
+}
+
+.red {
+  @include browsers(lightItUp 2s -0.5s linear infinite);
+}
+
+.green {
+  @include browsers(lightItUp 2s -1s linear infinite);
+}
+
+.yellow {
+  @include browsers(lightItUp 2s -1.5s linear infinite);
+}
+
+@include animation(lightItUp) {
+  0% {
+    fill: $blue;
+  }
+ 24% {
+    fill: $blue;
+  }
+  25% {
+    fill: $red;
+  }
+  49% {
+    fill: $red;
+  }
+  50% {
+    fill: $green;
+  }
+  74% {
+    fill: $green;
+  }
+  75% {
+    fill: $yellow;
+  }
+  100% {
+    fill: $yellow;
+  }
+}
+
+/* snow falling */
+.snow {
+  background-color: $white;
+  border-radius: 30%;
+  bottom: 110vh;
+  position: absolute;
+}
+
+@for $i from 1 through 100  {
+  .snow.s#{$i}{
+    $speed: random(5) + 1/random(7) + 10 + s;
+    $delay: (random(12) + 1/random(5)) + s;
+    $size: (random(4) + 1);
+    height: $size*3px;
+    left: random(100) + 0vw;
+    opacity: random(7)/10;
+    width: $size + px;
+    @include browsers((letItSnow $speed $delay linear infinite, shakeIt 4s $delay linear infinite));
+    &:after {
+      background-color: $white;
+      border-radius: 100%;
+      content: '';
+      height: $size*3px;
+      position: absolute;
+      @include transform(rotate(60deg));
+      width: $size + px;
+    }
+    &:before {
+      @extend .snow.s#{$i}:after;
+      @include transform(rotate(-60deg));
+    }
+  }
+}
+
+@include animation(letItSnow) {
+  from { 
+    top: -20vh;
+  }
+  to { 
+    top: 100vh;
+  }
+}
+
+@include animation(shakeIt) {
+  0% {
+    @include transform(rotate(-10deg));
+  } 
+  40% {
+    @include transform(rotate(10deg) translateX(0px));
+  }
+  60% {
+    @include transform(rotate(10deg) translateX(-10px));
+  } 
+  100% {
+    @include transform(rotate(-10deg));
+  } 
+}

@@ -1,0 +1,303 @@
+$textColor: #282828;
+$aColor: #202020;
+$kikiColor: #fff;
+$footerTextColor: #fff;
+$white: #eee;
+
+$backgroundColor: #7D4750;
+
+$borderColor: #282828;
+$footerColor: #282828;
+
+$successColor: #356125;
+$errorColor: #802525;
+$darkerColor: #282828;
+$darkSection: $backgroundColor - 50;
+
+$borderRadius:10px;
+$twitter:#55acee;
+$facebook:#3b5998;
+$footerHeight: 63px;
+
+$max-xs: 767px;
+$min-sm: 768px;
+$max-sm: 991px;
+$min-md: 992px;
+$max-md: 1199px;
+$min-lg: 1200px;
+
+
+@mixin placeholder($selector, $color){
+    #{$selector}::-webkit-input-placeholder {
+        color: $color;
+    }
+    #{$selector}::-moz-placeholder {
+        color: $color;
+    }
+    #{$selector}:-ms-input-placeholder {
+        color: $color;
+    }
+}
+@mixin transform($info) {
+  transform: $info;
+  -webkit-transform: $info;
+  -moz-transform: $info;
+  -ms-transform: $info;
+}
+@mixin browsers($info) {
+  animation: $info;
+  -webkit-animation: $info;
+  -moz-animation: $info;
+  -ms-animation: $info;
+  -o-animation: $info;
+}
+@mixin animation($name) {
+  @keyframes #{$name} {
+    @content;
+  }
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+}
+
+@font-face {
+    font-family: 'raleway';
+    src: url('../fonts/Raleway-Regular.ttf');
+}
+@font-face {
+    font-family: 'code';
+    src: url('../fonts/Code_Pro_Demo-webfont.eot');
+    src: url('../fonts/Code_Pro_Demo-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/Code_Pro_Demo-webfont.woff') format('woff'), url('../fonts/Code_Pro_Demo-webfont.ttf') format('truetype'), url('../fonts/Code_Pro_Demo-webfont.svg#CodeProDemoRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: $backgroundColor;
+    color: $textColor;
+    font-family: raleway, helvetica, arial;
+    font-size: 12pt;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+header {
+    margin: auto;
+    padding: 5vh 0;
+    position: relative;
+    text-align: center;
+    width: 80vw;
+    z-index: 2;
+    @media (max-width: $max-sm) {
+        width: 95vw;
+    }
+    @media (max-width: $max-xs) {
+        padding: 2.5vh 0;
+    }
+}
+
+p {
+    font-size: 13pt;
+    line-height: 16pt;
+    margin: 10px 0;
+    &.small {
+        font-size: 12pt;
+        line-height: 16pt;
+    }
+}
+
+a {
+    color: $aColor;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        @media (max-width: $max-sm) {
+            text-decoration: none;
+        }
+    }
+}
+
+/* headings */
+
+h1 {
+    line-height: 1.6;
+    margin: 0;
+    a {
+        color: $footerTextColor;
+        font-family: code;
+        font-size: 30pt;
+        opacity: 0.5;
+        &:hover {
+            text-decoration: none;
+        }
+        @media (max-width: $max-xs) {
+            font-size: 10pt;
+        }
+        @media (min-width: $min-sm) and (max-width: $max-sm) {
+            font-size: 24pt;
+        }
+    }
+}
+
+h2 {
+    font-family: code;
+    font-size: 14pt;
+    line-height: 16pt;
+    margin: 10px 0 15px 0;
+    text-align: center;
+    &:first-child {
+        margin-top: 0;
+    }
+    @media (max-width: $max-xs) {
+        font-size: 14pt;
+        line-height: 16pt;
+    }
+}
+
+h3, h4 {
+    font-family: code;
+}
+
+/* end of headings */
+
+/* hidden classes */
+.hidden {
+    display: none!important;
+}
+
+.hidden-visi {
+    visibility: hidden;
+}
+
+@media (max-width: $max-xs) {
+    .hidden-xs {
+        display: none!important;
+    }
+}
+
+@media (min-width: $min-sm)  and (max-width: $max-sm) {
+    .hidden-sm {
+        display: none!important;
+    }
+}
+
+/* end of hidden classes */
+
+main {
+    margin: 0;
+    margin-bottom: $footerHeight;
+    position: relative;
+    z-index: 2;
+}
+
+section {
+    margin: 1.5% 10%;
+    text-align: justify;
+    &.dino-test-wrapper {
+        background-color: $darkSection;
+        margin: 0;
+        padding: 3.75% 10%;
+    }
+    img{
+        border: 1px solid $borderColor;
+        border-radius: $borderRadius;
+        margin: 0 -3px;
+        @media (max-width: 767px){
+            width: 50%;
+        }
+    }
+    &.dark {
+        background-color: $darkSection;
+        margin: 2.5% 0;
+    }
+    .icon-wrapper img {
+        max-width: 40px;
+    }
+}
+
+.big-photo {
+    margin: 0 0 1% 0;
+    img {
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    @media (max-width: 767px) {
+        display: none;
+    }
+}
+
+/* buttons */
+.btn, .kiki-form input[type="submit"], .kiki-form input[type="reset"], input[type="submit"] {
+    background-color: $borderColor;
+    border: 0;
+    border-radius: $borderRadius;
+    color: $kikiColor;
+    cursor: pointer;
+    font-family: raleway;
+    font-size: 11pt;
+    opacity: 0.8;
+    padding: 10px 15px;
+    &:hover {
+        @media (min-width: 1025px) {
+            background-color: $borderColor - 15;
+        }
+    }
+    &:focus {
+        outline: 0;
+    }
+    @media (max-width: 910px) {
+        font-size: 11pt;
+        line-height: 13pt;
+        width: 42%;
+    }
+    @media (max-width: 768px) {
+        display: inline-block;
+        margin: 1.5% 0;
+        width: 90%;
+    }
+}
+
+.icon-wrapper {
+    text-align: center;
+    img.icon {
+        border: 0;
+    }
+}
+
+.menu-icon {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    left: -7.5vw;
+    line-height: 52px;
+    position: absolute;
+    top: 2%;
+    @media (min-width: 768px) {
+        display: none;
+    }
+    span {
+        color: $textColor;
+        font-size: 18pt;
+    }
+}
+
+@import "index";
+@import "about";
+@import "footer";
+@import "christmas";
+@import "game";
