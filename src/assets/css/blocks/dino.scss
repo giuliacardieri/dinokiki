@@ -1,0 +1,66 @@
+.dino {
+  display: flex;
+  justify-content: center;
+  padding-top: 2.5vh;
+  width: 100vw;
+}
+
+.dino__svg {
+  width: 90vw;
+  &.dino__svg--hidden {
+    display: none;
+  }
+  @media (min-width: $min-md) {
+  	width: 60vw;
+  }
+}
+
+.dino__p {
+	color: $white;
+	font-family: 'Code';
+	margin: 0;
+	position: fixed;
+	z-index: 3;
+	&.dino__p--extra-small {
+		font-size: 16px;
+	}
+	&.dino__p--small {
+		font-size: 18px;
+	}
+	&.dino__p--medium {
+		font-size: 24px;
+	}
+	&.dino__p--large {
+		font-size: 36px;
+	}
+	&.dino__p--extra-large {
+		font-size: 42px;
+	}
+	&.dino__p--huge {
+		font-size: 54px;
+	}
+	@for $i from 1 through 30 {
+		&.dino__p--left-#{$i} {
+			left: random(85) + 2vw;
+		}
+		&.dino__p--top-#{$i} {
+			top: random(85) + 5vh;
+		}
+	}
+}
+
+.dino__show-enter-active {
+  transition: opacity 0.5s ease-in;
+}
+
+.dino__show-leave-active {
+  transition: opacity 0.5s ease-in reverse;
+}
+
+.dino__show-enter, .dino__show-leave-to {
+  opacity: 0;
+}
+
+.dino__kiki-wrapper {
+	z-index: 3;
+}

@@ -1,0 +1,35 @@
+.footer {
+  background-color: $white;
+  border-top: 1px solid $grey-trans;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 15px 5vw;
+  position: fixed;
+  width: 100vw;
+  z-index: 4;
+  @media (min-width: $min-md) {
+    display: none;
+  }
+}
+
+.footer__nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__li {
+  list-style: none;
+}
+
+.footer__a {
+  padding: 10px;
+  &.router-link-exact-active .footer__svg {
+    fill: $grey;
+  }
+}
+
+.footer__svg {
+  fill: $grey-light;
+}
