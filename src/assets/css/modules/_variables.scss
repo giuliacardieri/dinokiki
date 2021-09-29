@@ -1,0 +1,27 @@
+$white: #ededed;
+$white-trans: rgba(237, 237, 237, 0.9);
+
+$black: #202020;
+
+$grey-trans: rgba(40, 40, 40, 0.8);
+$grey: #282828;
+$grey-light: #888;
+
+$blue: #40668c;
+$blue-darker: #375675;
+$blue-darkest: darken($blue-darker, 0.5);
+
+$border-radius: 5px;
+$footerHeight: 63px;
+
+$twitter: #55acee;
+$facebook: #3b5998;
+
+$max-xs: 767px;
+$min-sm: 768px;
+$max-sm: 991px;
+$min-md: 992px;
+$max-md: 1199px;
+$min-lg: 1200px;
+$max-lg: 1439px;
+$min-xl: 1440px;
