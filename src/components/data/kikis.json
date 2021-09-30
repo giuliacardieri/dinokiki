@@ -2,234 +2,237 @@
     "kikis": [
         {
             "name": "The AntiPattern Kiki",
-            "img": "antipattern",
-            "id": 31,
+            "img": "dinos/antipattern.png",
             "file_name": "KikiH",
-            "checked": 1
+            "friend_name": "Henrique S."
         },
         {
             "name": "The Bad Girl Kiki",
-            "img": "badgirl",
-            "id": 3,
+            "img": "dinos/badgirl.png",
             "file_name": "KikiC",
-            "checked": 1
+            "friend_name": "Caio M."
         },
         {
             "name": "The Birthday Kiki",
-            "img": "birthday",
-            "id": 24,
+            "img": "dinos/birthday.png",
             "file_name": "KikiG2",
-            "checked": 1
+            "friend_name": "Guilherme S."
         },
         {
             "name": "The British Kiki",
-            "img": "british",
-            "id": 23,
+            "img": "dinos/british.png",
             "file_name": "Kiki2",
-            "checked": 1
+            "friend_name": "Giulia C."
         },
         {
             "name": "The Broadway Kiki",
-            "img": "broadway",
-            "id": 13,
+            "img": "dinos/broadway.png",
             "file_name": "KikiN",
-            "checked": 1
+            "friend_name": "Nicole J."
         },
         {
             "name": "The Canadian Kiki",
-            "img": "canadian",
-            "id": 37,
+            "img": "dinos/canadian.png",
             "file_name": "KikiMC",
-            "checked": 1
+            "friend_name": "Marcelo C."
         },
         {
             "name": "The Caveman Kiki",
-            "img": "caveman",
-            "id": 5,
+            "img": "dinos/caveman.png",
             "file_name": "KikiF",
-            "checked": 1
+            "friend_name": "Felipe M."
         },
         {
             "name": "The Classical Music Kiki",
-            "img": "classical",
-            "id": 32,
+            "img": "dinos/classical.png",
             "file_name": "KikiCB",
-            "checked": 1
+            "friend_name": "Carlos B."
         },
         {
             "name": "The Classical Music Kiki",
-            "img": "classical",
-            "id": 2,
+            "img": "dinos/classical.png",
             "file_name": "KikiCH",
-            "checked": 1
+            "friend_name": "Caio H."
         },
         {
             "name": "The Classical Music Kiki",
-            "img": "classical",
-            "id": 33,
+            "img": "dinos/classical.png",
             "file_name": "KikiL",
-            "checked": 1
+            "friend_name": "Luiz F."
         },
         {
             "name": "The Clock Kiki",
-            "img": "clock",
-            "id": 20,
+            "img": "dinos/clock.png",
             "file_name": "KikiK",
-            "checked": 1
+            "friend_name": "Keiko I."
         },
         {
             "name": "The Cute Kiki",
-            "img": "cute",
-            "id": 7,
+            "img": "dinos/cute.png",
             "file_name": "KikiGA",
-            "checked": 1
+            "friend_name": "Giovana A."
         },
         {
             "name": "The Engineer Kiki",
-            "img": "engineer",
-            "id": 1,
+            "img": "dinos/engineer.png",
             "file_name": "KikiB",
-            "checked": 1
+            "friend_name": "Bruno O."
         },
         {
             "name": "The Fast Forward Kiki",
-            "img": "fastforward",
-            "id": 14,
+            "img": "dinos/fastforward.png",
             "file_name": "KikiR",
-            "checked": 1
+            "friend_name": "Raianne R."
         },
         {
             "name": "The First Kiki",
-            "img": "first",
-            "id": 6,
+            "img": "dinos/first.png",
             "file_name": "Kiki1",
-            "checked": 1
+            "friend_name": "Giulia C."
         },
         {
             "name": "The Game Of Thrones Kiki",
-            "img": "got",
-            "id": 36,
+            "img": "dinos/got.png",
             "file_name": "KikiGOT",
-            "checked": 1
+            "friend_name": "Karoline K."
         },
         {
             "name": "The Gaúcha Kiki",
-            "img": "gaucha",
-            "id": 4,
+            "img": "dinos/gaucha.png",
             "file_name": "KikiE",
-            "checked": 1
+            "friend_name": "Elisa C."
         },
         {
             "name": "The Hakuna Makiki",
-            "img": "hakunamakiki",
-            "id": 26,
+            "img": "dinos/hakunamakiki.png",
             "file_name": "KikiHM",
-            "checked": 1
+            "friend_name": "Keiko I."
         },
         {
             "name": "The Indikiki Jones",
-            "img": "indikikijones",
-            "id": 22,
+            "img": "dinos/indikikijones.png",
             "file_name": "KikiAC",
-            "checked": 1
+            "friend_name": "Carol M."
         },
         {
             "name": "The Kids Kiki",
-            "img": "kids",
-            "id": 10,
+            "img": "dinos/kids.png",
             "file_name": "KikiJC",
-            "checked": 1
+            "friend_name": "Kids"
         },
         {
             "name": "The Kiki Kiki",
-            "img": "kikikiki",
-            "id": 11,
+            "img": "dinos/kikikiki.png",
             "file_name": "KikiJ",
-            "checked": 1
+            "friend_name": "Jerome J."
         },
         {
             "name": "The Lion King Kiki",
-            "img": "lionking",
-            "id": 8,
+            "img": "dinos/lionking.png",
             "file_name": "KikiLK",
-            "checked": 1
+            "friend_name": "Raquel L. and friend"
         },
         {
             "name": "The Lost Kiki",
-            "img": "lost",
-            "id": 38,
+            "img": "dinos/lost.png",
             "file_name": "KikiVR",
-            "checked": 1
+            "friend_name": "Vinicius R."
         },
         {
             "name": "The Mission Impokikible",
-            "img": "missionimpokikible",
-            "id": 21,
+            "img": "dinos/missionimpokikible.png",
             "file_name": "KikiMI",
-            "checked": 1
+            "friend_name": "Keiko I. and Carol M."
         },
         {
             "name": "The Monster Kiki",
-            "img": "monster",
-            "id": 25,
+            "img": "dinos/monster.png",
             "file_name": "KikiK2",
-            "checked": 1
+            "friend_name": "Keiko I."
         },
         {
             "name": "The Multifaced Kiki",
-            "img": "multifaced",
-            "id": 12,
+            "img": "dinos/multifaced.png",
             "file_name": "KikiM",
-            "checked": 1
+            "friend_name": "Michelangelo G."
         },
         {
             "name": "The Pebble Kiki",
-            "img": "pebble",
-            "id": 9,
+            "img": "dinos/pebble.png",
             "file_name": "KikiG",
-            "checked": 1
+            "friend_name": "Guilherme S."
         },
         {
             "name": "The Pixel Kiki",
-            "img": "pixel",
-            "id": 19,
+            "img": "dinos/pixel.png",
             "file_name": "KikiY",
-            "checked": 1
+            "friend_name": "Alessandra S."
         },
         {
             "name": "The Psycho Kiki",
-            "img": "psycho",
-            "id": 17,
+            "img": "dinos/psycho.png",
             "file_name": "KikiT",
-            "checked": 1
+            "friend_name": "Tamires T."
         },
         {
             "name": "The Reporter Kiki",
-            "img": "reporter",
-            "id": 35,
+            "img": "dinos/reporter.png",
             "file_name": "KikiD",
-            "checked": 1
+            "friend_name": "Deivison S."
         },
         {
             "name": "The Singer Kiki",
-            "img": "singer",
-            "id": 15,
+            "img": "dinos/singer.png",
             "file_name": "KikiI",
-            "checked": 1
+            "friend_name": "Raquel L."
         },
         {
             "name": "The Staying Alive Kiki",
-            "img": "stayingalive",
-            "id": 16,
+            "img": "dinos/stayingalive.png",
             "file_name": "KikiSA",
-            "checked": 1
+            "friend_name": "The SA Friends Group"
         },
         {
             "name": "The Warning Kiki",
-            "img": "warning",
-            "id": 18,
+            "img": "dinos/warning.png",
             "file_name": "KikiV",
-            "checked": 1
+            "friend_name": "Vitória T."
+        },
+        {
+            "name": "The Rick Askiki",
+            "img": "dinos/rick.png",
+            "file_name": "KikiRick",
+            "friend_name": "Rick Askiki"
+        },
+        {
+            "name": "The Baby Nick Kiki",
+            "img": "dinos/nick-baby.png",
+            "file_name": "KikiNick",
+            "friend_name": "Paul"
+        },
+        {
+            "name": "The Mathieu Kiki",
+            "img": "dinos/mathieu-robot.png",
+            "file_name": "KikiTom",
+            "friend_name": "Tom"
+        },
+        {
+            "name": "The Dalbabob Kiki",
+            "img": "dinos/dalbabob-monkey.png",
+            "file_name": "KikiDavid",
+            "friend_name": "David"
+        },
+        {
+            "name": "The Miraculous Kiki",
+            "img": "dinos/miraculous.png",
+            "file_name": "KikiMiraculous",
+            "friend_name": "Secret Friend"
+        },
+        {
+            "name": "The Champ Kiki",
+            "img": "dinos/champ.png",
+            "file_name": "KikiDylan",
+            "friend_name": "Dylan K."
         }
     ]
 }

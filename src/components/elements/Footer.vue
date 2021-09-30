@@ -1,6 +1,6 @@
 <template>
-	<footer class="footer">
-		<nav>
+	<footer :class="[ home ? 'footer--home' : '', 'footer' ]">
+		<nav class="footer__nav">
 			<ul class="footer__nav-wrapper">
 				<li class="footer__li">
 					<router-link class="footer__a"
@@ -36,6 +36,9 @@
 				</li>
 			</ul>
 		</nav>
+		<p class="footer__p">&copy; Copyright {{ year }} - 
+			<a class="a" href="mailto:dinokikiteam@gmail.com">Dinokiki Team</a>
+		</p>
 	</footer>
 </template>
 
@@ -48,26 +51,57 @@ import IconKiki from '../svgs/iconKiki'
 export default {
 	name: 'homepage',
 
+	props: {
+		home: {
+			type: Boolean,
+			required: false,
+		}
+	},
+
 	components: {
 		IconHome,
 		IconAbout,
 		IconGame,
 		IconKiki,
 	},
+
+	computed: {
+		year() {
+			return new Date().getFullYear();
+		}
+	},
 }
 </script>
 
 <style lang="scss">
-@import '../../assets/css/modules/variables';
+@import '../../assets/css/variables';
 
 .footer {
-	background-color: $white;
-	border-top: 1px solid $grey-trans;
-	bottom: 0;
+	background-color: $blue;
 	box-sizing: border-box;
-	padding: 16px;
-	position: fixed;
+	padding: 8px;
 	width: 100%;
+
+	@media (max-width: $max-sm) {
+		background-color: $white;
+		bottom: 0;
+		position: fixed;
+		padding: 16px;
+	}
+}
+
+.footer--home {
+	bottom: 0;
+	position: absolute;
+}
+
+.footer__p {
+	color: $white;
+	margin: 0;
+	text-align: center;
+}
+
+.footer__nav {
 	@media (min-width: $min-md) {
 		display: none;
 	}

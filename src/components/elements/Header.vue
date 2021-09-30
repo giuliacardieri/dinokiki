@@ -49,14 +49,14 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../assets/css/modules/variables';
+@import '../../assets/css/variables';
 
 .header {
 	align-items: center;
 	box-sizing: border-box;
 	display: flex;
 	justify-content: center;
-	padding: 24px 48px;
+	padding: 24px;
 	margin: auto;
 	max-width: 1440px;
 	width: 100%;
@@ -68,7 +68,7 @@ export default {
 	
 	@media (min-width: $min-md) {
 		justify-content: space-between;
-	padding: 48px;
+		padding: 48px;
 	}
 }
 
@@ -87,7 +87,7 @@ export default {
 .header__title {
 	color: $white;
 	font-family: 'Code';
-	font-size: 1.75rem;
+	font-size: 1.5rem;
 	margin: 0;
 	text-decoration: none;
 	text-transform: uppercase;

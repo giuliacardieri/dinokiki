@@ -12,12 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import './assets/css/modules/variables';
-
-@import './assets/css/blocks/button.scss';
-@import './assets/css/blocks/section.scss';
-
-@import './assets/css/blocks/kiki-gallery.scss';
+@import './assets/css/variables';
 
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
 
@@ -38,9 +33,111 @@ body {
 	width: 100%;
 }
 
-.app__main {
+main {
 	@media (max-width: $max-sm) {
-		margin-bottom: 56px;
+		padding-bottom: 64px;
 	}
+}
+
+.section {
+	padding: 24px;
+
+	@media (min-width: $min-sm) {
+		padding: 48px;
+	}
+}
+
+.section__container {
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.section__container--flex {
+	align-items: center;
+	display: flex;
+	justify-content: flex-start;
+
+	@media (max-width: $max-sm) {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+}
+
+.section--white {
+	background-color: $white-trans;
+}
+
+.section__img {
+  border-radius: 100%;
+  width: 256px;
+
+  @media (max-width: $max-sm) {
+	margin-bottom: 24px;
+  }
+}
+
+@media (min-width: $min-md) {
+	.section__text-wrapper {
+		padding-left: 48px;
+	}
+}
+
+.h2 {
+	font-size: 1.75rem;
+	margin: 0 0 8px;
+	text-transform: uppercase;
+
+	@media (max-width: $max-sm) {
+		font-size: 1.25rem;
+	}
+}
+  
+.h2--blue {
+	color: $blue-darkest;
+}
+
+.p {
+	margin: 0;
+
+	+ .p {
+		margin-top: 4px;
+	}
+}
+
+.p--blue {
+	color: $blue-darkest;
+}
+
+.p--bold {
+	font-weight: 700;
+}
+
+.ul {
+	margin: 0;
+	padding: 0 0 0 16px;
+}
+
+.ul--blue {
+	color: $blue;
+}
+
+.a {
+	color: $white;
+	font-weight: 600;
+	transition: color 0.3s ease-in-out;
+
+	&:hover,
+	&:focus {
+		color: $whitish;
+	}
+}
+
+.a--blue {
+	color: $blue;
+
+  &:hover,
+  &:focus {
+	color: $blue-darkest;
+  }
 }
 </style>

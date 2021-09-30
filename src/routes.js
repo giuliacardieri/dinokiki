@@ -1,6 +1,7 @@
 import Home from './components/Home'
 import About from './components/About'
 import Game from './components/Game'
+import Send from './components/Send'
 
 const routes = [
     {
@@ -17,6 +18,11 @@ const routes = [
         path: '/games',
         name: 'game',
         component: Game
+    },
+    {
+        path: '/send',
+        name: 'send',
+        component: Send
     }
 ]
 

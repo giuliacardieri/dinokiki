@@ -20,14 +20,14 @@
 						:style="{ left: kiki.left, top: kiki.top, fontSize: kiki.size }"
 						v-for="kiki in kikiList" 
 						:key="`${kiki.left}-${kiki.text}`"
-						v-on:after-leave="removeKiki()"
+						@after-leave="removeKiki()"
 					>
 					{{ kiki.text }}
 					</span>
 				</transition-group>
 			</div>
 		</section>
-		<DinoFooter/>
+		<DinoFooter home />
 	</main>
 </template>
 
@@ -62,72 +62,73 @@ export default {
 			animationFrame: undefined,
 			kikis: undefined
 		}
-  },
-  methods: {
-	letItKiki: function () {
-		this.isOpen = true
-		this.animationFrame = requestAnimationFrame(this.addToKikiList)
-		this.sayKiki()
 	},
-	stopTheKiki: function () {
-		this.isOpen = false
-		cancelAnimationFrame(this.animationFrame)
-		this.activeAudio.pause()
-	},
-	removeKiki: function () {
-		this.kikiList.splice(0, 1)
-	},
-	getRandom: function(len) {
-		return Math.floor(len * Math.random())
-	},
-	addToKikiList: function () {
-		const textList = ['ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki']
-		const sizeList = ['12px', '20px', '28px', '36px', '44px', '52px']
 
-		let left = Math.floor(Math.random() * 100) + 1
-		let top = Math.floor(Math.random() * 100) + 1
+	methods: {
+		letItKiki: function () {
+			this.isOpen = true
+			this.animationFrame = requestAnimationFrame(this.addToKikiList)
+			this.sayKiki()
+		},
+		stopTheKiki: function () {
+			this.isOpen = false
+			cancelAnimationFrame(this.animationFrame)
+			this.activeAudio.pause()
+		},
+		removeKiki: function () {
+			this.kikiList.splice(0, 1)
+		},
+		getRandom: function(len) {
+			return Math.floor(len * Math.random())
+		},
+		addToKikiList: function () {
+			const textList = ['ki', 'kiki', 'ki kiki', 'kikiki', 'kikikiki', 'kiki ki']
+			const sizeList = ['12px', '20px', '28px', '36px', '44px', '52px']
 
-		let kiki = {
-			'size': sizeList[this.getRandom(sizeList.length)],
-			'text': textList[this.getRandom(textList.length)],
-			'left': left + '%',
-			'top': top + '%',
-		}
+			let left = Math.floor(Math.random() * 100) + 1
+			let top = Math.floor(Math.random() * 100) + 1
 
-		this.kikiList.push(kiki)
-
-		setTimeout(() => {
-			this.removeKiki()
-		}, 5000)
-
-		setTimeout(() => {
-			if (this.isOpen) {
-				this.animationFrame = requestAnimationFrame(this.addToKikiList)
+			let kiki = {
+				'size': sizeList[this.getRandom(sizeList.length)],
+				'text': textList[this.getRandom(textList.length)],
+				'left': left + '%',
+				'top': top + '%',
 			}
-		}, 500)
-	},
-	sayKiki: function () {
-		let audioList = this.kikiData[Math.floor(this.kikiData.length * Math.random())]
-		let audio = new Audio(require('../../public/audios/' + audioList.file_name + '.mp3'))
 
-		audio.loop = true
-		audio.play()
+			this.kikiList.push(kiki)
 
-		this.activeAudio = audio
+			setTimeout(() => {
+				this.removeKiki()
+			}, 5000)
+
+			setTimeout(() => {
+				if (this.isOpen) {
+					this.animationFrame = requestAnimationFrame(this.addToKikiList)
+				}
+			}, 500)
+		},
+		sayKiki: function () {
+			let audioList = this.kikiData[Math.floor(this.kikiData.length * Math.random())]
+			let audio = new Audio(require('../../public/audios/' + audioList.file_name + '.mp3'))
+
+			audio.loop = true
+			audio.play()
+
+			this.activeAudio = audio
+		},
 	},
-  },
 }
 </script>
 
-<style lang="scss">
-@import '../assets/css/modules/variables';
+<style lang="scss" scoped>
+@import '../assets/css/variables';
 
 .dino {
 	display: flex;
 	justify-content: center;
 	margin: 0 auto;
 	max-width: 1440px;
-	padding-top: 128px;
+	padding-top: 64px;
 	width: 100%;
 }
 
@@ -136,6 +137,10 @@ export default {
 
 	@media (min-width: $min-md) {
 		width: 60%;
+	}
+
+	svg {
+		width: 100%;
 	}
 }
 

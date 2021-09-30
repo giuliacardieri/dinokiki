@@ -1,0 +1,25 @@
+{
+    "games": [
+        {
+            "name": "Dinokiki Maker",
+            "lang": "English",
+            "description": "Exercise your creativity choosing Dinokiki's appearance.",
+            "img": "games/make.jpg",
+            "link": "https: //codepen.io/giuliacardieri/full/YNJBMO"
+        },
+        {
+            "name": "Jogo do Dino",
+            "lang": "Português",
+            "description": "Ajude o Dinokiki a encontrar países no mapa!",
+            "img": "games/jogo.jpg",
+            "link": "https://codepen.io/giuliacardieri/full/PjeQzG/"
+        },
+        {
+            "name": "Who's that kiki?",
+            "lang": "English",
+            "description": "Listen to the kikis and find the corresponding image to it.",
+            "img": "games/whos.jpg",
+            "link": "http://dinokiki.com/whosthatkiki/#/"
+        }
+    ]
+}
