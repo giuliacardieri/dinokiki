@@ -13,6 +13,8 @@
     "node-sass": "^6.0.1",
     "sass-loader": "^10",
     "vue": "^2.6.11",
+    "vue-gtag": "^1.16.1",
+    "vue-meta": "^2.4.0",
     "vue-router": "^3.5.2"
   },
   "devDependencies": {

@@ -1,19 +1,20 @@
 <template>
 	<main>
 		<DinoHeader />
+		<Banner />
 		<section class="dino"> 
-			<div v-if="isOpen"
+			<button v-if="isOpen"
 				class="dino__svg"
 				@click="stopTheKiki()"
 			>
 				<DinoOpen aria-label="Dinokiki with his mouth open" />
-			</div>
-			<div v-else
+			</button>
+			<button v-else
 				class="dino__svg"
 				@click="letItKiki()"
 			>
 				<DinoClosed aria-label="Dinokiki with his mouth closed" />
-			</div>
+			</button>
 			<div class="dino__kiki-wrapper">
 				<transition-group name="dino__show">
 					<span class="dino__p"
@@ -37,15 +38,85 @@ import DinoOpen from './svgs/dinoOpen'
 
 import DinoHeader from './elements/Header'
 import DinoFooter from './elements/Footer'
+import Banner from './elements/Banner'
 
 export default {
 	name: 'homepage',
+	metaInfo() {
+		return {
+			title: 'Dinokiki',
+			meta: [
+				{ 
+					name: 'description', 
+					content: 'Dinokiki is a friendly dinosaur who speaks the Kiki language. He hopes you have fun on his website, and maybe send a Kiki!'
+				},
+				{ 
+					name: 'name', 
+					content: 'Dinokiki'
+				},
+				{
+					property: "og:title",
+					content: 'Dinokiki'
+				},
+				{ 
+					name: "og:description",
+					content: 'Dinokiki is a friendly dinosaur who speaks the Kiki language. He hopes you have fun on his website, and maybe send a Kiki!'
+				},
+				{
+					property: "og:url",
+					content: "https://dinokiki.com"
+				},
+				{
+					property: "og:image",
+					content: require("../assets/img/dinos/dino.png" )
+				},
+				{
+					name: 'twitter:site',
+					content: 'https://twitter.com/mrdinokiki'
+				},
+				{
+					name: 'twitter:creator',
+					content: '@mrdinokiki'
+				},
+				{
+					name: 'twitter:card',
+					content: 'summary_large_image'
+				},
+				{
+					property: "twitter:title",
+					content: 'Dinokiki'
+				},
+				{ 
+					name: "twitter:description",
+					content: 'Dinokiki is a friendly dinosaur who speaks the Kiki language. He hopes you have fun on his website, and maybe send a Kiki!'
+				},
+				{
+					key:"twitter:image",
+					property: "og:url",
+					content: require("../assets/img/dinos/dino.png" )
+				}
+			],
+			script: [
+				{
+					type: 'application/ld+json',
+					json: {
+						'@context': 'http://schema.org',
+						'@type': 'WebPage',
+						'name': 'Dinokiki',
+						'description': 'Dinokiki is a friendly dinosaur who speaks the Kiki language. He hopes you have fun on his website, and maybe send a Kiki!',
+						'url': "https://dinokiki.com"
+					}
+				},
+			]
+		}
+	},
 
 	components: {
 		DinoClosed,
 		DinoOpen,
 		DinoHeader,
 		DinoFooter,
+		Banner,
 	},
 
 	computed: {
@@ -109,7 +180,7 @@ export default {
 		},
 		sayKiki: function () {
 			let audioList = this.kikiData[Math.floor(this.kikiData.length * Math.random())]
-			let audio = new Audio(require('../../public/audios/' + audioList.file_name + '.mp3'))
+			let audio = new Audio(require('../assets/audios/' + audioList.file_name + '.mp3'))
 
 			audio.loop = true
 			audio.play()
@@ -126,13 +197,15 @@ export default {
 .dino {
 	display: flex;
 	justify-content: center;
-	margin: 0 auto;
+	margin: 0 auto 32px auto;
 	max-width: 1440px;
-	padding-top: 64px;
 	width: 100%;
 }
 
 .dino__svg {
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
 	width: 90%;
 
 	@media (min-width: $min-md) {

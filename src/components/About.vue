@@ -4,7 +4,7 @@
 		<section class="section section--white">
 			<div class="section__container section__container--flex">
 				<div class="section__img-wrapper">
-					<img class="section__img" src="/img/dinos/dino.png" alt="Dinokiki wearing a red bow tie" />
+					<img class="section__img" :src="require('../assets/img/dinos/dino.png')" alt="Dinokiki wearing a red bow tie" />
 				</div>
 				<div class="section__text-wrapper">
 					<h2 class="h2 h2--blue">
@@ -63,6 +63,74 @@ import KikiGallery from './elements/KikiGallery'
 
 export default {
 	name: 'about',
+	metaInfo() {
+		return {
+			title: 'About | Dinokiki',
+			meta: [
+				{ 
+					name: 'description', 
+					content: 'Dinokiki is a friendly green dinosaur that was born on February 11th, 2014. His website is the place to have fun and meet his friends.'
+				},
+				{ 
+					name: 'name', 
+					content: 'About | Dinokiki'
+				},
+				{
+					property: "og:title",
+					content: 'About | Dinokiki'
+				},
+				{ 
+					name: "og:description",
+					content: 'Dinokiki is a friendly green dinosaur that was born on February 11th, 2014. His website is the place to have fun and meet his friends.'
+				},
+				{
+					property: "og:url",
+					content: "https://dinokiki.com/about"
+				},
+				{
+					property: "og:image",
+					content: require("../assets/img/dinos/dino.png" )
+				},
+				{
+					name: 'twitter:site',
+					content: 'https://twitter.com/mrdinokiki'
+				},
+				{
+					name: 'twitter:creator',
+					content: '@mrdinokiki'
+				},
+				{
+					name: 'twitter:card',
+					content: 'summary_large_image'
+				},
+				{
+					property: "twitter:title",
+					content: 'About | Dinokiki'
+				},
+				{ 
+					name: "twitter:description",
+					content: 'Dinokiki is a friendly green dinosaur that was born on February 11th, 2014. His website is the place to have fun and meet his friends.'
+				},
+				{
+					key:"twitter:image",
+					property: "og:url",
+					content: require("../assets/img/dinos/dino.png" )
+				}
+			],
+			script: [
+				{
+					type: 'application/ld+json',
+					json: {
+						'@context': 'http://schema.org',
+						'@type': 'WebPage',
+						'name': 'About | Dinokiki',
+						'description': 'Dinokiki is a friendly green dinosaur that was born on February 11th, 2014. His website is the place to have fun and meet his friends.',
+						'url': "https://dinokiki.com/about"
+					}
+				},
+			]
+		}
+	},
 
 	components: {
 		DinoHeader,

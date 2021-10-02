@@ -13,6 +13,9 @@
 		<KikiCard v-for="(kiki, index) in kikiData"
 			:key="index"
 			:data="kiki"
+			:pausedKiki="lastPlayed === kiki.file_name && lastPlayed !== playing"
+			@playKiki="setPlayKiki"
+			@pauseKiki="setPauseKiki"
 		/>
 	</div>
 </template>
@@ -40,6 +43,14 @@ export default {
 		},
 	},
 
+	data () {
+		return {
+			audio: undefined,
+			lastPlayed: undefined,
+			playing: undefined,
+		}
+	},
+
 	computed: {
 		kikiData() {
 			return this.orderAlphabetically(this.data)
@@ -58,7 +69,24 @@ export default {
 				return 0;
 			})
 			return arr;
-		}
+		},
+		setPlayKiki: function (file) {
+			if (this.playing) {
+				this.lastPlayed = this.playing
+				this.audio.pause()
+			}
+			
+			this.audio = new Audio(require('../../assets/audios/' + file + '.mp3'))
+			this.audio.loop = true
+			this.playing = file
+			this.audio.play()
+		},
+		setPauseKiki: function () {
+			this.lastPlayed = this.playing
+			this.playing = undefined
+			this.audio.pause()
+			this.audio = undefined
+		},
 	}
 }
 </script>

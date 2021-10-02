@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
+import VueMeta from 'vue-meta'
+import VueGtag from "vue-gtag"
 import routes from './routes'
 
 Vue.config.productionTip = false
@@ -12,6 +14,11 @@ const router = new VueRouter({ mode: 'history', routes,
 })
 
 Vue.use(VueRouter)
+Vue.use(VueMeta)
+
+Vue.use(VueGtag, {
+	config: { id: process.env.GOOGLE_ANALYTICS }
+});
 
 new Vue({
 	router,

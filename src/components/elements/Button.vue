@@ -3,17 +3,20 @@
 		:href="link"
 		:class="[ blue ? 'button--blue' : '', 'button' ]"
 		target="_blank"
+		:aria-label="ariaLabel"
 	>
 		{{ text }}
 	</a>
 	<router-link v-else-if="link"
 		:to="link"
 		:class="[ blue ? 'button--blue' : '', 'button' ]"
+		:aria-label="ariaLabel"
 	>
 		{{ text }}
 	</router-link>
 	<button v-else
 		:class="[ blue ? 'button--blue' : '', 'button' ]"
+		:aria-label="ariaLabel"
 	>
 		{{ text }}
 	</button>
@@ -40,6 +43,10 @@ export default {
 			type: Boolean,
 			required: false,
 		},
+		ariaLabel: {
+			type: String,
+			required: false,
+		}
 	}
 }
 </script>
@@ -59,10 +66,10 @@ export default {
 	text-decoration: none;
 	transition: transform 0.3s ease-in-out;
 
-	@media (min-width: $min-md) {
-		&:hover {
-			transform: scale(1.05);
-		}
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+		transform: scale(1.05);
 	}
 }
 

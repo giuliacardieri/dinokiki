@@ -202,37 +202,43 @@
             "name": "The Rick Askiki",
             "img": "dinos/rick.png",
             "file_name": "KikiRick",
-            "friend_name": "Rick Askiki"
+            "friend_name": "Rick Askiki",
+            "new": true
         },
         {
             "name": "The Baby Nick Kiki",
-            "img": "dinos/nick-baby.png",
+            "img": "dinos/nick.png",
             "file_name": "KikiNick",
-            "friend_name": "Paul"
+            "friend_name": "Paul",
+            "new": true
         },
         {
             "name": "The Mathieu Kiki",
-            "img": "dinos/mathieu-robot.png",
+            "img": "dinos/mathieu.png",
             "file_name": "KikiTom",
-            "friend_name": "Tom"
+            "friend_name": "Tom",
+            "new": true
         },
         {
             "name": "The Dalbabob Kiki",
-            "img": "dinos/dalbabob-monkey.png",
+            "img": "dinos/dalbabob.png",
             "file_name": "KikiDavid",
-            "friend_name": "David"
+            "friend_name": "David",
+            "new": true
         },
         {
             "name": "The Miraculous Kiki",
             "img": "dinos/miraculous.png",
             "file_name": "KikiMiraculous",
-            "friend_name": "Secret Friend"
+            "friend_name": "Secret Friend",
+            "new": true
         },
         {
             "name": "The Champ Kiki",
             "img": "dinos/champ.png",
             "file_name": "KikiDylan",
-            "friend_name": "Dylan K."
+            "friend_name": "Dylan K.",
+            "new": true
         }
     ]
 }

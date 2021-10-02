@@ -23,13 +23,13 @@
 						About
 					</router-link>
 				</li>
-				<li class="header__li">
+				<!-- <li class="header__li">
 					<router-link class="header__a"
 						to="/games"
 					>
 						Games
 					</router-link>
-				</li>
+				</li> -->
 				<li class="header__li">
 					<router-link class="header__a"
 						to="/send"
@@ -68,7 +68,7 @@ export default {
 	
 	@media (min-width: $min-md) {
 		justify-content: space-between;
-		padding: 48px;
+		padding: 32px;
 	}
 }
 
@@ -123,7 +123,8 @@ export default {
 		font-weight: 600;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		text-decoration: underline;
 	}
 }

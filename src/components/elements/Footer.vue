@@ -1,5 +1,5 @@
 <template>
-	<footer :class="[ home ? 'footer--home' : '', 'footer' ]">
+	<footer class="footer">
 		<nav class="footer__nav">
 			<ul class="footer__nav-wrapper">
 				<li class="footer__li">
@@ -18,14 +18,14 @@
 						<IconAbout class="footer__svg" />
 					</router-link>
 				</li>
-				<li class="footer__li">
+				<!-- <li class="footer__li">
 					<router-link class="footer__a"
 						to="/game"
 						aria-label="Go to Games page"
 					>
 						<IconGame class="footer__svg" />
 					</router-link>
-				</li>
+				</li> -->
 				<li class="footer__li">
 					<router-link class="footer__a"
 						to="/send"
@@ -45,7 +45,6 @@
 <script>
 import IconHome from '../svgs/iconHome'
 import IconAbout from '../svgs/iconAbout'
-import IconGame from '../svgs/iconGame'
 import IconKiki from '../svgs/iconKiki'
 
 export default {
@@ -61,7 +60,6 @@ export default {
 	components: {
 		IconHome,
 		IconAbout,
-		IconGame,
 		IconKiki,
 	},
 
@@ -88,11 +86,6 @@ export default {
 		position: fixed;
 		padding: 16px;
 	}
-}
-
-.footer--home {
-	bottom: 0;
-	position: absolute;
 }
 
 .footer__p {
