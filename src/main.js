@@ -17,7 +17,7 @@ Vue.use(VueRouter)
 Vue.use(VueMeta)
 
 Vue.use(VueGtag, {
-	config: { id: process.env.GOOGLE_ANALYTICS }
+	config: { id: "UA-48013923-5" }
 });
 
 new Vue({
