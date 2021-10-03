@@ -92,6 +92,10 @@ export default {
 	color: $white;
 	margin: 0;
 	text-align: center;
+
+	@media (max-width: $max-sm) {
+		display: none;
+	}
 }
 
 .footer__nav {

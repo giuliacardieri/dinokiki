@@ -45,6 +45,10 @@ export default {
 	padding: 8px;
 	position: fixed;
 	width: 100%;
+
+	@media (max-width: $max-sm) {
+		display: none;
+	}
 }
 
 .banner__container {
